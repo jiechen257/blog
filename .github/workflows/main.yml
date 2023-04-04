@@ -25,12 +25,12 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v1
         with:
-            ref: main
+            ref: master
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-              node-version: '14'
+              node-version: '12'
 
 
       - name: Setup Hexo
