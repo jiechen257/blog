@@ -49,8 +49,9 @@ jobs:
                     npm install
       - name: Deploy
         run: |
-            mkdir .deploy && cd .deploy &&
-            git clone --depth 1 --branch master --single-branch https://github.com/jiechen257/jiechen257.github.io.git . &&
-            rm -rf ./* && cp -r ../public/* . &&
-            git add -A . && - git commit -m "Site updated at  `date +"%Y-%m-%d %H:%M"` :octocat:" &&
-            git branch -m master && git push -q -u origin master
+            git clone --depth 1 --branch=master https://github.com/jiechen257/jiechen257.github.io.git .deploy_git
+            cd .deploy_git
+            find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
+            cd ../
+            hexo clean
+            hexo deploy
