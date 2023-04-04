@@ -110,8 +110,8 @@ profile:
 # Sidebar navigation links
 menu:
   Home: /
-  About: /about
-  Links: /links
+  # About: /about
+  # Links: /links
   Github: https://github.com/username
 
 # Social media URL
