@@ -186,7 +186,7 @@ post:
   # The following settings are the same as the page
   # toc: false
   # reward: true
-  # copyright: true
+  copyright: true
 
 # Archive
 archive:
@@ -202,13 +202,13 @@ category:
 
 # Search
 search:
-#   # Display a quick search button in fab
+  # Display a quick search button in fab
   fab: true
 
-#   # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
+  # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
   page: true
 
-#   # Local search
+  # Local search
   adapter:
     range:
       - post
@@ -287,14 +287,14 @@ reward:
 # It is possible to use front matter `copyright` to override this setting.
 copyright:
   # Display author, default to `true`
-  # author: true
+  author: false
 
   # Display link, default to `true`
   # link: false
 
-  # license: Attribution-NonCommercial-NoDerivatives 4.0 International
-  #   (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
-  #   rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
+  license: 自由转载-非商用-禁止演绎-保持署名
+    (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
 
   # Display published date, default to `false`
   # published: false
