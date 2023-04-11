@@ -1,2 +1,2 @@
 ## Tech
-Hexo + github page
+Hexo + Github Pages
