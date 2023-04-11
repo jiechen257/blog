@@ -18,18 +18,23 @@ ACGM 通吃，moba、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只�
 ## 一些标签
 
 （👇记得点开小箭头哦...）
-
 <details style="padding-left:12px;padding-bottom:10px">
-  <summary>ACGM</summary>
+  <summary>技术向</summary>
+  <p style="font-size:12px; line-height:13px"> ⌨️ vimer + 双拼，效率至上</p>
+  <p style="font-size:12px;line-height:10px"> 👻 面对技术栈的选择，一向是都试试</p>
+  <p style="font-size:12px;line-height:10px"> 👨‍💻 终身学习</p>
+</details>
+<details style="padding-left:12px;padding-bottom:10px">
+  <summary>ACGM玩家</summary>
   <p style="font-size:12px; line-height:13px"> 📺 宫崎骏、新海诚、若森数字</p>
+  <p style="font-size:12px; line-height:13px"> 🎮 top-king，shy 老师亲传大弟子</p>
   <p style="font-size:12px; line-height:13px"> 🎥 豆瓣 top 250、木鱼水心</p>
   <p style="font-size:12px; line-height:13px"> 📖 江南（杨志爬）、意林、刘慈欣</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
-  <summary>社交达人</summary>
-  <p style="font-size:12px; line-height:13px"> 🪀 密室、蹦极、狼人杀、剧本杀~</p>
-  <p style="font-size:12px; line-height:13px"> 🎮 moba游戏上单玩家，shy 老师亲传大弟子</p>
-  <p style="font-size:12px;line-height:10px"> 😋 饭局、旅游（希望人没事） </p>
+  <summary>各种嗨皮</summary>
+  <p style="font-size:12px; line-height:13px"> 🪀 密室、蹦极、德州、狼人杀、剧本杀~</p>
+  <p style="font-size:12px;line-height:10px"> 😋 约饭、旅游（希望人没事） </p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>欲养老而不为</summary>
@@ -40,12 +45,7 @@ ACGM 通吃，moba、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只�
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>battle</summary>
   <p style="font-size:12px; line-height:13px"> 🌝 可以理论，但不要恼火</p>
-  <p style="font-size:12px; line-height:13px"> 👸 派系分明，理解万岁</p>
-</details>
-<details style="padding-left:12px;padding-bottom:10px">
-  <summary>互联网弄潮儿</summary>
-  <p style="font-size:12px; line-height:13px"> 🏂 掌握实时热点和大旗信息</p>
-  <p style="font-size:12px; line-height:13px"> 👻 能接梗</p>
+  <p style="font-size:12px; line-height:13px"> 🙊 派系分明，理解万岁</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>小目标</summary>
