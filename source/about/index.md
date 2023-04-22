@@ -9,7 +9,7 @@ copyright: false
 典型的 00 后天秤男🤷‍♂️，base 杭州
 
 ## 唠叨几句
-首先是一名程序开发人员，其次是 web 和 H5 开发，技术栈是 ![Vue](https://img.shields.io/badge/-Vue-333333?style=flat&logo=vue.js)、![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)，目标是 Independent Developer（~~天天被 cue "前端已死"😅~~），业余时间主要逛 [知乎](https://www.zhihu.com/people/luo-chen-84-71-57)、[推特](https://twitter.com/jiechen257)
+首先是一名程序开发人员，其次是 web 和 H5 开发，技术栈是 ![Vue](https://img.shields.io/badge/-Vue-333333?style=flat&logo=vue.js)、![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)，目标是 Independent Developer（~~天天被 cue "前端已死"😅~~），业余时间主要逛 [推特](https://twitter.com/jiechen257) 和 bilibili
 
 ACGM 通吃，moba、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只要有约，立马背上行囊
 
@@ -27,19 +27,19 @@ ACGM 通吃，moba、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只�
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>ACGM玩家</summary>
   <p style="font-size:12px; line-height:13px"> 📺 宫崎骏、新海诚、若森数字</p>
-  <p style="font-size:12px; line-height:13px"> 🎮 top-king，shy 老师亲传大弟子</p>
+  <p style="font-size:12px; line-height:13px"> 🎮 top-king，shy sensi</p>
   <p style="font-size:12px; line-height:13px"> 🎥 豆瓣 top 250、木鱼水心</p>
   <p style="font-size:12px; line-height:13px"> 📖 江南（杨志爬）、意林、刘慈欣</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
-  <summary>各种嗨皮</summary>
+  <summary>各种玩</summary>
   <p style="font-size:12px; line-height:13px"> 🪀 密室、蹦极、德州、狼人杀、剧本杀~</p>
   <p style="font-size:12px;line-height:10px"> 😋 约饭、旅游（希望人没事） </p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>欲养老而不为</summary>
   <p style="font-size:12px; line-height:13px"> 😪 想要早睡，可是不困  </p>
-  <p style="font-size:12px; line-height:13px"> 🌧️ 想要锻炼，可是下雨 </p>
+  <p style="font-size:12px; line-height:13px"> 🌧️ 想要跑步，可是下雨 </p>
   <p style="font-size:12px; line-height:13px"> 🌶️ 不能吃辣，被迫达成 </p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
@@ -49,6 +49,6 @@ ACGM 通吃，moba、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只�
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>小目标</summary>
-  <p style="font-size:12px; line-height:13px"> 🌅 一趟西藏，一趟大理 </p>
+  <p style="font-size:12px; line-height:13px"> 🌅 一趟西藏，一趟北欧 </p>
   <p style="font-size:12px; line-height:13px"> 🎸 指弹玩家  </p>
 </details>
