@@ -1,6 +1,6 @@
 ---
 title: TS类型体操刷题tips
-date: 2023-8-27 14:14:33
+date: 2022-8-27 14:14:33
 tags: TypeScript
 categories: front-end
 ---
