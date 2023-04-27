@@ -1,7 +1,8 @@
 ---
 categories: new-power
-date: 2023-03-23 11:53:4
+date: 2021-04-23 11:53:4
 tags: strapi
+thumbnail: https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202304272135444.png
 ---
 
 ## 背景
