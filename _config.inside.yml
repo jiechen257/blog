@@ -184,9 +184,9 @@ post:
   #   text: ":words words in :minutes min"
 
   # The following settings are the same as the page
-  # toc: false
+  toc: true
   # reward: true
-  copyright: true
+  # copyright: true
 
 # Archive
 archive:
