@@ -31,22 +31,20 @@ B("dfs")
 ```
 
 ## 泛型中 extends 的约束
-```scala
+```ts
 type MyPick<T, K extends keyof T> = {
   [P in K]: T[P] 
 };
-复制代码
 ```
 
 需要注意的是 K 是一个 union，keyof T 也将 T 中的属性转换为一个 union。当我们使用 extends 来进行条件约束的时候，TS 会使用 union ` 分发 ` 的特性自动遍历 union K 中的属性与 keyof T 中的属性进行比较。
 
 假设 K 为 'title' | 'completed' | 'invalid' ，T 为 'title' | 'completed' | 'description'。它的过程如下
 
-```javascript
+```ts
 step1:  'title' extends 'title' | 'completed' | 'description' //通过
 step2:  'completed' extends 'title' | 'completed' | 'description' //通过
 step3:  'invalid' extends 'title' | 'completed' | 'description' //未通过，报错
-复制代码
 ```
 
 如果比较成功则通过，失败则报错，这样我们就实现了所有的关键步骤，通过了所有的测试用例。

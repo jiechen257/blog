@@ -23,7 +23,7 @@ http1.1 提出支持长链接和管道化。
 ### 线头阻塞
 HTTP 管线化要求服务器按照接收到的请求顺序进行响应，如果管线化中的单个请求执行得很慢，客户端的后续 ` 响应 ` 也会相应的延迟下去
 
-![][https://static001.infoq.cn/resource/image/48/00/483db522e673c62bee2b8261534d9600.png]
+![](https://static001.infoq.cn/resource/image/48/00/483db522e673c62bee2b8261534d9600.png)
 
 #### 解决办法
 客户端在主机上建立多个 TCP 连接
