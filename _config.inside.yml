@@ -103,7 +103,7 @@ profile:
   email: 1487503910@qq.com
 
   # You can set Avatar URL directly
-  # avatar:
+  avatar: https://raw.githubusercontent.com/jiechen257/gallery/main/img/avatar.png
 
   bio: The world is quiet here.
 
