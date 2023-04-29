@@ -1,42 +1,29 @@
 ---
-title: 工作流 | 实用工具
-copyright: false
+title: 技术之外
+date: 2022-03-17 21:53:4
 ---
 
-## 网站
-- [变量命名](https://unbug.github.io/codelf/)
-- [image generator](https://dummyimage.com/)
-- [IT book](https://www.manongbook.com/)
-- [壁纸](https://wallhaven.cc/)
-- [在线流程图制作](https://excalidraw.com/)
-- [前端常用网址总览](http://www.alloyteam.com/nav/)
+> 生命好在无意义，才容得下各自赋予意义。假如生命是有意义的，这个意义却不符合我的志趣，那才尴尬狼狈
 
-## IDE
-- vscode
-- webstorm + IDEA
+## 📜 杂文
+一些思考和理解
 
-## 环境
-- Git
-- Mysql + navicat
-- Nvm + nrm + pnpm
-- jdk + maven
-- redis + redis GUI
-- postman + apifox
-- finalshell
+::: timeline
+- 2021-10-12 [消失的附近](resources/消失的附近) 
+- 2023-03-17 [学校-学生-学习](resources/学校-学生-学习) 
+:::
 
-## 文档
-- Obsidian + Vim + 小鹤双拼
-- typora
-- sublime text
+## 📃 随笔
+类似备忘录
 
+::: timeline
+- 2022-12-15 [小阳人的自我修养](resources/小阳人的自我修养) 
+:::
 
-## 小插件
-- traffic monitor + istatus menu
-- snipaste + paste
-- clash
-- flux
-- picgo
+## 🏷️ 清单
+记录下过程，希望自己能一直阅读下去
 
-## 软件
-- 火绒
-- potplayer
+|  | 清单 | todo | ing |
+| ---  | --- | --- | --- |
+| 书籍 | [书籍清单](resources/书籍清单) | 设计模式 | VueJS设计与实现 |
+| 影视 | [影视清单](resources/影视清单) | | 绝命毒师 |
