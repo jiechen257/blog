@@ -17,6 +17,7 @@ date: 2022-03-17 21:53:4
 类似备忘录
 
 ::: timeline
+- 2023-06-15 [The Boy](resources/theboy)
 - 2022-12-15 [小阳人的自我修养](resources/小阳人的自我修养) 
 :::
 
