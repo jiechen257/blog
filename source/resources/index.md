@@ -30,6 +30,7 @@ date: 2022-03-17 21:53:4
 - 2022-03-27 [大唐三百年](resources/excerpt/大唐三百年)
 - 2021-07-07 [语文高考作文可以写负能量吗](resources/excerpt/语文高考作文可以写负能量作文吗)
 - 2021-05-05 [给青年添个堵](resources/excerpt/给青年添个堵)
+- 2021-12-22 [情书](resources/excerpt/情书)
 - 2021-03-22 [生于焦虑，死于自律](resources/excerpt/生于焦虑-死于自律) 
 :::
 
