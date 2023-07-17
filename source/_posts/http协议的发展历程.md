@@ -95,13 +95,13 @@ QUIC协议是基于UDP协议实现的，在一条链接上可以有多个流，�
 
 ## 三个版本在数据传输上的体现
 HTTP/1.1
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/efa50d3b4bf04288b78d408cb713c089~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.image)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202307171105979.png)
 
 HTTP/2
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/38e96dec3ab64cf2bf607ddfd5c14f40~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.image)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202307171106136.png)
 
 QUIC
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4331f462280b47a0862704a9da70aa1c~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.image)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202307171106664.png)
 
 ## RTT和RTO
 1.  RTT(Round Trip Time)：一个连接的往返时间，即数据发送时刻到接收到确认的时刻的差值；
