@@ -13,7 +13,7 @@ categories: front-end
 
 也就是说其他打包器因为使用 JavaScript 编写，于是每次编译开始需要先解析打包器的代码，然后再去实际编译 JavaScript 代码，这样就会更慢。而 Go 不属于[动态编译的语言](https://link.juejin.cn?target=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDynamic_programming_language "https://en.wikipedia.org/wiki/Dynamic_programming_language")，省去了这个步骤
 ## 速度快的原因
-esbuild 内部打包速度优化的四个方面：
+esbuild 内部打包速度优化的四个原因：
 
 1.  esbuild 是用 Go 语言写的，并且编译为 native code
 2.  大量使用并行，充分利用多核 CPU

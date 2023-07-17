@@ -9,7 +9,7 @@ categories: front-end
 
 ## 框架定位
 
-接下来聊一聊 Astro 框架的定位，是像 Vue、React 这样的底层渲染框架，还是像 Next.js 这种上层的研发框架？
+先来聊一聊 Astro 框架的定位，是像 Vue、React 这样的底层渲染框架，还是像 Next.js 这种上层的研发框架？
 
 这一点其实挺困扰初学者的，因为 Astro 既自创了类似于`.vue`、`.jsx`文件的 `.astro` 语法，又提供了像 Next.js 里面各种运行时的能力，比如约定式路由、构建优化、SSR 等等。
 
