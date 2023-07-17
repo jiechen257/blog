@@ -12,31 +12,35 @@ copyright: false
 - [前端常用网址总览](http://www.alloyteam.com/nav/)
 
 ## IDE
-- vscode
-- webstorm + IDEA
+- VScode
+- Webstorm + IDEA
 
 ## 环境
 - Git
 - Mysql + navicat
 - Nvm + nrm + pnpm
-- jdk + maven
-- redis + redis GUI
-- postman + apifox
-- finalshell
+- JDK + maven
+- Redis + Redis GUI
+- postman + Apifox
+- Finalshell
 
 ## 文档
-- Obsidian + Vim + 小鹤双拼
-- typora
-- sublime text
+- Obsidian
+- Typora
+- Sublime text
 
+## 输入
+- vim
+- 小鹤双拼
 
 ## 小插件
-- traffic monitor + istatus menu
-- snipaste + paste
-- clash
+- Raycast
+- Traffic monitor + istatus menu
+- Snipaste + paste
+- clash + clashX
 - flux
-- picgo
+- Picgo
 
 ## 软件
 - 火绒
-- potplayer
+- Potplayer
