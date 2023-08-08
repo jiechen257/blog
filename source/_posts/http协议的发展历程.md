@@ -112,6 +112,6 @@ RTT 和 RTO 的关系是：由于网络波动的不确定性，每个RTT都是�
 > 当 RTO < RTT 时, 将会触发大量的重传, 当 RTO > RTT 时候, 如果频繁出现丢包, 重传不及时, 又会造成网络的反应慢, 最好的结果是 RTO 略大于 RTT.
 
 ## 参考
-[从 HTTP 到 HTTP/3 的发展简史_文化 & 方法_Scorpil_InfoQ 精选文章](https://www.infoq.cn/article/uallzq6vu7emxbxdkjex)
+[从 HTTP 到 HTTP/3 的发展简史_文化](https://www.infoq.cn/article/uallzq6vu7emxbxdkjex)
 
 [HTTP/2、HTTP/3的一些新特性及优缺点 - 掘金](https://juejin.cn/post/7096295041211039751#heading-8)
