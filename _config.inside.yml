@@ -148,18 +148,26 @@ sns:
 # Sidebar footer copyright info
 footer:
   # Set to false to hide.
-  copyright: '&copy; 2021-2023 • <a href="https://github.com/jiechen257">jiechen</a>'
+  copyright: '&copy;  <a href="https://github.com/jiechen257">jiechen</a>'
 
   # Set to false to hide Hexo link.
-  # powered: false
+  powered: false
 
   # Set to false to hide theme link.
-  # theme: false
+  theme: false
 
   # Custom text.
   # custom: Hosted by <a target="_blank" rel="external nofollow"
   #   href="https://github.com/jiechen257"><b>jiechen257</b></a>
-  custom: <span id="busuanzi_container_site_uv" style='display:none'>Total <span id="busuanzi_value_site_uv"></span> visitors. </span><span id="busuanzi_container_site_pv" style='display:none'><span id="busuanzi_value_site_pv"></span> Views</span>
+  custom: 
+    # <span>rebuild in 2023 with using the  <a href="https://hexo.io/index.html">Hexo</a> and<a href="https://github.com/ikeq/hexo-theme-inside">inside</a></span>
+    <div>Rebuild in 2023  &nbsp;&nbsp;|&nbsp;&nbsp;  Start in 2021</div>
+    <div>
+      <span>
+        Powered by <a href="https://hexo.io/index.html">Hexo</a> &nbsp; & &nbsp; Theme • <a href="https://github.com/ikeq/hexo-theme-inside">inside</a>
+      </span>
+    </div>
+    <span id="busuanzi_container_site_uv" style='display:none'>Total <span id="busuanzi_value_site_uv"></span> visitors. </span><span id="busuanzi_container_site_pv" style='display:none'><span id="busuanzi_value_site_pv"></span> Views</span>
 
 
 
