@@ -90,6 +90,7 @@ Hi jiechen257! You've successfully authenticated, but GitHub does not provide sh
 好家伙，感情我是被 ClashX 演了呀 =_=
 
 然后琢磨 ClashX 的配置项，发现个【增强模式】，果然一开就 ping 通了
+<img src="https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202308202249644.png" style="width: 30%;display: flex;justify-content: center;">
 
 ## 又现 Mac 安装 App 问题
 想必每个 mac 拥有者都遇到过:
