@@ -11,14 +11,14 @@ copyright: false
 - [在线流程图制作](https://excalidraw.com/)
 
 ## IDE
-- VScode
-- Webstorm + IDEA
+- VSCode
+- WebStorm + IDEA
 
 ## 环境
-- navicat
+- Navicat
 - Apifox
-- Finalshell
-- Warp + Iterm2 + ranger
+- FinalShell
+- Warp + iTerm2 + ranger
 - Charles
 
 ## 文档
@@ -32,7 +32,7 @@ copyright: false
 
 ## 插件
 - Raycast
-- Traffic monitor + istatus menu
+- Traffic monitor + iStatus menu
 - Snipaste + paste
 - clash + clashX
 - flux
