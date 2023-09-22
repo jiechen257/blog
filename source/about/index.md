@@ -11,7 +11,7 @@ copyright: false
 ## 唠叨几句
 首先是一名铲屎官，供养两只猫崽，一只美短，一直蓝白英短
 
-其次是 Front-end Engineer（~~天天被 cue "前端已死"😅~~），技术栈是 ![Vue](https://img.shields.io/badge/-Vue-333333?style=flat&logo=vue.js)、![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)，目标是 Independent Developer，业余时间主要逛 [推特](https://twitter.com/jiechen257) 和 bilibili
+其次是 Front-end Engineer（~~天天被 cue "前端已死"😅~~），目标是 Independent Developer，业余时间主要逛 [推特](https://twitter.com/jiechen257) 和 bilibili
 
 ACGM 通吃，moba、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只要有约，立马背上行囊
 
