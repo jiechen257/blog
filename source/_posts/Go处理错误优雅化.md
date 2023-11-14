@@ -250,3 +250,6 @@ func checkPersion(*p Persion) (err error) {
 > With our recovery pattern in place, the `do` function (and anything it calls) can get out of any bad situation cleanly by calling `panic`. We can use that idea to simplify error handling in complex software.
 
 有了 recovery 模式，我们就可以随时通过调用 panic 简单地摆脱异常情况，可以使用该思想来简化复杂软件中的错误处理。
+
+## 转载
+-  [Go 优雅地处理错误](https://chenhe.me/post/go-handle-errors-gracefully/)
