@@ -241,7 +241,7 @@ func checkPersion(*p Persion) (err error) {
       }
     }
   }()
-  // do any thing
+  // do something thing
 }
 ```
 
