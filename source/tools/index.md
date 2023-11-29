@@ -4,7 +4,6 @@ copyright: false
 ---
 
 ## 网站
-- [变量命名](https://unbug.github.io/codelf/)
 - [图片制作](https://dummyimage.com/)
 - [IT book](https://www.manongbook.com/)
 - [壁纸](https://wallhaven.cc/)
