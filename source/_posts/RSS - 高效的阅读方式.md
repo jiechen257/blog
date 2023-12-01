@@ -2,7 +2,7 @@
 title: RSS - 高效率的阅读方式
 categories: new-power
 tags: rss
-created: 2023-12-01
+created: 2023-11-30
 ---
 ## 背景
 如果你经常逛一些博客网站，会发现他们的头部 tab 常常带有一个 `RSS` 的内容区域，长这样
