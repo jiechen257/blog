@@ -52,21 +52,21 @@ module.exports = ({ env }) => ({
 ```
 
 重启服务后就会发现数据库中多了几张表
-![](http://cdn.becase.top/20220520145135.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041413415.png)
 
 同时原先的数据也会消失，因为数据的引用关系已经从 sqlite的db文件转为本地数据库
-![](http://cdn.becase.top/20220520145257.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041414787.png)
 
 
 ### http请求说明
 
-![](http://cdn.becase.top/20220520145400.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041414049.png)
 
 关于通过ajax post/put relation数据的，根据设置一对多/一对一，字段的类型为number[]/number，填入对应数据的id即可
 
 ### 路由配置
 
-![](http://cdn.becase.top/20220520145619.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041414292.png)
 1. method 就是请求的方法
 2. path 请求的路径
 3. handler 请求用到的方法，在这里为relation.find，表示会用到在relation文件夹下的`controllers/{表名}.js`中的find函数。但默认下find函数已经在系统中存在了，所以`controllers/{表名}.js`中没有find函数
@@ -76,7 +76,7 @@ module.exports = ({ env }) => ({
 兜兜转转找了很久才发现，并不能直接通过 strapi 的一般方式上传图片，这里的一般方式指的是 （创建实体表——开放权限——发布——接口请求）
 
 原因——strapi 不支持设置请求头（Content-type）为 `multipart/form-data` 后发起 `POST` 请求上传图片
-![](http://cdn.becase.top/20220520150924.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041415227.png)
 
 
 可以看看这个 Issues ：[POST multipart/form-data on generated API for file upload · Issue #1316 · strapi/strapi · GitHub](https://github.com/strapi/strapi/issues/1316#)
@@ -84,17 +84,17 @@ module.exports = ({ env }) => ({
 解决办法：直接使用 strapi 的插件 `upload模块`
 
 ### upload模块位置
-![](http://cdn.becase.top/20220520150327.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041415509.png)
 
-![](http://cdn.becase.top/20220520150340.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041415231.png)
 
 ### 配置请求头和body参数
-![](http://cdn.becase.top/20220520150805.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041415569.png)
 
-![](http://cdn.becase.top/20220520150811.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041416021.png)
 
 ### 成功获取到返回数据
-![](http://cdn.becase.top/20220520150843.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041416958.png)
 
 项目会在 `public/uploads` 目录下转存图片，其实你通过 `http://[ip]:[port]/upload`  访问的图片就是这里的图片，项目本身只是提供了一层映射关系
 

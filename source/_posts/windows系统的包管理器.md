@@ -33,10 +33,12 @@ Windows 系统上常见的包管理器主要有 **Chocolatey**、**winget** �
 - PowerShell v2+
 - .NET Framework 4+
 ### 安装
-右键开始菜单，选择用管理员权限打开 **Windows Powershell(管理员)(A)** ![微信图片_20220816145304.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6dd9108df5534617ad2afcf006303364~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+右键开始菜单，选择用管理员权限打开 **Windows Powershell(管理员)(A)** 
+
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041410936.png)
+
 ```bash
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-复制代码
 ```
 
 等待安装完成，之后可以使用 `choco -v` 查看安装结果,也可以使用 `choco -?` 查看帮助文档

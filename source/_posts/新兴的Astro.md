@@ -36,7 +36,7 @@ Islands 架构模型早在 2019 年就被提出来了，并在 2021 年被 Preac
 
 为了解决这个问题，Islands 架构将页面拆分为各自独立的组件，包含`静态组件`和`可交互组件`，如下图的例子所示：
 
-![](https://files.mdnice.com/user/6411/fd21bf56-97d4-4ab1-96c3-74b4f0d7a376.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041409031.png)
 
 可以清楚的看到，一个页面中只有部分的组件交互，那么对于这些可交互的组件，我们可以并行地执行 hydration 过程，因为组件之间是互相独立的。
 
@@ -44,7 +44,7 @@ Islands 架构模型早在 2019 年就被提出来了，并在 2021 年被 Preac
 
 可交互的组件就犹如整个页面中的孤岛(Island)，因此这种模式叫做 Islands 架构:
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3466189da6c94bcbab0cb23e84f828c4~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041408502.png)
 
 相比于传统 SSR 中的全量 hydration，Islands 模式可以实现局部(partial) hydration，从而优化 JS 的体积，减少网络传输的成本和 JS 运行时的开销。
 

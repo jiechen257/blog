@@ -23,7 +23,7 @@ http1.1 提出支持长链接和管道化。
 ### 线头阻塞
 HTTP 管线化要求服务器按照接收到的请求顺序进行响应，如果管线化中的单个请求执行得很慢，客户端的后续 ` 响应 ` 也会相应的延迟下去
 
-![](https://static001.infoq.cn/resource/image/48/00/483db522e673c62bee2b8261534d9600.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041412221.png)
 
 #### 解决办法
 客户端在主机上建立多个 TCP 连接
@@ -52,7 +52,7 @@ HTTP/2 通过在单个打开的 TCP 连接上多路复用 HTTP 请求，解决�
 
 这允许服务器以任何顺序响应请求，然后客户端可以在接收到响应时重新组合响应，从而在单个连接中加快整个交换的速度。
 
-![](https://static001.infoq.cn/resource/image/ff/5c/ff75d52d2f8ec7f656f65eaaa7f4ae5c.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312041412315.png)
 
 > 实际上，使用 HTTP/2 服务器甚至可以在请求之前就将资源提供给客户端！举个例子，如果服务器知道客户端很可能需要样式表来显示 HTML 页面，它可以将 CSS“推”到客户端，而无需等待相应的请求。虽然这从理论上讲是有益的，但此功能在实践中很少见，因为它需要服务器了解其服务的 HTML 结构，但这种情况很少发生。
 
