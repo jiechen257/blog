@@ -6,7 +6,7 @@ copyright: false
 > Not everything that can be counted counts, and not everything that counts can be counted
 
 ## 一句话
-00 后天秤男，base 杭州
+00 后天秤男，ENFJ 人格，base 杭州
 
 ## 唠叨几句
 首先是一名铲屎官，供养两只猫崽，一只美短，一直蓝白英短
