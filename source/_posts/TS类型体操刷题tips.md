@@ -141,7 +141,7 @@ type IsEmptyType<T> =
 ```
 
 ## any类型如何表示
-> # implement IsAny< T >
+> implement IsAny< T >
 
 ```ts
 // 想写出这道题必须了解：any 类型在和其他类型进行联合、交叉时等于 any 类型自身

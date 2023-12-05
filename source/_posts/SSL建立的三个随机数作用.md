@@ -17,7 +17,7 @@ categories: cs-basics
 
 ## 分析
 具体过程，图示如下（1-9）：
-![](http://cdn.becase.top/20220530170531.png)
+![](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312051854392.png)
 
 其中建立 SSL 的三个随机数分别是：
 - ClientHello 中存在的一个随机数，令为 A
