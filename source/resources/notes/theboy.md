@@ -1,5 +1,5 @@
 ---
-title: The Boy
+title: 小男孩
 date: 2023-06-15
 ---
 
