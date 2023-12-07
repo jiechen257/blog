@@ -21,7 +21,7 @@ date: 2022-03-17 21:53:4
 
 ::: timeline
 - 2023-08-25 [打工人的自我修养](resources/notes/打工人的自我修养)
-- 2023-06-15 [The Boy](resources/notes/theboy)
+- 2023-06-15 [小男孩](resources/notes/theboy)
 - 2022-12-15 [小阳人的自我修养](resources/notes/小阳人的自我修养)
   :::
 
