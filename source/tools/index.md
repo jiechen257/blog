@@ -4,16 +4,19 @@ copyright: false
 ---
 
 ## 网站
+
 - [图片制作](https://dummyimage.com/)
 - [IT book](https://www.manongbook.com/)
 - [壁纸](https://wallhaven.cc/)
 - [在线流程图制作](https://excalidraw.com/)
 
 ## IDE
+
 - VSCode
 - WebStorm + IDEA
 
 ## 环境
+
 - Navicat
 - Apifox
 - FinalShell
@@ -21,15 +24,18 @@ copyright: false
 - Charles
 
 ## 文档
+
 - Obsidian
 - Typora
 - Sublime text
 
 ## 输入
+
 - vim
 - 小鹤双拼
 
 ## 插件
+
 - Raycast
 - Traffic monitor + iStatus menu
 - Snipaste + paste
@@ -38,6 +44,7 @@ copyright: false
 - Picgo
 
 ## 软件
+
 - 火绒
 - Potplayer
 - IINA

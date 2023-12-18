@@ -6,23 +6,27 @@ copyright: false
 > Not everything that can be counted counts, and not everything that counts can be counted
 
 ## 一句话
+
 00 后天秤男，ENFJ 人格，base 杭州
 
 ## 唠叨几句
+
 首先是一名铲屎官，供养两只猫崽，一只美短，一直蓝白英短
 
-其次是 Front-end Engineer（~~天天被 cue "前端已死"😅~~），目标是 Independent Developer，业余时间主要逛 [推特](https://twitter.com/jiechen257) 和 bilibili
+其次是 `Front-end Engineer`（~~天天被 cue "前端已死"😅~~），目标是 `Independent Developer`，业余时间主要逛 [推特](https://twitter.com/jiechen257) 和 bilibili
 
-ACGM 通吃，moba、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只要有约，立马背上行囊
+ACGM 通吃，MOBA、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只要有约，立马背上行囊
 
 厌恶饭圈，杜绝女拳，自由至上，理解万岁！
 
 ## 一些收录
+
 [点这里](/resources)
 
 ## 一些标签
 
-（👇记得点开小箭头哦...）
+（👇 记得点开小箭头哦...）
+
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>技术向</summary>
   <p style="font-size:12px; line-height:13px"> ⌨️ vimer + 双拼，效率至上</p>
