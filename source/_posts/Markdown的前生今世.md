@@ -31,7 +31,7 @@ John Gruber 在  [Daring Fireball: Dive Into Markdown](https://daringfireball.n
 Jeff 在 Markdown 发布的同一年开始自己的博客  [Coding Horror](https://blog.codinghorror.com/)。再该博客中，他表示自己是 Markdown 忠实铁粉，记录了他如何在早期的 Stack Overflow 使用 Markdown 的语法用于书写问题和答案（Discourse 的也是集成 Markdown
 ![image.png](https://cdn.jsdelivr.net/gh/jiechen257/gallery@main/img/202312191530985.png)
 
-### 发展历史
+## 发展历史
 
 ### 2004 - Markdown 起源
 
@@ -162,40 +162,6 @@ webviewPanel 支持 webview.postMessage(message); 的方式传递消息，支持
 
 这样，就完成了 Markdown 内容的更新。
 
-### typora
-
-大家都知道在 md 界中一个叫 typora 的软件，以其实时预览的功能广各位 coder 欢迎，typora 如何使用不再过多介绍
-
-核心技术点：Electron + node 技术栈
-
-> Electron 是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。 嵌入 Chromium 和 Node.js 到 二进制的 Electron 允许您保持一个 JavaScript 代码代码库并创建 在 Windows 上运行的跨平台应用 macOS 和 Linux——不需要本地开发 经验。
-> 参考：[简介 | Electron](https://www.electronjs.org/zh/docs/latest/)
-
-如上所说 typora 的显示，其实本质上还是以 html 网页的形式呈现，但是因为 electron 的技术实现，使得在 app 底座上能够显示 html 的内容
-
-### vscode 的 md 功能
-
-本质上与 typora 一样，因为 vscode 本身也是用 `typescript + electron` 实现的桌面端 app
-
-#### 预览
-
-通过 vscode.window.createWebviewPanel 创建一个 webview，指定在侧边打开，之后通过该 panel 对象的 webview.html 属性来设置 html。
-
-html 是通过编辑器的 Markdown 内容生成的， 编辑器内容通过 editor.document.getText() 拿到，然后调用第三方的 Markdown 转 html 的库来生成。
-
-这样就完成了 Markdown 的预览。
-
-#### 编辑+更新
-
-预览之后需要更新，监听 vscode.workspace.onDidSaveTextDocument 和 vscode.workspace.onDidChangeTextDocument 的事件，在文档更新和保存的时候，拿到编辑器的内容，重新生成 html，然后设置到 webview。
-
-webviewPanel 支持 webview.postMessage(message); 的方式传递消息，支持 updateHTML 等一系列 command，可以通过传递消息来触发。
-
-> 但是怎么知道哪个文档更新哪个 webview 呢？
-
-可以维护一个 map，在创建 webviewPanel 的时候记录到 map 中，key 为文件路径，这样更新的时候就能查找到对应的 webview 进行更新。
-
-这样，就完成了 Markdown 内容的更新。
 
 ### 实时预览
 
