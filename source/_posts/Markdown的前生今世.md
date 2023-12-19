@@ -214,6 +214,7 @@ webviewPanel 支持 webview.postMessage(message); 的方式传递消息，支持
 ## 参考
 
 - [Markdown - Wikipedia](https://en.wikipedia.org/wiki/Markdown)
+- [Markdown 发展史](https://lin.am/blog/2018-11-15-markdown-history/)
 - [The Markdown Movement](http://aaronbeveridge.com/markdown/index.html)
 - [John Gruber - Wikipedia](https://en.wikipedia.org/wiki/John_Gruber)
 - [Jeff Atwood - Wikipedia](https://en.wikipedia.org/wiki/Jeff_Atwood)
