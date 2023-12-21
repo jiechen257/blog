@@ -33,7 +33,7 @@ appearance:
     # Base font which applied to body
     base: "'Josefin Sans', 'PingFang SC'"
     # Sidebar author font, fallback to `base`
-    logo: 'https://s.gravatar.com/avatar/30a417136bddcc21623646bcf2f8e6e5?s=80'
+    logo: 'https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/202312211541815.jpeg'
     # Sidebar menu font, fallback to `base`
     menu: 'Baloo Bhaijaan'
     # Font for:
@@ -103,7 +103,7 @@ profile:
   email: 1487503910@qq.com
 
   # You can set Avatar URL directly
-  avatar: https://raw.githubusercontent.com/jiechen257/gallery/main/img/avatar.png
+  avatar: https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/202312211541815.jpeg
 
   bio: The world is quiet here.
 
