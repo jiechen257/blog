@@ -8,30 +8,22 @@ copyright: false
 - [图片制作](https://dummyimage.com/)
 - [IT book](https://www.manongbook.com/)
 - [壁纸](https://wallhaven.cc/)
-- [在线流程图制作](https://excalidraw.com/)
-
-## IDE
-
-- VSCode
-- WebStorm + IDEA
 
 ## 环境
 
-- Navicat
-- Apifox
+- Navicat + Apifox
 - FinalShell
 - Warp + iTerm2 + ranger
 - Charles
 
 ## 文档
 
-- Obsidian
-- Typora
-- Sublime text
+- Obsidian + PicGO + Github
+- Typora + Sublime text
 
 ## 输入
 
-- vim
+- Vim
 - 小鹤双拼
 
 ## 插件
@@ -41,10 +33,8 @@ copyright: false
 - Snipaste + paste
 - clash + clashX
 - flux
-- Picgo
 
 ## 软件
 
-- 火绒
 - Potplayer
 - IINA

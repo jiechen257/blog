@@ -111,7 +111,7 @@ profile:
 menu:
   📝 Articles: /
   🔖 Resources: /resources
-  ⏳ Tools: /tools
+  # ⏳ Tools: /tools
   🔗 Now: /now
   
   # ⌨️ LeetCode: /leetcode
