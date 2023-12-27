@@ -7,7 +7,7 @@ copyright: false
 
 ## 一句话
 
-00 后天秤男，ENFJ 人格，base 杭州
+00 后天秤男，ENFJ 人格，来自长沙
 
 ## 唠叨几句
 
