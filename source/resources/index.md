@@ -10,7 +10,6 @@ date: 2022-03-17 21:53:4
 一些思考和理解
 
 ::: timeline
-
 - 2023-03-17 [学校-学生-学习](resources/essays/学校-学生-学习)
 - 2021-10-12 [消失的附近](resources/essays/消失的附近)
 - 2019-12-20 [观望即可](resources/essays/观望即可)
@@ -21,7 +20,7 @@ date: 2022-03-17 21:53:4
 类似备忘录
 
 ::: timeline
-
+- 2024-01-06 [矛盾的自己](resources/notes/矛盾的自己)
 - 2023-08-25 [打工人的自我修养](resources/notes/打工人的自我修养)
 - 2023-06-15 [小男孩](resources/notes/theboy)
 - 2022-12-15 [小阳人的自我修养](resources/notes/小阳人的自我修养)
