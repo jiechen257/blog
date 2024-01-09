@@ -10,7 +10,8 @@ copyright: false
 - 在看《繁花》
 - 元旦在家睡大觉
 - 给家里老爹送生日礼物
-
+- chasing 小太阳
+- 对技术丧失了信心
 
 <div style="display: flex;justify-content: end;">
   更新于 2024.1.4 日
