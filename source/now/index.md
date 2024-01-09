@@ -7,14 +7,13 @@ copyright: false
 
 还在杭州搬砖 🧱
 
-- 在看《繁花》
-- 元旦在家睡大觉
-- 给家里老爹送生日礼物
-- chasing 小太阳
-- 对技术丧失了信心
+- 家里小猫肠胃炎，治疗中 :(
+- 对技术丧失信心
+- 心里有了小太阳 :)
+
 
 <div style="display: flex;justify-content: end;">
-  更新于 2024.1.4 日
+  更新于 2024.1.9 日
 </div>
 
 
@@ -23,5 +22,6 @@ copyright: false
 
 ::: timeline
 过去式
+- [2024-01-04](now/past/2024-01-04)
 - [2023-12-17](now/past/2023-12-17)
   :::
