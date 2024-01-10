@@ -57,14 +57,7 @@ Queue 接口的一些常用方法是：
 - **addLast()** - 在双端队列的末尾添加指定的元素。如果双端队列已满，则引发异常。
 - **offerFirst()** - 在双端队列的开头添加指定的元素。如果双端队列已满，则返回 false。
 - **offerLast()** - 在双端队列的末尾添加指定的元素。如果双端队列已满，则返回 false。
-- **getFirst()** - 返回双端队列的第一个元素。如果双端队列为空，则引发异常。
-- **getLast()** - 返回双端队列的最后一个元素。如果双端队列为空，则引发异常。
-- **peekFirst()** - 返回双端队列的第一个元素。如果双端队列为空，则返回 null。
-- **peekLast()** - 返回双端队列的最后一个元素。如果双端队列为空，则返回 null。
-- **removeFirst()** - 返回并删除双端队列的第一个元素。如果双端队列为空，则引发异常。
-- **removeLast()** - 返回并删除双端队列的最后一个元素。如果双端队列为空，则引发异常。
-- **pollFirst()** - 返回并删除双端队列的第一个元素。如果双端队列为空，则返回 null。
-- **pollLast()** - 返回并删除双端队列的最后一个元素。如果双端队列为空，则返回 null。
+等等
 
 ### LinkedList 类
 Java 中的链表具体实现类，对比 ArrayList 的**增加和删除**的效率更高，而**查找和修改**的的效率较低
@@ -93,8 +86,3 @@ Java 中的链表具体实现类，对比 ArrayList 的**增加和删除**的效
 
 > Java 集合框架中没有 Stack 接口，仅有 java 早期遗留的一个 Stack 类
 > - 因为集成子 Vector，所以 Stack 类是同步的，效率不高，推荐用 ArrayDeque 代替
-
-### 参考
- [# java 栈容器_Java 并发技术栈](https://blog.csdn.net/weixin_31630721/article/details/114672989)
-
- [Java Queue 接口](https://www.cainiaojc.com/java/java-queue.html)
