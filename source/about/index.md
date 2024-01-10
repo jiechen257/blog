@@ -7,7 +7,8 @@ copyright: false
 
 ## 一句话
 
-00 后天蝎男，ENFJ 人格，来自长沙
+00 后天蝎男(~~我不是，我没有，别乱说~~)，ENFJ 人格，来自长沙
+
 
 ## 唠叨几句
 
@@ -15,7 +16,7 @@ copyright: false
 
 其次是 `Front-End Engineer`（~~天天被 cue "前端已死"😅~~），目标是 `Independent Developer`，业余时间主要逛 [推特](https://twitter.com/jiechen257) 和 bilibili
 
-ACGM 通吃，MOBA、桌游通玩 🤖，爱好音乐，目前在玩 🎸，只要有约，立马背上行囊
+ACGM 通吃，MOBA、桌游通玩 🤖，爱好音乐，有玩 🎸，只要有约，立马背上行囊
 
 厌恶饭圈，杜绝女拳，**自由至上，理解万岁！**
 
