@@ -5,10 +5,11 @@ copyright: false
 
 > Not everything that can be counted counts, and not everything that counts can be counted
 
+[English | 英文版本](./about/about_en)
+
 ## 一句话
 
 00 后 ENFJ 人格，天蝎男(~~不造谣，不信谣，不传谣~~)，来自长沙
-
 
 ## 唠叨几句
 
