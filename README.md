@@ -1,2 +1,2 @@
 ## Tech
-Hexo + Github Pages
+Hexo + Github Pages + Picgo
