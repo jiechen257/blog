@@ -33,6 +33,7 @@ copyright: false
 - Snipaste + paste
 - clash + clashX
 - flux
+- Loop(MacOS)
 
 ## 软件
 
