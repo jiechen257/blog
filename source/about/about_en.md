@@ -30,22 +30,23 @@ Detest fan circles, avoid female fighting, **freedom above all, long live unders
 (👇 Remember to click on the little arrow on the left...)
 
 <details style="padding-left:12px;padding-bottom:10px">
-  <summary>Technical</summary>
-  <p style="font-size:12px; line-height:13px"> ⌨️ Vimer + Double Pinyin, efficiency first</p>
-  <p style="font-size:12px;line-height:10px"> 👻 Always try different technology stacks</p>
-  <p style="font-size:12px;line-height:10px"> 👨‍💻 Lifelong learner</p>
-</details>
-<details style="padding-left:12px;padding-bottom:10px">
   <summary>ACGM Player</summary>
+  <p style="font-size:12px; line-height:13px"> 🎶 Folk & Romantic Rock</p>
+  <p style="font-size:12px; line-height:13px"> 📖 Jiangnan (Yang Zhipa), Han Han, and Yilin</p>
   <p style="font-size:12px; line-height:13px"> 📺 Miyazaki Hayao, Shinkai Makoto, Ruoshen Digital</p>
   <p style="font-size:12px; line-height:13px"> 🎮 Top-king, shy sensi</p>
-  <p style="font-size:12px; line-height:13px"> 🎥 Douban top 250, Muyu Shuixin</p>
-  <p style="font-size:12px; line-height:13px"> 📖 Jiangnan (Yang Zhipa), Yilin, Liu Cixin</p>
+  <p style="font-size:12px; line-height:13px"> 🎥 Douban top 250, American TV series (Friends)</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>Various Hobbies</summary>
   <p style="font-size:12px; line-height:13px"> 🪀 Escape room, bungee jumping, Texas hold'em, Werewolf Kill, script killing~</p>
   <p style="font-size:12px;line-height:10px"> 😋 Dinner dates, travel (hopefully people are okay)</p>
+</details>
+<details style="padding-left:12px;padding-bottom:10px">
+  <summary>Technical</summary>
+  <p style="font-size:12px; line-height:13px"> ⌨️ Vimer + Double Pinyin, efficiency first</p>
+  <p style="font-size:12px;line-height:10px"> 👻 Always try different technology stacks</p>
+  <p style="font-size:12px;line-height:10px"> 👨‍💻 Lifelong learner</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>Aspiring to Age Gracefully</summary>
