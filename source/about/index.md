@@ -30,22 +30,23 @@ ACGM 通吃，MOBA、桌游通玩 🤖，爱好音乐，有玩 🎸，只要有�
 （👇 记得点开左边的小箭头哦...）
 
 <details style="padding-left:12px;padding-bottom:10px">
-  <summary>技术向</summary>
-  <p style="font-size:12px; line-height:13px"> ⌨️ vimer + 双拼，效率至上</p>
-  <p style="font-size:12px;line-height:10px"> 👻 面对技术栈的选择，一向是都试试</p>
-  <p style="font-size:12px;line-height:10px"> 👨‍💻 终身学习</p>
-</details>
-<details style="padding-left:12px;padding-bottom:10px">
   <summary>ACGM玩家</summary>
+  <p style="font-size:12px; line-height:13px"> 🎶 民谣 & 浪漫摇滚</p>
+  <p style="font-size:12px; line-height:13px"> 📖 江南(杨志爬)、韩寒、还有意林</p>
   <p style="font-size:12px; line-height:13px"> 📺 宫崎骏、新海诚、若森数字</p>
   <p style="font-size:12px; line-height:13px"> 🎮 top-king，shy sensi</p>
-  <p style="font-size:12px; line-height:13px"> 🎥 豆瓣 top 250、木鱼水心</p>
-  <p style="font-size:12px; line-height:13px"> 📖 江南（杨志爬）、意林、刘慈欣</p>
+  <p style="font-size:12px; line-height:13px"> 🎥 豆瓣 top 250、美剧(老友记)</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>各种玩</summary>
   <p style="font-size:12px; line-height:13px"> 🪀 密室、蹦极、德州、狼人杀、剧本杀~</p>
   <p style="font-size:12px;line-height:10px"> 😋 约饭、旅游（希望人没事） </p>
+</details>
+<details style="padding-left:12px;padding-bottom:10px">
+  <summary>技术向</summary>
+  <p style="font-size:12px; line-height:13px"> ⌨️ vimer + 双拼，效率至上</p>
+  <p style="font-size:12px;line-height:10px"> 👻 面对技术栈的选择，一向是都试试</p>
+  <p style="font-size:12px;line-height:10px"> 👨‍💻 终身学习</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>欲养老而不为</summary>
