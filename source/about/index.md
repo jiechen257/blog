@@ -3,7 +3,7 @@ title: 关于我
 copyright: false
 ---
 
-> Not everything that can be counted counts, and not everything that counts can be counted
+> 生命好在无意义，才容得下各自赋予意义。假如生命是有意义的，这个意义却不符合我的志趣，那才尴尬狼狈
 
 [English | 英文版本](./about/about_en)
 

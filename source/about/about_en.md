@@ -3,7 +3,7 @@ title: About Me
 copyright: false
 ---
 
-> Not everything that can be counted counts, and not everything that counts can be counted
+> Life is fortunate in its meaninglessness, for it allows room for us to each assign our own meanings. If life were to have a predefined meaning that didn't align with our interests, that would indeed be awkward and uncomfortable.
 
 [Chinese | 中文版本](./about)
 
