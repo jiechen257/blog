@@ -60,7 +60,9 @@ copyright: false
 
 直接 buff 叠满了，回到家里随便吃点就倒头睡觉了，实在不想再回想
 
-唯一不错的是路上拍到了冬天的痕迹
+唯一好的是路上拍到了冬天的痕迹
+
+![](https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/202402281648928.png)
 
 ### 麻将
 
