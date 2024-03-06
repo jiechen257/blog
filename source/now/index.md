@@ -4,9 +4,12 @@ copyright: false
 ---
 
 > 你会继承某一个人的时间，在这条无边无垠的长河里继续流淌下去
-
+> <br/>
+> ![](https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/202403060948992.png)
 - say good-bye
 - 慢慢适应，做出改变
+
+...
 
 - 还在收拾房子，接着拆快递
 - 在家锻炼身体，拉力绳卡门事件
@@ -19,6 +22,7 @@ copyright: false
 
 ::: timeline
 过去式
+
 - [2024-02-26](now/past/2024-02-26)
 - [2024-01-25](now/past/2024-01-25)
 - [2024-01-09](now/past/2024-01-09)
