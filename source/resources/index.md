@@ -33,7 +33,7 @@ date: 2022-03-17 21:53:4
 收集自己在各种论坛上看到有价值的长文或者帖子
 
 ::: timeline
-
+- 2024-03-10 [独行的栈道](resources/extract/独行的栈道)
 - 2024-01-10 [他的 2023](resources/extract/他的2023-我的理想)
 - 2023-12-11 [计算 · 序](resources/extract/计算-序)
 - 2023-09-05 [为什么卸载抖音](resources/extract/为什么卸载抖音)
