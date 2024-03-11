@@ -62,5 +62,5 @@ Detest fan circles, avoid female fighting, **freedom above all, long live unders
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>Small Goals</summary>
   <p style="font-size:12px; line-height:13px"> 🌅 A trip to Tibet, a trip to Northern Europe</p>
-  <p style="font-size:12px; line-height:13px"> 🎸 Fingerstyle player</p>
+  <p style="font-size:12px; line-height:13px"> 🎹 Electronic piano</p>
 </details>

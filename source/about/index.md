@@ -62,5 +62,5 @@ ACGM 通吃，MOBA、桌游通玩 🤖，爱好音乐，有玩 🎸，只要有�
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>小目标</summary>
   <p style="font-size:12px; line-height:13px"> 🌅 一趟西藏，一趟北欧 </p>
-  <p style="font-size:12px; line-height:13px"> 🎸 指弹玩家  </p>
+  <p style="font-size:12px; line-height:13px"> 🎹 电子钢琴  </p>
 </details>
