@@ -11,7 +11,7 @@ copyright: false
 
 Post-2000s ENFJ personality, Scorpio male (~~Don't spread rumors, don't believe rumors, don't pass on rumors~~), hailing from Changsha.
 
-## A Few Words
+## Say a few more words
 
 First and foremost, a cat's servant, raising two kittens, one American Shorthair, and one Blue Bicolor British Shorthair.
 
