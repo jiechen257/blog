@@ -21,7 +21,7 @@ date: 2022-03-17 21:53:4
 类似备忘录
 
 ::: timeline
-
+- 2024-03-17 [所谓命运](resources/notes/所谓命运)
 - 2024-01-06 [矛盾的自己](resources/notes/矛盾的自己)
 - 2023-08-25 [打工人的自我修养](resources/notes/打工人的自我修养)
 - 2023-06-15 [小男孩](resources/notes/theboy)
