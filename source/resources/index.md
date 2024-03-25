@@ -12,6 +12,7 @@ date: 2022-03-17 21:53:4
 ::: timeline
 - 2024-03-10 [认识你自己](resources/essays/认识你自己)
 - 2023-03-17 [学校-学生-学习](resources/essays/学校-学生-学习)
+- 2022-06-02 [卖弱现象](resources/essays/卖弱现象)
 - 2021-10-12 [消失的附近](resources/essays/消失的附近)
   :::
 
@@ -41,6 +42,7 @@ date: 2022-03-17 21:53:4
 - 2023-05-27 [如何听到时间的声音](resources/extract/如何听到时间的声音)
 - 2023-02-22 [为什么是绘梨衣](resources/extract/为什么是绘梨衣)
 - 2023-02-13 [平台的垃圾化](resources/extract/平台的垃圾化)
+- 2022-06-12 [刻奇国里说刻奇](resources/extract/刻奇国里说刻奇)
 - 2022-03-27 [大唐三百年](resources/extract/大唐三百年)
 - 2021-07-07 [语文高考作文可以写负能量吗](resources/extract/语文高考作文可以写负能量作文吗)
 - 2021-05-05 [给青年添个堵](resources/extract/给青年添个堵)
