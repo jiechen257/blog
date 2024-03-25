@@ -11,10 +11,11 @@ copyright: false
 
 ## 环境
 
+- Arc Browser
 - Navicat + Apifox
 - FinalShell
 - Warp + iTerm2 + ranger
-- Charles
+- Charles + Reqable
 
 ## 文档
 
