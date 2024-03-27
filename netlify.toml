@@ -1,9 +1,9 @@
 [build]
-publish = "dist"
-command = "npm run build"
+publish = ".deploy_git"
+command = "hexo deploy"
 
 [build.environment]
-NODE_VERSION = "16"
+NODE_VERSION = "18"
 
 [[redirects]]
 from = "/.well-known/*"
