@@ -3,7 +3,7 @@ publish = ".deploy_git"
 command = "hexo deploy"
 
 [build.environment]
-NODE_VERSION = "18"
+NODE_VERSION = "16"
 
 [[redirects]]
 from = "/.well-known/*"
