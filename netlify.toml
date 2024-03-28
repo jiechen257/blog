@@ -1,6 +1,6 @@
 [build]
-publish = ".deploy_git"
-command = "hexo deploy"
+publish = "public"
+command = "hexo generate"
 
 [build.environment]
 NODE_VERSION = "16"
