@@ -324,7 +324,7 @@ copyright:
 # for other comment system, see plugins
 comments:
   disqus:
-    shortname: becase-top
+    shortname: blog-becase-top
     # Or you can set disqus script URL directly
     # script: //disqus_shortname.disqus.com/embed.js
     # Autoload, default to `true`, set to `false` to display a button
