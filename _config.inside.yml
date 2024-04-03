@@ -33,9 +33,9 @@ appearance:
     # Base font which applied to body
     base: "'Josefin Sans', 'PingFang SC'"
     # Sidebar author font, fallback to `base`
-    logo: 'https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/202312211541815.jpeg'
+    logo: "https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/202312211541815.jpeg"
     # Sidebar menu font, fallback to `base`
-    menu: 'Baloo Bhaijaan'
+    menu: "Baloo Bhaijaan"
     # Font for:
     # - percentage on the fab button
     # - month text on archives page
@@ -83,18 +83,31 @@ appearance:
   # ]
 
   darkmode:
-    accent_color: '#539bf5'
-    foreground_color: '#adbac7'
-    border_color: '#373e47'
-    background: '#22272e'
-    sidebar_background: '#22272e'
-    card_background: '#2d333b'
-    highlight: [
-      '#2d333b', '#444c56', '#3e4451', '#545862',
-      '#565c64', '#abb2bf', '#b6bdca', '#c8ccd4',
-      '#e06c75', '#d19a66', '#e5c07b', '#98c379',
-      '#56b6c2', '#61afef', '#c678dd', '#be5046'
-    ]
+    accent_color: "#539bf5"
+    foreground_color: "#adbac7"
+    border_color: "#373e47"
+    background: "#22272e"
+    sidebar_background: "#22272e"
+    card_background: "#2d333b"
+    highlight:
+      [
+        "#2d333b",
+        "#444c56",
+        "#3e4451",
+        "#545862",
+        "#565c64",
+        "#abb2bf",
+        "#b6bdca",
+        "#c8ccd4",
+        "#e06c75",
+        "#d19a66",
+        "#e5c07b",
+        "#98c379",
+        "#56b6c2",
+        "#61afef",
+        "#c678dd",
+        "#be5046",
+      ]
 
 # Sidebar profile
 profile:
@@ -113,7 +126,7 @@ menu:
   🔖 Articles: /resources
   # ⏳ Tools: /tools
   # 🔗 Now: /now
-  
+
   # ⌨️ LeetCode: /leetcode
   🐈 About: /about
   # 🔗 Links: /links
@@ -160,22 +173,16 @@ footer:
   # Custom text.
   # custom: Hosted by <a target="_blank" rel="external nofollow"
   #   href="https://github.com/jiechen257"><b>jiechen257</b></a>
-  custom: 
+  custom:
     # <span>rebuild in 2023 with using the  <a href="https://hexo.io/index.html">Hexo</a> and<a href="https://github.com/ikeq/hexo-theme-inside">inside</a></span>
     <div>Rebuild in 2023  &nbsp;&nbsp;|&nbsp;&nbsp;  Start in 2021</div>
     <div>
-      <span>
-        Powered by <a href="https://hexo.io/index.html">Hexo</a> &nbsp; & &nbsp; Theme • <a href="https://github.com/ikeq/hexo-theme-inside">inside</a>
-      </span>
+    <span>
+    Powered by <a href="https://hexo.io/index.html">Hexo</a> &nbsp; & &nbsp; Theme • <a href="https://github.com/ikeq/hexo-theme-inside">inside</a>
+    </span>
     </div>
     <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"></span> visitors. </span><span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span> Views</span>
-    <div class="statcounter">
-      <a title="site stats" href="https://statcounter.com/" target="_blank">
-        <img class="statcounter" src="https://c.statcounter.com/12984725/0/9bd9e8ff/0/" alt="site stats" referrerPolicy="no-referrer-when-downgrade">
-      </a>
-    </div>
-
-
+    
 
 # ---------------------------------------------------------------
 # Content
@@ -191,7 +198,6 @@ page:
 
   # Display copyright notice, default to `false`
   # copyright: true
-
 
 # Post
 post:
@@ -265,7 +271,6 @@ search:
   #     # Used to retrieve content from per hit
   #     content: _snippetResult.content.value
 
-
 # ---------------------------------------------------------------
 # Content addons
 # ---------------------------------------------------------------
@@ -333,7 +338,6 @@ comments:
     # script: //disqus_shortname.disqus.com/embed.js
     # Autoload, default to `true`, set to `false` to display a button
     autoload: false
-
 
 # ---------------------------------------------------------------
 # Misc
@@ -444,22 +448,15 @@ plugins:
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
-    # HTML code
-    # template: <script>...</script>
-    # Or a path relative to `hexo.base_dir`
-    # template: snippets/snippet-1.html
+  # HTML code
+  # template: <script>...</script>
+  # Or a path relative to `hexo.base_dir`
+  # template: snippets/snippet-1.html
 
   - position: sidebar
     template: |
       <script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>
-      <script type="text/javascript">
-        var sc_project=12984725; 
-        var sc_invisible=0; 
-        var sc_security="9bd9e8ff"; 
-        var scJsHost = "https://";
-        document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-        "statcounter.com/counter/counter.js'></"+"script>");
-      </script>
+      
 
   # jQery
   - //cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js
