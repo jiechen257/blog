@@ -168,8 +168,12 @@ footer:
         Powered by <a href="https://hexo.io/index.html">Hexo</a> &nbsp; & &nbsp; Theme • <a href="https://github.com/ikeq/hexo-theme-inside">inside</a>
       </span>
     </div>
-    <span id="busuanzi_container_site_uv" style='display:none'>Total <span id="busuanzi_value_site_uv"></span> visitors. </span><span id="busuanzi_container_site_pv" style='display:none'><span id="busuanzi_value_site_pv"></span> Views</span>
-
+    <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"></span> visitors. </span><span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span> Views</span>
+    <div class="statcounter">
+      <a title="site stats" href="https://statcounter.com/" target="_blank">
+        <img class="statcounter" src="https://c.statcounter.com/12984725/0/9bd9e8ff/0/" alt="site stats" referrerPolicy="no-referrer-when-downgrade">
+      </a>
+    </div>
 
 
 
@@ -447,7 +451,15 @@ plugins:
 
   - position: sidebar
     template: |
-      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>
+      <script type="text/javascript">
+        var sc_project=12984725; 
+        var sc_invisible=0; 
+        var sc_security="9bd9e8ff"; 
+        var scJsHost = "https://";
+        document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+        "statcounter.com/counter/counter.js'></"+"script>");
+      </script>
 
   # jQery
   - //cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js
