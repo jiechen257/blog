@@ -181,7 +181,10 @@ footer:
     Powered by <a href="https://hexo.io/index.html">Hexo</a> &nbsp; & &nbsp; Theme • <a href="https://github.com/ikeq/hexo-theme-inside">inside</a>
     </span>
     </div>
-    <span id="busuanzi_container_site_uv">Total <span id="busuanzi_value_site_uv"></span> visitors. </span><span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span> Views</span>
+    <span>
+      Total View <span id="busuanzi_value_site_pv">Loading</span>,&nbsp;
+      Site Visitors <span id="busuanzi_value_site_uv">Loading</span>
+    </span>
     
 
 # ---------------------------------------------------------------
@@ -455,7 +458,7 @@ plugins:
 
   - position: sidebar
     template: |
-      <script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js"></script>
+      <script defer src="https://cn.vercount.one/js"></script>
       
 
   # jQery
