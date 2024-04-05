@@ -182,10 +182,9 @@ footer:
     </span>
     </div>
     <span>
-      Total View <span id="busuanzi_value_site_pv">Loading</span>,&nbsp;
-      Site Visitors <span id="busuanzi_value_site_uv">Loading</span>
+    Total View <span id="busuanzi_value_site_pv">Loading</span>,&nbsp;
+    Site Visitors <span id="busuanzi_value_site_uv">Loading</span>
     </span>
-    
 
 # ---------------------------------------------------------------
 # Content
@@ -448,7 +447,6 @@ plugins:
   # In general, script or style depends on their ext name.
   # - xxx.css
   # - xxx.jss
-  
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -459,9 +457,8 @@ plugins:
 
   - position: sidebar
     template: |
-      <script defer src="https://cn.vercount.one/js"></script>
-      <script defer>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("busuanzi_value_site_uv"),t=document.getElementById("busuanzi_value_site_pv"),n=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){n.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+1024;break}}),i=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){i.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+2500;break}}),r={childList:!0};n.observe(e,r),i.observe(t,r)});</script>
-      
+      <script src="https://cn.vercount.one/js"></script>
+      <script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("busuanzi_value_site_uv"),t=document.getElementById("busuanzi_value_site_pv"),n=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){n.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+1024;break}}),i=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){i.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+2500;break}}),r={childList:!0};n.observe(e,r),i.observe(t,r)});</script>
 
   # jQery
   - //cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js
