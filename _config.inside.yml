@@ -178,10 +178,6 @@ footer:
     <div>Rebuild in 2023  &nbsp;&nbsp;|&nbsp;&nbsp;  Start in 2021</div>
     <div>
     <span>
-    Powered by <a href="https://hexo.io/index.html">Hexo</a> &nbsp; & &nbsp; Theme • <a href="https://github.com/ikeq/hexo-theme-inside">inside</a>
-    </span>
-    </div>
-    <span>
     Total View <span id="busuanzi_value_site_pv">Loading</span>,&nbsp;
     Site Visitors <span id="busuanzi_value_site_uv">Loading</span>
     </span>
@@ -457,8 +453,7 @@ plugins:
 
   - position: sidebar
     template: |
-      <script src="https://cn.vercount.one/js"></script>
-      <script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("busuanzi_value_site_uv"),t=document.getElementById("busuanzi_value_site_pv"),n=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){n.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+1024;break}}),i=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){i.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+2500;break}}),r={childList:!0};n.observe(e,r),i.observe(t,r)});</script>
+      <script defer>var t;!(function(){var n,e=[],o=!1;function c(){(o=!0),document.removeEventListener("DOMContentLoaded",c),e.forEach((t)=>t.call(document)),(e=[])}n=function(t){o||"interactive"===document.readyState||"complete"===document.readyState?t.call(document):(e.push(t),document.addEventListener("DOMContentLoaded",c))};({fetch:async function(e){const o=`${document.currentScript.src.includes("cn.vercount.one")?"https://cn.vercount.one":"https://vercount.one"}/log?jsonpCallback=VisitorCountCallback`;try{const t=await fetch(o,{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({url:window.location.href,}),}),c=await t.json();n(()=>e(c))}catch(n){console.error("Error fetching visitor count:",n),t.hideAll()}},}).fetch((t={counterIds:["site_pv","site_uv"],updateText:function(t){this.counterIds.forEach((n,index)=>{const e=document.getElementById("busuanzi_value_"+n);const number=index===0?t[n]+3500:t[n]+1024;e&&(e.textContent=number||"0")})},hideAll:function(){this.counterIds.forEach((t)=>{const n=document.getElementById("busuanzi_container_"+t);n&&(n.style.display="none")})},showAll:function(){this.counterIds.forEach((t)=>{const n=document.getElementById("busuanzi_container_"+t);n&&(n.style.display="inline")})},}).updateText.bind(t))})();</script>
 
   # jQery
   - //cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js
