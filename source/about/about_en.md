@@ -3,7 +3,6 @@ title: About Me
 copyright: false
 ---
 
-
 > Life is fortunate in its meaninglessness, for it allows room for us to each assign our own meanings.
 >
 > If life were to have a predefined meaning that didn't align with our interests, that would indeed be awkward and uncomfortable.
@@ -16,7 +15,10 @@ Post-2000s ENFJ personality, hailing from Changsha.
 
 ## A few more words
 
+<div style="display: flex">
 Firstly, a dedicated pet owner, catering to a blue and white British Shorthair.
+<img src="/image/cat.jpg" style="width: 20px; height: 20px; margin: 2px 0 0 5px;border-radius: 4px;">
+</div>
 
 Next up, a `Front-End Developer` (~~constantly reminded that "frontend is dead" 😅~~), aiming to be an `Independent Developer`. In my spare time, you can find me browsing [Twitter](https://twitter.com/jiechen257) and [bilibili](https://bilibili.com).
 
