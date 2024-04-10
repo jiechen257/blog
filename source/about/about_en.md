@@ -15,7 +15,7 @@ Post-2000s ENFJ personality, hailing from Changsha.
 
 ## A few more words
 
-<div style="display: flex">
+<div>
 Firstly, a dedicated pet owner, catering to a blue and white British Shorthair.
 <img src="/image/cat.jpg" style="width: 20px; height: 20px; margin: 2px 0 0 5px;border-radius: 4px;">
 </div>

@@ -15,7 +15,7 @@ copyright: false
 
 ## 多讲几句
 
-<div style="display: flex">
+<div>
 首先是名铲屎官，供养一只蓝白英短
 <img src="/image/cat.jpg" style="width: 20px; height: 20px; margin: 2px 0 0 5px;border-radius: 4px;">
 </div>
