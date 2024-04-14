@@ -11,6 +11,7 @@ date: 2022-03-17 21:53:4
 
 ::: timeline
 
+- 2024-04-14 [试着刻画爱情](resources/essays/试着刻画爱情)
 - 2024-03-10 [认识你自己](resources/essays/认识你自己)
 - 2023-03-17 [学校-学生-学习](resources/essays/学校-学生-学习)
 - 2022-06-02 [卖弱现象](resources/essays/卖弱现象)
