@@ -122,7 +122,7 @@ profile:
 
 # Sidebar navigation links
 menu:
-  📝 Tech: /
+  📝 Tech: /tech
   🔖 Articles: /resources
   # ⏳ Tools: /tools
   # 🔗 Now: /now
