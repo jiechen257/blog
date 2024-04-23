@@ -6,7 +6,7 @@ date: 2023-2-22
 
 > Not everything that can be counted counts, and not everything that counts can be counted
 
-## Now
+## ⏹️ Now
 
 ::: timeline
 
@@ -15,7 +15,7 @@ date: 2023-2-22
 
   :::
 
-## Past
+## ⏪️ Past
 
 23 年及以前
 
@@ -56,7 +56,7 @@ date: 2023-2-22
 - 2023-08-19 [ClashX 的增强模式](/post/17799)
 - 2023-01-17 [windows 系统的包管理器](/post/47785)
 - 2022-02-14 [Git 从 0 到 1](/post/2509)
-- 2021-04-23 [strapi 实践](/post/1)
+- 2021-04-23 [strapi 实践](/post/20210423)
 
   :::
 
