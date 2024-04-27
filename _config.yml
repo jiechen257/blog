@@ -108,7 +108,7 @@ theme: inside
 
 encrypt: # hexo-blog-encrypt
   abstract: 有东西被加密了, 请输入密码查看.
-  message: 您好, 这里需要密码.
+  message: 有东西被加密了, 请输入密码查看.
   tags:
   - {name: diary , password: jiechen}
   # - {name: tagName, password: 密码B}
