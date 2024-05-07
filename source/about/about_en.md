@@ -16,15 +16,15 @@ Post-2000s ENFJ personality, hailing from Changsha.
 ## A few more words
 
 <div>
-Firstly, a dedicated pet owner, catering to a blue and white British Shorthair.
-<img src="/image/cat.jpg" style="width: 20px; height: 20px; margin: 2px 0 0 5px;border-radius: 4px;">
+Firstly, there's a cat owner, caring for a blue and white British Shorthair
+<img src="/image/cat.jpg" style="width: 20px; height: 20px;border-radius: 4px;">
 </div>
 
-Next up, a `Front-End Developer` (~~constantly reminded that "frontend is dead" 😅~~), aiming to be an `Independent Developer`. In my spare time, you can find me browsing [Twitter](https://twitter.com/jiechen257) and [bilibili](https://bilibili.com).
+Next, an ACGM player, passionate about music, skilled at playing 🎸, always ready to pack up and go at a moment's notice🎒
 
-ACGM all-rounder, mastering both MOBA and tabletop games 🕹️. I'm passionate about music, dabbling in guitar 🎸, always ready for a meetup or trip.
+Entertainment content is primarily on [Twitter](https://twitter.com/jiechen257) and [bilibili](https://space.bilibili.com/436617390)
 
-**Keep it real, feel the vibe, freedom reigns, long live understanding!**
+**Close to life, experience true emotions, freedom above all, long live understanding!**
 
 ## Some Tags
 

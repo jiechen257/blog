@@ -11,7 +11,7 @@ copyright: false
 
 ## 一句话
 
-00 后 ENFJ 人格，来自长沙
+ENFJ 人格，来自长沙
 
 ## 多讲几句
 
@@ -20,9 +20,9 @@ copyright: false
 <img src="/image/cat.jpg" style="width: 20px; height: 20px; margin: 2px 0 0 5px;border-radius: 4px;">
 </div>
 
-其次是 `Front-End Developer`（~~天天被 cue "前端已死"😅~~），目标是 `Independent Developer`，业余时间主要逛 [推特](https://twitter.com/jiechen257) 和 [bilibili](https://bilibili.com)
+其次是 ACGM 玩家，爱好音乐，有玩 🎸，只要有约，立马背上行囊 🎒
 
-ACGM 通吃，MOBA、桌游通玩 🕹️，爱好音乐，有玩 🎸，只要有约，立马背上行囊
+娱乐媒体主要在 [推特](https://twitter.com/jiechen257) 和 [bilibili](https://space.bilibili.com/436617390)
 
 **贴近生活，感受真情，自由至上，理解万岁！**
 
