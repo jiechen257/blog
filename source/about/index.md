@@ -22,8 +22,6 @@ ENFJ 人格，来自长沙
 
 其次是 ACGM 玩家，爱好音乐，有玩 🎸，只要有约，立马背上行囊 🎒
 
-娱乐媒体主要在 [推特](https://twitter.com/jiechen257) 和 [bilibili](https://space.bilibili.com/436617390)
-
 **贴近生活，感受真情，自由至上，理解万岁！**
 
 ## 一些标签
@@ -42,12 +40,6 @@ ENFJ 人格，来自长沙
   <summary>各种局</summary>
   <p style="font-size:12px; line-height:13px"> 🪀 密室、蹦极、德州、狼人杀、剧本杀~</p>
   <p style="font-size:12px;line-height:10px"> 😋 约饭、旅游（希望人没事） </p>
-</details>
-<details style="padding-left:12px;padding-bottom:10px">
-  <summary>技术向</summary>
-  <p style="font-size:12px; line-height:13px"> ⌨️ vimer + 双拼，效率至上</p>
-  <p style="font-size:12px;line-height:10px"> 👻 面对技术栈的选择，一向是都试试</p>
-  <p style="font-size:12px;line-height:10px"> 👨‍💻 终身学习，coding for fun</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>欲养老而不为</summary>

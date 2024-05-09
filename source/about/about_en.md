@@ -22,8 +22,6 @@ Firstly, there's a cat owner, caring for a blue and white British Shorthair
 
 Next, an ACGM player, passionate about music, skilled at playing 🎸, always ready to pack up and go at a moment's notice🎒
 
-Entertainment content is primarily on [Twitter](https://twitter.com/jiechen257) and [bilibili](https://space.bilibili.com/436617390)
-
 **Close to life, experience true emotions, freedom above all, long live understanding!**
 
 ## Some Tags
@@ -42,12 +40,6 @@ Entertainment content is primarily on [Twitter](https://twitter.com/jiechen257) 
   <summary>All Sorts of Fun</summary>
   <p style="font-size:12px; line-height:13px"> 🪀 Escape rooms, bungee jumping, Texas Hold'em, Werewolf, and Murder Mystery</p>
   <p style="font-size:12px;line-height:10px"> 😋 Dining out, traveling (hoping everyone's safe) </p>
-</details>
-<details style="padding-left:12px;padding-bottom:10px">
-  <summary>Tech Enthusiast</summary>
-  <p style="font-size:12px; line-height:13px"> ⌨️ Vimer + Pinyin input, efficiency first</p>
-  <p style="font-size:12px;line-height:10px"> 👻 Always up for experimenting with different tech stacks</p>
-  <p style="font-size:12px;line-height:10px"> 👨‍💻 Lifelong learner, coding for fun</p>
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>Longing for Retirement</summary>
