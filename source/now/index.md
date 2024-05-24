@@ -6,7 +6,7 @@ date: 2024-04-07
 
 > 泛黄的旧事是我生活的痕迹
 
-<img src="./image/now.jpg">
+<img src="./image/now.png">
 
 ::: timeline
 🗓️ **日记时间线** （_tips：以下内容偏隐私已加密，有需要请联系我_
