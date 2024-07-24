@@ -46,7 +46,7 @@ thumbnail: https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/2024
 
 <hr />
 
-聊完了 DX 过渡历程，我们再来看当下的 DX 发展到了一个怎样的程D
+聊完了 DX 过渡历程，我们再来看当下的 DX 发展到了一个怎样的程度
 
 ## DX 现状
 
@@ -78,7 +78,7 @@ thumbnail: https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/2024
 
 local-first 是一个很早就出现的技术性话题，正所谓 `技术大牛不一定掌握 CRDT，但掌握了 CRDT 的一定是技术大牛`
 
-这里我们先看布道师(雪碧老师)的推文：
+这里我们先看布道师(雪碧老师)的[推文](https://twitter.com/ewind1994/status/1813251128014086627)：
 
 ```txt
 Local-first 正在变成一个 umbrella term，讲这个概念的人既可能是关心数据所有权的原教旨派，也可能是个 CRDT nerd，
