@@ -1,5 +1,5 @@
 ---
-title: Local-First 应用
+title: Local-First 应用程序
 categories: front-end
 tags: ["local-first"]
 abbrlink: 20270708
@@ -34,7 +34,7 @@ _There is no cloud, it's just someone else's computer._
 
 我们相信，数据所有权和实时协作并不相悖。我们有可能创建具有云应用所有优点的软件，同时也允许你保留对你创建的数据、文档和文件的完全所有权。
 
-我们把这种类型的软件称为本地优先软件 `Local-first software` ，因为它优先使用本地存储（你的电脑中内置的磁盘）和本地网络（如你的家庭 WiFi）而不是远程数据中心的服务器。
+我们把这种类型的软件称为本地优先软件 `Local-First software` ，因为它优先使用本地存储（你的电脑中内置的磁盘）和本地网络（如你的家庭 WiFi）而不是远程数据中心的服务器。
 
 - 在云计算应用程序中，服务器上的数据被视为数据的主要的、权威的副本；
 - 如果客户端有一份数据的副本，它只是一个从属于服务器的缓冲区。任何数据修改都必须发送到服务器上，否则就 “没有发生”
@@ -71,7 +71,7 @@ CRDTs as `Conflict-free Replicated Data Types`，无冲突复制数据类型
 
 整个系统采用事件驱动的架构。数据变化被视为事件，这些事件触发一系列反应，包括 UI 更新、数据同步和业务逻辑执行
 
-## 代码实现
+## 简易代码实现
 
 ```js
 class LocalFirstApp {
@@ -221,7 +221,7 @@ class LocalFirstApp {
 }
 ```
 
-使用案例
+测试使用用例
 
 ```js
 // 创建应用实例
