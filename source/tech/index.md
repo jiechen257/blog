@@ -10,6 +10,8 @@ date: 2023-2-22
 
 ::: timeline
 
+- 2024-07-24 [DX 的发展与现状](/post/20270724)
+- 2024-07-08 [Local-First Software](/post/20270708)
 - 2024-06-05 [How to write commit messages in English](/post/20240605)
 - 2024-04-06 [抽象、分层和高阶组件](/post/57474)
 - 2024-03-10 [我在2023这一年](/post/2024031002)
