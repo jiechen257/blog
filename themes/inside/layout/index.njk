@@ -9,6 +9,7 @@
 <link rel="icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}">
 {% if theme.pwa.manifest -%}
 <link rel="manifest" href="{{ url_for('manifest.json') }}">
+<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 {%- endif %}
@@ -19,5 +20,10 @@
 {%- endif %}
 {{ ga(theme.ga) if theme.ga }}
 </head>
-<body lang="{{ config.language }}"></body>
+<body lang="{{ config.language }}">
+<!-- 你的页面内容 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
+</body>
 </html>
