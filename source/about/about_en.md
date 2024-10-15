@@ -11,7 +11,7 @@ copyright: false
 
 ## One-liner
 
-Post-2000s ENFJ personality, hailing from Changsha.
+ENFJ personality, base Hangzhou
 
 ## A few more words
 
@@ -32,7 +32,7 @@ Next, an ACGM player, passionate about music, skilled at playing 🎸, always re
   <summary>ACGM Player</summary>
   <p style="font-size:12px; line-height:13px"> 🎶 Folk & Romantic Rock</p>
   <p style="font-size:12px; line-height:13px"> 📖 Jiangnan (Note Yangzhi), Han Han, and Yilin</p>
-  <p style="font-size:12px; line-height:13px"> 📺 Studio Ghibli, Makoto Shinkai, and Ruosen</p>
+  <p style="font-size:12px; line-height:13px"> 📺 Studio Ghibli & Ruosen</p>
   <p style="font-size:12px; line-height:13px"> 🎮 Top King, Shy Sensi</p>
   <p style="font-size:12px; line-height:13px"> 🎥 Douban Top 250, American TV series (Friends)</p>
 </details>
@@ -54,6 +54,6 @@ Next, an ACGM player, passionate about music, skilled at playing 🎸, always re
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>Goals</summary>
-  <p style="font-size:12px; line-height:13px"> 🎹 Electronic piano player</p>
-  <p style="font-size:12px; line-height:13px"> 🌅 A trip to Tibet, a trip to Scandinavia</p>
+  <p style="font-size:12px; line-height:13px"> 🌅 A trip to Xinjiang, a trip to Scandinavia</p>
+  <p style="font-size:12px; line-height:13px"> 🎹 Retire early</p>
 </details>
