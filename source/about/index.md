@@ -11,7 +11,7 @@ copyright: false
 
 ## 一句话
 
-ENFJ 人格，base hh'vz
+ENFJ 人格，base 杭州
 
 ## 多讲几句
 

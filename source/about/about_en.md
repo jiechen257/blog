@@ -54,6 +54,6 @@ Next, an ACGM player, passionate about music, skilled at playing 🎸, always re
 </details>
 <details style="padding-left:12px;padding-bottom:10px">
   <summary>Goals</summary>
-  <p style="font-size:12px; line-height:13px"> 🌅 A trip to Xinjiang, a trip to Scandinavia</p>
+  <p style="font-size:12px; line-height:13px"> 🌅 A trip to Xinjiang, a trip to Northern Europe</p>
   <p style="font-size:12px; line-height:13px"> 🎹 Retire early</p>
 </details>
