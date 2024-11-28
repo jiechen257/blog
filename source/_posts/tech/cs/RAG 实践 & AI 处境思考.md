@@ -1,5 +1,5 @@
 ---
-title: RAG 实践 & AI 处境思考
+title: RAG 实践 & AI 当下发展
 tags: AI
 categories: cs-basics
 abbrlink: 20241126
@@ -139,7 +139,7 @@ date: 2024-11-26 22:02:58
 
 可以看出，RAG 技术在问答系统中已经非常成熟，在实际应用中，RAG 可与其他技术结合使用，以达到更好的效果
 
-## 行业中 AI 的处境思考
+## AI 当下发展
 
 我目前日常使用的 AI 应用：
 - Cursor IDE
