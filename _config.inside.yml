@@ -124,10 +124,10 @@ profile:
 menu:
   📝 Tech: /tech
   🔖 Life: /life
-  🔗 Now: /now
 
   # ⌨️ LeetCode: /leetcode
-  # ⏳ Notes: /notes
+  ⏳ List: /list
+  🔗 Now: /now
   🐈 About: /about
   # 🔗 Links: /links
   🔍 Search: /search
