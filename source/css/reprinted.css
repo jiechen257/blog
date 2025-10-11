@@ -1,0 +1,91 @@
+/* 转载标识样式 - 右上角角标 */
+
+/* 为包含转载标识的文章卡片添加角标 */
+[data-reprinted="true"]::after,
+.reprinted-post::after {
+  content: "转载" !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  background: #fafafa !important;
+  color: #757575 !important;
+  font-size: 10px !important;
+  font-weight: normal !important;
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+  z-index: 9999 !important;
+  border: 1px dashed #e0e0e0 !important;
+  text-align: center !important;
+  pointer-events: none !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  transition: none !important;
+  box-shadow: none !important;
+  min-width: auto !important;
+  line-height: 12px !important;
+}
+
+/* 文章详情页转载标识样式 */
+.reprinted-notice {
+  background: #f8f9fa !important;
+  border-left: 4px solid #007bff !important;
+  padding: 12px 16px !important;
+  margin: 16px 0 !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  color: #495057 !important;
+  line-height: 1.6 !important;
+}
+
+/* 增强链接样式优先级 */
+.reprinted-notice a,
+div.reprinted-notice a,
+body .reprinted-notice a,
+.reprinted-link {
+  text-decoration: none !important;
+  border-bottom: 1px dotted #000 !important;
+  transition: all 0.2s ease !important;
+  font-weight: normal !important;
+}
+
+.reprinted-notice a:hover,
+div.reprinted-notice a:hover,
+body .reprinted-notice a:hover,
+.reprinted-link:hover {
+  color: #0056b3 !important;
+  border-bottom-style: solid !important;
+  text-decoration: none !important;
+  background-color: rgba(0, 123, 255, 0.1) !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+}
+
+/* 文章卡片容器需要相对定位 */
+.post-card, .post-item, article, [class*="post"], 
+[class*="card"], [class*="item"], div {
+  position: relative;
+  overflow: visible;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  [data-reprinted="true"]::after,
+  .reprinted-post::after {
+    font-size: 10px !important;
+    padding: 3px 6px !important;
+    min-width: 35px !important;
+    top: 6px !important;
+    right: 6px !important;
+  }
+}
+
+/* 角标悬停效果 */
+[data-reprinted="true"]:hover::after,
+.reprinted-post:hover::after {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  background: #e9ecef !important;
+}

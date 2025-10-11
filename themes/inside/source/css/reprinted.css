@@ -1,0 +1,102 @@
+/* 转载标识样式 - 右上角角标 */
+.reprinted-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #fafafa;
+  color: #757575;
+  font-size: 10px;
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 12px;
+  z-index: 9999;
+  border: 1px dashed #e0e0e0;
+  text-align: center;
+  pointer-events: none;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: none;
+  box-shadow: none;
+  min-width: auto;
+  height: 20px;
+  line-height: 12px;
+  display: inline-block;
+}
+
+/* 文章详情页转载标识样式 */
+.reprinted-notice {
+  background: #f8f9fa;
+  border-left: 4px solid #007bff;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.6;
+}
+
+/* 增强链接样式优先级 */
+.reprinted-notice a,
+div.reprinted-notice a,
+body .reprinted-notice a,
+.reprinted-link {
+  text-decoration: none !important;
+  border-bottom: 1px dotted #000 !important;
+  transition: all 0.2s ease !important;
+  font-weight: normal !important;
+}
+
+.reprinted-notice a:hover,
+div.reprinted-notice a:hover,
+body .reprinted-notice a:hover,
+.reprinted-link:hover {
+  color: #0056b3 !important;
+  border-bottom-style: solid !important;
+  text-decoration: none !important;
+  background-color: rgba(0, 123, 255, 0.1) !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+}
+
+.reprinted-badge::before {
+  content: "📋";
+  margin-right: 2px;
+  font-size: 10px;
+}
+
+/* 文章卡片容器需要相对定位 */
+.post-card, .post-item, article, [class*="post"] {
+  position: relative;
+}
+
+/* 确保角标在卡片上方 */
+.post-card .reprinted-badge,
+.post-item .reprinted-badge,
+article .reprinted-badge,
+[class*="post"] .reprinted-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .reprinted-badge {
+    font-size: 10px;
+    padding: 3px 6px;
+    min-width: 35px;
+    top: 2px;
+    right: 2px;
+  }
+}
+
+/* 确保角标在卡片边界内 */
+.post-card, .post-item, article, [class*="post"] {
+  overflow: visible;
+}
+
+/* 角标悬停效果 */
+.reprinted-badge:hover {
+  transform: rotate(15deg) scale(1.05);
+  transition: transform 0.2s ease;
+}

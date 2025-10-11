@@ -4,6 +4,8 @@ categories: front-end
 tags: npm
 abbrlink: 2025101001
 date: 2025-10-10 21:47:50
+reprinted: true
+reprinted_url: https://github.com/bodadotsh/npm-security-best-practices
 ---
 
 在现代 JavaScript 开发中，NPM 生态系统为我们提供了丰富的包资源，但同时也带来了安全风险，包括但不限于：数据入侵、供应链攻击、恶意软件、垃圾邮件、网络钓鱼等

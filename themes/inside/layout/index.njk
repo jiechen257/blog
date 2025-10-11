@@ -22,8 +22,173 @@
 </head>
 <body lang="{{ config.language }}">
 <!-- 你的页面内容 -->
+<div id="app-root">
+  <app-root></app-root>
+</div>
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="/js/clipboard_use.js"></script>
+
+<script>
+  // 转载标识功能 - 右上角角标
+  (function() {
+    'use strict';
+    
+    // 添加转载角标到文章卡片
+    function addReprintedBadges() {
+      // 只在首页显示转载标识，不在其他页面显示
+      if (window.location.pathname !== '/' && !window.location.pathname.match(/^\/page\/\d+\/?$/)) {
+        return;
+      }
+      
+      // 尝试通过API获取文章数据并添加角标
+      async function fetchPostsDataAndAddBadges() {
+        try {
+          // 尝试获取首页数据
+          const response = await fetch('/api/cGFnZQ.json');
+          if (response.ok) {
+            const data = await response.json();
+            
+            if (data && data.data && Array.isArray(data.data)) {
+              data.data.forEach(post => {
+                if (post.reprinted) {
+                  // 查找对应的文章卡片并设置data-reprinted属性
+                  const postLinks = document.querySelectorAll(`a[href*="${post.link}"]`);
+                  postLinks.forEach(link => {
+                    let card = link.closest('article, .post-item, [class*="post"], [class*="card"], [class*="item"]');
+                    
+                    if (card) {
+                      card.setAttribute('data-reprinted', 'true');
+                      // 立即添加角标
+                      addBadgeToCard(card);
+                    } else {
+                      // 尝试查找父级容器
+                      let parent = link.parentElement;
+                      let attempts = 0;
+                      while (parent && attempts < 10) {
+                        if (parent.offsetWidth > 200 && parent.offsetHeight > 50) {
+                          parent.setAttribute('data-reprinted', 'true');
+                          addBadgeToCard(parent);
+                          break;
+                        }
+                        parent = parent.parentElement;
+                        attempts++;
+                      }
+                    }
+                  });
+                }
+              });
+            }
+          }
+        } catch (e) {
+          // 忽略错误
+        }
+      }
+      
+      // 为单个卡片添加角标的函数
+      function addBadgeToCard(card) {
+        // 检查是否已经有角标
+        if (card.querySelector('.reprinted-badge')) {
+          return;
+        }
+        
+        // 确保容器有相对定位
+        const computedStyle = window.getComputedStyle(card);
+        if (computedStyle.position === 'static') {
+          card.style.position = 'relative';
+        }
+        
+        // 添加转载文章类名
+        card.classList.add('reprinted-post');
+        
+        // 直接创建角标元素
+        const badge = document.createElement('div');
+        badge.className = 'reprinted-badge';
+        badge.innerHTML = '转载';
+        badge.title = '本文为转载文章';
+        
+        badge.style.cssText = `
+          position: absolute !important;
+          top: 8px !important;
+          right: 8px !important;
+          background: #fafafa !important;
+          color: #757575 !important;
+          font-size: 10px !important;
+          font-weight: normal !important;
+          padding: 4px 8px !important;
+          border-radius: 12px !important;
+          z-index: 9999 !important;
+          border: 1px dashed #e0e0e0 !important;
+          text-align: center !important;
+          pointer-events: none !important;
+          display: inline-block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          transform: none !important;
+          rotate: none !important;
+          letter-spacing: 0 !important;
+          text-transform: none !important;
+          transition: none !important;
+          box-shadow: none !important;
+          min-width: auto !important;
+          line-height: 12px !important;
+        `;
+        
+        // 添加到容器
+        card.appendChild(badge);
+      }
+      
+      // 执行API请求
+      fetchPostsDataAndAddBadges();
+    }
+    
+    // 等待页面完全加载
+    function init() {
+      // 立即执行一次
+      addReprintedBadges();
+      
+      // 延迟执行，确保所有内容都加载完成
+      setTimeout(() => {
+        addReprintedBadges();
+      }, 1000);
+      
+      setTimeout(() => {
+        addReprintedBadges();
+      }, 3000);
+      
+      setTimeout(() => {
+        addReprintedBadges();
+      }, 5000);
+      
+      // 监听DOM变化
+      const observer = new MutationObserver(() => {
+        setTimeout(addReprintedBadges, 500);
+      });
+      
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
+    
+    // 页面加载完成后执行
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+    
+    // 监听路由变化（SPA 应用）
+    let lastUrl = location.href;
+    setInterval(() => {
+      const url = location.href;
+      if (url !== lastUrl) {
+        lastUrl = url;
+        setTimeout(addReprintedBadges, 1000);
+      }
+    }, 1000);
+  })();
+</script>
 </body>
 </html>

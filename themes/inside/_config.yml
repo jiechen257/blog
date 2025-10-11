@@ -185,6 +185,9 @@ post:
   # toc: false
   reward: true
   # copyright: true
+  
+  # Display reprinted notice, default to `true`
+  reprinted: true
 
 # Archive
 archive:
@@ -416,11 +419,16 @@ plugins:
   #       '#2a2b33'
   #     ]
 
+  # Reprinted notice plugin
+  - reprinted:
+      placeholder: "声明"
+      excerpt: "本文为转载文章"
+
   # Global Inject script/style
   # By default script will be injected into <body>, and style will be injected into <head>
   # In general, script or style depends on their ext name.
-  # - xxx.css
-  # - xxx.jss
+  - reprinted.css
+  - reprinted.js
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end

@@ -87,4 +87,43 @@ module.exports = function (data) {
   if (renderReadingTime) {
     data.reading_time = renderReadingTime(data.content);
   }
+
+  // reprinted flag
+  if (!isPage && data.reprinted) {
+    data.reprinted = true;
+    // 添加转载标识的显示信息
+    data.reprinted_label = "转载";
+    data.reprinted_icon = "📋";
+    data.reprinted_badge = true; // 用于右上角角标
+    
+    // 构建转载标识内容
+    let reprintedContent = `<strong>📋 声明</strong> - 本文为转载文章`;
+    
+    // 如果有原文链接，添加链接
+    if (data.reprinted_url) {
+      reprintedContent += `<br><a href="${data.reprinted_url}" target="_blank" rel="noopener noreferrer" class="reprinted-link">🔗 原文链接：${data.reprinted_url}</a>`;
+    }
+    
+    // 在文章内容前添加转载标识
+    const reprintedNotice = `
+<div class="reprinted-notice" style="
+  background: #f8f9fa;
+  border-left: 4px solid #333;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.6;
+">
+  ${reprintedContent}
+</div>
+`;
+    data.content = reprintedNotice + data.content;
+  } else {
+    data.reprinted = false;
+    data.reprinted_label = null;
+    data.reprinted_icon = null;
+    data.reprinted_badge = false;
+  }
 };

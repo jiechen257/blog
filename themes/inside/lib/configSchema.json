@@ -262,6 +262,10 @@
             }
           ],
           "default": true
+        },
+        "reprinted": {
+          "type": "boolean",
+          "default": true
         }
       },
       "required": ["per_page", "toc", "reading_time"],
