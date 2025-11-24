@@ -127,7 +127,7 @@ menu:
 
   # ⌨️ LeetCode: /leetcode
   ⏳ List: /list
-  🔗 Now: /now
+  # 🔗 Now: /now
   🐈 About: /about
   # 🔗 Links: /links
   🔍 Search: /search
@@ -139,7 +139,7 @@ sns:
   # `youtube`, `hangouts`, `linkedin`, `pinterest`, `soundcloud`, `myspace`, `weibo`, `qq
   - icon: email
     title: Email
-    url: 1487503910@qq.com
+    url: becase369@gmail.com
   - icon: github
     title: Github
     url: https://github.com/jiechen257
