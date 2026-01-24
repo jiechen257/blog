@@ -28,6 +28,8 @@ date: 2026-1-3 14:14:29
 
 ## 一、季逸超的创业历程与个人背景
 
+![季逸超创业历程时间线](./image/manus-jiyichao-interview/01-framework-career-timeline.png)
+
 ### 1.1 早期创业：从猛犸浏览器到 Peak Labs
 
 季逸超的创业故事始于 2009 年，当时他还是北大附中的一名高中生。**2009 年苹果发布 iPhone 的第二年，App Store 的出现成为了他人生的重要转折点**，因为它给了开发者一种全景化变现的能力。
@@ -61,6 +63,8 @@ date: 2026-1-3 14:14:29
 ## 二、Manus 的产品哲学与技术路线
 
 ### 2.1 对 Agent 的独特定义：从聊天工具到行动执行者
+
+![Manus 产品哲学核心框架](./image/manus-jiyichao-interview/02-framework-product-philosophy.png)
 
 季逸超对 AI Agent 有着独特而深刻的理解。**他认为 Agent 不应该只是一个聊天的入口，而应该是能替代你把事办了的工具。Agent 的定义是：它不应该是你请来的一个老师，而应该是一个随时待命的特工**。
 
@@ -103,6 +107,8 @@ Manus 的增长运营有其独特的秘诀。**季逸超强调："打造 Manus �
 ## 三、AI 行业观察与思考
 
 ### 3.1 AI 时代的创业认知：从艺术家到精英者
+
+![AI 时代创业思维转变](./image/manus-jiyichao-interview/03-framework-era-transition.png)
 
 季逸超对 AI 时代的创业有着深刻的洞察。他指出了一个关键差异：**"移动互联网喜欢艺术家，但是 AI 时代更需要精英者"**[(94)](https://www.iesdouyin.com/share/video/7592277863082024870/?region=&mid=7592277796819356443&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-&share_version=280700&ts=1767945672&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)。
 
@@ -165,6 +171,8 @@ DeepSeek 的成功证明了一个重要观点：**在大模型领域效率和工
 对于未来，季逸超充满期待："**这次收购不是一个句号，而是一个逗号，是探索 AGI 下一公里的底座**"。这种积极的态度，体现了他对技术前景的信心和对未来的期待。
 
 ## 五、核心金句与关键观点
+
+![核心金句集锦](./image/manus-jiyichao-interview/04-framework-key-quotes.png)
 
 ### 5.1 关于产品哲学的金句
 
@@ -246,218 +254,69 @@ Manus 选择了一条看似 "非主流" 的技术路线：**不做模型，专�
 
 最后，让我们记住季逸超的那句话："**我们没有权利活着，我们是在努力获得一个活着的权利**"[(99)](https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html)。这种对生存的敬畏和对成功的谦逊，或许正是这个时代最需要的品质。在 AI 浪潮席卷而来的今天，保持理性、坚持价值、勇于创新，我们才能在这场技术革命中找到属于自己的位置。
 
-**参考资料&#x20;**
+## 参考资料
 
-\[1] 张小珺 Jùn|商业访谈录 | 小宇宙 - 听播客，上小宇宙[ https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962?utm_source=rss](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962?utm_source=rss)
+### 核心访谈来源
 
-\[2] 我 认为 25 年 最 有 价值 的 一篇 中文 AI 访谈 Manus 出售 前 最后 一 次 公开 访谈 说了 什么 我 反复 看 了 3 遍 ， 总结 了 我 认为 最 有 价值 的 点 # AI # 人工 智能 # Manus # Deep seek # chat gpt[ https://www.iesdouyin.com/share/video/7592277863082024870/?region=\&mid=7592277796819356443\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-\&share_version=280700\&ts=1767945610\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7592277863082024870/?region=&mid=7592277796819356443&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-&share_version=280700&ts=1767945610&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
+1. **张小珺 Jùn｜商业访谈录 第 128 期** - Manus 决定出售前最后的访谈
+   - [小宇宙](https://www.xiaoyuzhoufm.com/episode/695331cb2db086f897b50ea9) ｜ [Apple 播客](https://podcasts.apple.com/cn/podcast/id1634356920?i=1000743131736)
 
-\[3] Manus 季逸超访谈解读(1)Benchmark 是所有 AI 公司的唯一护城河\_孔某人的低维认知[ http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao](http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao)
+2. **腾讯科技独家对话 Manus 肖弘** - 混沌学园对话 Manus 两位创始人
+   - [搜狐](https://m.sohu.com/a/871251605_121124376/)
 
-\[4] 播客推荐 | Manus 季逸超 12 月访谈(下)\_孔某人的低维认知[ http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao](http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao)
+3. **对话"Manus"两位创始人：2025，AI Agent 即将引爆**
+   - [新浪财经](https://finance.sina.com.cn/jjxw/2025-03-10/doc-inepeiih0596196.shtml)
 
-\[5] 播客更新|与戴雨森和季逸超聊 一幅 Sora 的信息拼图和中国大模型淘汰赛\_腾讯新闻[ http://news.qq.com/rain/a/20240311A024IP00](http://news.qq.com/rain/a/20240311A024IP00)
+### 深度解读文章
 
-\[6] 128. Manus 决定出售前最后的访谈:啊，这奇幻的 202... - 张小珺 Jùn|商业访谈录 - Apple 播客[ https://podcasts.apple.com/cn/podcast/128-manus%E5%86%B3%E5%AE%9A%E5%87%BA%E5%94%AE%E5%89%8D%E6%9C%80%E5%90%8E%E7%9A%84%E8%AE%BF%E8%B0%88-%E5%95%8A-%E8%BF%99%E5%A5%87%E5%B9%BB%E7%9A%842025%E5%B9%B4%E6%BC%82%E6%B5%81%E5%95%8A/id1634356920?i=1000743131736](https://podcasts.apple.com/cn/podcast/128-manus%E5%86%B3%E5%AE%9A%E5%87%BA%E5%94%AE%E5%89%8D%E6%9C%80%E5%90%8E%E7%9A%84%E8%AE%BF%E8%B0%88-%E5%95%8A-%E8%BF%99%E5%A5%87%E5%B9%BB%E7%9A%842025%E5%B9%B4%E6%BC%82%E6%B5%81%E5%95%8A/id1634356920?i=1000743131736)
+4. **Manus 被收购前最后一次访谈：季逸超还不知道 Meta 即将来敲门** - 网易
+   - [链接](https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html)
 
-\[7] Manus 被收购前最后一次访谈:季逸超还不知道 Meta 即将来敲门[ https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html](https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html)
+5. **Manus 季逸超访谈解读系列** - 孔某人的低维认知
+   - [(1) Benchmark 是所有 AI 公司的唯一护城河](http://m.toutiao.com/group/7591408149740012038/)
+   - [(2) Proactive Agent 不应占用用户时间](http://m.toutiao.com/group/7591946717029728774/)
+   - [(3) Manus 的数据飞轮](http://m.toutiao.com/group/7592317769761260067/)
+   - [(4) 不要构建对等的 Multi-Agent](http://m.toutiao.com/group/7592688829362864680/)
 
-\[8] 来自豆包张小珺 ×Manus(季逸超)访谈核心速览(500 字内)访谈录制于 2025 年 12 月 1 日( Meta 收购前)，是 M...[ https://xueqiu.com/3783292942/368778062](https://xueqiu.com/3783292942/368778062)
+6. **Manus 杀疯了！这个非主流 90 后的突围路，揭示了 AI 时代的成长法则** - 外滩教育
+   - [链接](http://m.toutiao.com/group/7592812703157076522/)
 
-\[9] Manus 季逸超访谈解读(3)Manus 的数据飞轮\_孔某人的低维认知[ http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao](http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao)
+7. **3 位连续创业者打造 Manus，应用潮里有更多"underdog"的机会** - 腾讯新闻
+   - [链接](http://news.qq.com/rain/a/20250308A08ABQ00)
 
-\[10] 2025 年 12 月记录:kamath 采访马斯克、王石段永平、ai 投资人、中金海外、cal newport、季逸超;大华、南微 一、印度人 kamath 采访马斯克 202512\~深刻 1，做 x 不是为了搞社交媒体，是想做一个全球的公共广场可以交流，形成一...[ https://xueqiu.com/7168781713/367941194](https://xueqiu.com/7168781713/367941194)
+### 人物背景资料
 
-\[11] 【长期主义】第 329 期智能说:腾讯科技独家对话 Manus 肖弘，混沌学园对话 Manus 两位创始人，AI Agent 即将引爆\_创业\_能力\_技术[ https://m.sohu.com/a/871251605_121124376/](https://m.sohu.com/a/871251605_121124376/)
+8. **季逸超 Peak：AI 竞泳十年** - 网易订阅
+   - [链接](https://www.163.com/dy/article/IPQ85GIG0511B6FU.html)
 
-\[12] 张小珺 对话 季 艺超 ： 只因 肖弘 “ 正常 ” ， 我 才 选择 加入 Manus # 张小珺 商业 访谈录 # 季逸超 # Manus # 肖弘 # Meta 收购 Manus[ https://www.iesdouyin.com/share/video/7593038036498268901/?region=\&mid=7593037934350125824\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=0wLvUFYnUqlpI3dFTiPrAA4H781p4leMWkjw_BC4RW0-\&share_version=280700\&ts=1767945610\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7593038036498268901/?region=&mid=7593037934350125824&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=0wLvUFYnUqlpI3dFTiPrAA4H781p4leMWkjw_BC4RW0-&share_version=280700&ts=1767945610&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
+9. **季逸超百科词条** - 百度百科
+   - [链接](https://m.baike.com/wiki/%E5%AD%A3%E9%80%B8%E8%B6%85/4094098)
 
-\[13] 张小珺 Jùn|商业访谈录\_全集免费在线阅读收听下载 - 喜马拉雅[ https://www.ximalaya.com/album/67773472](https://www.ximalaya.com/album/67773472)
+10. **英雄出少年之季逸超** - CSDN 博客
+    - [链接](https://blog.csdn.net/junecauzhang/article/details/7889256)
 
-\[14] 张小珺 Jùn|商业访谈录 | 小宇宙 - 听播客，上小宇宙[ https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962?utm_source=rss](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962?utm_source=rss)
+### 行业分析与评论
 
-\[15] 张小珺发布过的内容\_36 氪[ https://m.36kr.com/user/1712254050](https://m.36kr.com/user/1712254050)
+11. **Manus 上岸了，但 Agent 还没有赢** - 中国企业家杂志
+    - [链接](http://m.toutiao.com/group/7589981563408957978/)
 
-\[16] 理想汽车以人工智能技术驱动未来交通革新[ https://www.iesdouyin.com/share/video/7507453307976174858/?region=\&mid=7507453480916093696\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=NiU3xG1UfMpoGX_mW9cI8PfOTf8GQNUXjxaci1JoAB8-\&share_version=280700\&ts=1767945626\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7507453307976174858/?region=&mid=7507453480916093696&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=NiU3xG1UfMpoGX_mW9cI8PfOTf8GQNUXjxaci1JoAB8-&share_version=280700&ts=1767945626&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
+12. **Manus 最新对话全文：尝试 Agent 支付，公司 ARR 近 1 亿美元** - 极客公园
+    - [链接](http://m.toutiao.com/group/7541273859254698539/)
 
-\[17] 126. 和红杉郑庆生聊:经济史的流量革命、人类行为模式的不可预期，与创始人性格 - 张小珺 Jùn|商业访谈录 | 小宇宙 - 听播客，上小宇宙[ https://www.xiaoyuzhoufm.com/episode/694795da9f70e5d6b371d207](https://www.xiaoyuzhoufm.com/episode/694795da9f70e5d6b371d207)
+13. **Manus 季逸超访谈：阿里千问非常扎实** - 雪球
+    - [链接](https://xueqiu.com/4111913912/368423284)
 
-\[18] BAI 资本龙宇对话张小珺:新时代的美德是“克制”|韩国|大海|拜登|小红书|奥运会|知名企业|bai 资本\_网易订阅[ http://www.163.com/dy/article/JU004NCP05119C3G.html](http://www.163.com/dy/article/JU004NCP05119C3G.html)
+14. **AI 时代，到底什么是稀缺的？** - 网易订阅
+    - [链接](https://www.163.com/dy/article/KIGT8PU905566SDR.html)
 
-\[19] 张小珺 Jùn|商业访谈录在线收听-mp3 全集-蜻蜓 FM 听播客[ https://www.qtfm.cn/channels/469496/](https://www.qtfm.cn/channels/469496/)
+### 相关播客
 
-\[20] 季逸超\[Peak Labs 的创始人]\_百科[ https://m.baike.com/wiki/%E5%AD%A3%E9%80%B8%E8%B6%85/4094098?baike_source=doubao](https://m.baike.com/wiki/%E5%AD%A3%E9%80%B8%E8%B6%85/4094098?baike_source=doubao)
+15. **播客更新｜与戴雨森和季逸超聊：一幅 Sora 的信息拼图和中国大模型淘汰赛** - 腾讯新闻
+    - [链接](http://news.qq.com/rain/a/20240311A024IP00)
 
-\[21] Manus 被收购前最后一次访谈:季逸超还不知道 Meta 即将来敲门|manus|meta|创业者|季逸超|疯狂\_手机网易网[ http://m.163.com/dy/article_cambrian/KI2BSOSU0556BKW5.html](http://m.163.com/dy/article_cambrian/KI2BSOSU0556BKW5.html)
+16. **AGI 范式大转移：和广密预言草莓、OpenAI o1 和 self-play RL** - 小宇宙
+    - [链接](https://www.xiaoyuzhoufm.com/episode/66d866f0f39a2201c069dccb)
 
-\[22] Manus 杀疯了!这个非主流 90 后的突围路，揭示了 AI 时代的成长法则\_外滩教育[ http://m.toutiao.com/group/7592812703157076522/?upstream_biz=doubao](http://m.toutiao.com/group/7592812703157076522/?upstream_biz=doubao)
+---
 
-\[23] 90 后天才季逸超携 Manus AI 回归海淀，猛[ https://www.iesdouyin.com/share/video/7479046910968368424/?region=\&mid=7479048284246788918\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=rT4Xt_adweykwl_Cqzi7_6jVbJNMcNpigk7yv5TaFJw-\&share_version=280700\&ts=1767945626\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7479046910968368424/?region=&mid=7479048284246788918&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=rT4Xt_adweykwl_Cqzi7_6jVbJNMcNpigk7yv5TaFJw-&share_version=280700&ts=1767945626&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[24] 观·人物丨一场来自中国的“代码起义”，谁在定义 AI 搭档?\_四川观察[ http://m.toutiao.com/group/7478722834055889449/?upstream_biz=doubao](http://m.toutiao.com/group/7478722834055889449/?upstream_biz=doubao)
-
-\[25] Manus AI 一夜爆火，揭秘其背后团队的核心成员\_腾讯新闻[ https://news.qq.com/rain/a/20250307A08TWN00](https://news.qq.com/rain/a/20250307A08TWN00)
-
-\[26] 英雄出少年之季逸超-CSDN 博客[ https://blog.csdn.net/weixin_34413103/article/details/92337226](https://blog.csdn.net/weixin_34413103/article/details/92337226)
-
-\[27] 播客推荐 | Manus 季逸超 12 月访谈(下)\_孔某人的低维认知[ http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao](http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao)
-
-\[28] 张小珺 Jùn|商业访谈录 | 小宇宙 - 听播客，上小宇宙[ https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962)
-
-\[29] Manus 季逸超访谈解读(3)Manus 的数据飞轮\_孔某人的低维认知[ http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao](http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao)
-
-\[30] 张小珺 对话 季 艺超 ： 只因 肖弘 “ 正常 ” ， 我 才 选择 加入 Manus # 张小珺 商业 访谈录 # 季逸超 # Manus # 肖弘 # Meta 收购 Manus[ https://www.iesdouyin.com/share/video/7593038036498268901/?region=\&mid=7593037934350125824\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=0wLvUFYnUqlpI3dFTiPrAA4H781p4leMWkjw_BC4RW0-\&share_version=280700\&ts=1767945630\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7593038036498268901/?region=&mid=7593037934350125824&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=0wLvUFYnUqlpI3dFTiPrAA4H781p4leMWkjw_BC4RW0-&share_version=280700&ts=1767945630&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[31] Manus 季逸超访谈解读(1)Benchmark 是所有 AI 公司的唯一护城河\_孔某人的低维认知[ http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao](http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao)
-
-\[32] 新浪财经客户端[ https://stock.weibo.cn/page/detail?symbol=sz300753\&market=cn\&from=module](https://stock.weibo.cn/page/detail?symbol=sz300753&market=cn&from=module)
-
-\[33] Manus 季逸超访谈解读(4)不要构建对等的 Multi-Agent\_孔某人的低维认知[ http://m.toutiao.com/group/7592688829362864680/?upstream_biz=doubao](http://m.toutiao.com/group/7592688829362864680/?upstream_biz=doubao)
-
-\[34] Manus 上岸了，但 Agent 还没有赢\_中国企业家杂志[ http://m.toutiao.com/group/7589981563408957978/?upstream_biz=doubao](http://m.toutiao.com/group/7589981563408957978/?upstream_biz=doubao)
-
-\[35] Manus 被收购前最后一次访谈:季逸超还不知道 Meta 即将来敲门[ https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html](https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html)
-
-\[36] Manus 最新对话全文:尝试 Agent 支付，公司 RRR 近 1 亿美元\_极客公园[ http://m.toutiao.com/group/7541273859254698539/?upstream_biz=doubao](http://m.toutiao.com/group/7541273859254698539/?upstream_biz=doubao)
-
-\[37] 什么 是 Manus ？ 它 不仅 整合 旅行 信息 ， 还 为 用户 创建 定制 旅行 手册 ； 它 可以 进行 深入 的 股票 分析 ， 对 股票 进行 全面 的 洞察 ； 它 可以 为 中学 教师 创建 视频 演示 材料 ， 帮助 教师 更 有效 地 教学 ； 它 可以 帮 你 筛选 简历 ， 整理 表格 对 候选人 进行 评估 … … 2025 年 3 月 6 日 凌晨 ， Monica 研发 的 全球 首款 AI Agent 产品 “ Manus ” 正式 面世 ， 引起 全球 范围 内 的 行业 关注 ， 邀请 码 被 一 抢 而 空 。 Monica 产品 合伙人 张涛 “ Manus ” 首席 科学家 ， 原 Magi 创始人 & 真格 基金 EIR 季逸超 混沌 创新 领教 、 云九 资本 合伙人 任鑫 混沌 创新 领教 、 洪泰 基金 董事 总经理 潘杨 一同 参加 混沌 圆桌 探索 流 ， 深 聊 了 《 创新 范式 转移 ， AI 革命 下 ， 创业 何去何从 ？ 》 # manus # 深度 阅读 # 产品 # 人工 智能 # 商业 思维[ https://www.iesdouyin.com/share/note/7479441283354742016/?region=\&mid=7450368764439382017\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&schema_type=37\&share_sign=RNNFQlVsU6Ows9Jw45FMVJWC5PrSqwn9XFaCNixYniI-\&share_version=280700\&ts=1767945630\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/note/7479441283354742016/?region=&mid=7450368764439382017&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&schema_type=37&share_sign=RNNFQlVsU6Ows9Jw45FMVJWC5PrSqwn9XFaCNixYniI-&share_version=280700&ts=1767945630&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[38] 对话“Manus”两位创始人:2025，AI Agent 即将引爆|AI|创业|张涛|AI|创业\_手机新浪网[ https://finance.sina.cn/2025-03-10/detail-inepeiih0596196.d.html?vt=4\&cid=79649\&node_id=79649](https://finance.sina.cn/2025-03-10/detail-inepeiih0596196.d.html?vt=4&cid=79649&node_id=79649)
-
-\[39] 128. Manus 决定出售前最后的访谈：啊，这奇幻的 2025 年漂流啊…[ http://m.toutiao.com/imported-data/general_first_party_podcast/7589894993003970586?upstream_biz=doubao#0000](http://m.toutiao.com/imported-data/general_first_party_podcast/7589894993003970586?upstream_biz=doubao#0000)
-
-\[40] 【长期主义】第 329 期智能说:腾讯科技独家对话 Manus 肖弘，混沌学园对话 Manus 两位创始人，AI Agent 即将引爆\_创业\_能力\_技术[ https://m.sohu.com/a/871251605_121124376/](https://m.sohu.com/a/871251605_121124376/)
-
-\[41] 128. Manus 决定出售前最后的访谈:啊，这奇幻的 202... - 张小珺 Jùn|商业访谈录 - Apple 播客[ https://podcasts.apple.com/cn/podcast/128-manus%E5%86%B3%E5%AE%9A%E5%87%BA%E5%94%AE%E5%89%8D%E6%9C%80%E5%90%8E%E7%9A%84%E8%AE%BF%E8%B0%88-%E5%95%8A-%E8%BF%99%E5%A5%87%E5%B9%BB%E7%9A%842025%E5%B9%B4%E6%BC%82%E6%B5%81%E5%95%8A/id1634356920?i=1000743131736](https://podcasts.apple.com/cn/podcast/128-manus%E5%86%B3%E5%AE%9A%E5%87%BA%E5%94%AE%E5%89%8D%E6%9C%80%E5%90%8E%E7%9A%84%E8%AE%BF%E8%B0%88-%E5%95%8A-%E8%BF%99%E5%A5%87%E5%B9%BB%E7%9A%842025%E5%B9%B4%E6%BC%82%E6%B5%81%E5%95%8A/id1634356920?i=1000743131736)
-
-\[42] 播客推荐 | Manus 季逸超 12 月访谈(下)\_孔某人的低维认知[ http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao](http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao)
-
-\[43] Manus 季逸超访谈解读(1)Benchmark 是所有 AI 公司的唯一护城河\_孔某人的低维认知[ http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao](http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao)
-
-\[44] 新浪财经客户端[ https://stock.weibo.cn/page/detail?symbol=sz300753\&market=cn\&from=module](https://stock.weibo.cn/page/detail?symbol=sz300753&market=cn&from=module)
-
-\[45] 张小珺 Jùn|商业访谈录 | 小宇宙 - 听播客，上小宇宙[ https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962?utm_source=rss](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962?utm_source=rss)
-
-\[46] Manus 季逸超访谈解读(3)Manus 的数据飞轮\_孔某人的低维认知[ http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao](http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao)
-
-\[47] 张小珺's Podcast: AGI Paradigm Shift[ https://docs.feishu.cn/v/wiki/QsOXwDJTOi4XQEklMUTcLwFMnqh/aj](https://docs.feishu.cn/v/wiki/QsOXwDJTOi4XQEklMUTcLwFMnqh/aj)
-
-\[48] 我 认为 25 年 最 有 价值 的 一篇 中文 AI 访谈 Manus 出售 前 最后 一 次 公开 访谈 说了 什么 我 反复 看 了 3 遍 ， 总结 了 我 认为 最 有 价值 的 点 # AI # 人工 智能 # Manus # Deep seek # chat gpt[ https://www.iesdouyin.com/share/video/7592277863082024870/?region=\&mid=7592277796819356443\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-\&share_version=280700\&ts=1767945640\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7592277863082024870/?region=&mid=7592277796819356443&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-&share_version=280700&ts=1767945640&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[49] Manus 季逸超访谈:阿里千问非常扎实 \$阿里巴巴(BABA)\$刚刚看完 Manus 首席科学家季逸超长达三个小时的访谈，很有意思。(视频在 B 站 有)相比 C...[ https://xueqiu.com/4111913912/368423284](https://xueqiu.com/4111913912/368423284)
-
-\[50] Meta 几十亿 美金 收购 Manus ， 看 首席 科学家 季逸超 3 . 5 小时 播客 都 说 了 什么 ， 我 总结 了 八 个 主题 ， 原 播客 非常 值得 一看 # Meta # Manus # 肖弘 # 季逸超 # Agent[ https://www.iesdouyin.com/share/video/7591370069294507954/?region=\&mid=7591369996664703763\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=Gx6dp7c33CJ1rml5mCUnsFt9NKTTaHWWDPgKBClwUtI-\&share_version=280700\&ts=1767945640\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7591370069294507954/?region=&mid=7591369996664703763&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=Gx6dp7c33CJ1rml5mCUnsFt9NKTTaHWWDPgKBClwUtI-&share_version=280700&ts=1767945640&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[51] 25 年 ， 我 精选 的 36 条 AI 洞察[ https://www.iesdouyin.com/share/note/7593169998618852473/?region=\&mid=6477398356422789901\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&schema_type=37\&share_sign=aCzCv4393MgMh2Gl_aARLFMxDm_Umq0UXbo2Yw.7lfg-\&share_version=280700\&ts=1767945640\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/note/7593169998618852473/?region=&mid=6477398356422789901&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&schema_type=37&share_sign=aCzCv4393MgMh2Gl_aARLFMxDm_Umq0UXbo2Yw.7lfg-&share_version=280700&ts=1767945640&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[52] Manus 被收购前最后一次访谈:季逸超还不知道 Meta 即将来敲门|manus|meta|创业者|季逸超|疯狂\_手机网易网[ http://m.163.com/sports/article_cambrian/KI2BSOSU0556BKW5.html](http://m.163.com/sports/article_cambrian/KI2BSOSU0556BKW5.html)
-
-\[53] 对话“Manus”两位创始人:2025，AI Agent 即将引爆[ https://finance.sina.com.cn/jjxw/2025-03-10/doc-inepeiih0596196.shtml](https://finance.sina.com.cn/jjxw/2025-03-10/doc-inepeiih0596196.shtml)
-
-\[54] 张小珺 Jùn|商业访谈录 | Podwise[ https://podwise.ai/dashboard/podcasts/189](https://podwise.ai/dashboard/podcasts/189)
-
-\[55] 李想 2024 年 12 月 25 日访谈 \$理想汽车-W(02015)\$ \$赛力斯(SH601127)\$ \$小米集团-W(01810)\$ 今年汽车行业最重磅的访谈...[ https://xueqiu.com/2396299213/318185235](https://xueqiu.com/2396299213/318185235)
-
-\[56] 相逢 2025 创业邦 璀璨 女性 影响力 大会 ， 遇见 值得 关注 的 商业 、 科创 、 跨界 女性 ， 我们 在 发问 与 对话 间 中 听见 勇气 与 智慧 的 共鸣 ， 循 着 她们 韧性 与 硬核 的 创业路 ， 发现 更 广阔 的 人生 视野 。&#x20;
-
-&#x20;每 一位 现场 的 她 ， 都 闪闪 发光 ， 每 一程 无畏 探索 都 被 让 爱 照亮 。 大会 落幕 ， 让 这段 精彩 花絮 带 我们 重温 感动 。 下 一 次 ， 期待 更多 优秀 女性 于 此 相逢 ！ # 2025 创业邦 璀璨 女性 影响力 大会[ https://www.iesdouyin.com/share/video/7496418697469300008/?region=\&mid=7496419260365949723\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=Dni\_.8nAzzcCOCj.CYPNprY9.lahaCQGjLUUhXldzpc-\&share_version=280700\&ts=1767945650\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7496418697469300008/?region=&mid=7496419260365949723&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=Dni_.8nAzzcCOCj.CYPNprY9.lahaCQGjLUUhXldzpc-&share_version=280700&ts=1767945650&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[57] Xiao-Jun Zhang[ https://cambridgepub.com/author/xiao-jun-zhang](https://cambridgepub.com/author/xiao-jun-zhang)
-
-\[58] 张小珺的个人主页 - 即刻 App[ http://m.jellow.club/users/8FB3DB5E-4971-4B31-8FC6-B18B8C847D3F](http://m.jellow.club/users/8FB3DB5E-4971-4B31-8FC6-B18B8C847D3F)
-
-\[59] 季逸超\[Peak Labs 的创始人]\_百科[ https://m.baike.com/wiki/%E5%AD%A3%E9%80%B8%E8%B6%85/4094098?baike_source=doubao](https://m.baike.com/wiki/%E5%AD%A3%E9%80%B8%E8%B6%85/4094098?baike_source=doubao)
-
-\[60] Manus 被收购前最后一次访谈:季逸超还不知道 Meta 即将来敲门|manus|meta|创业者|季逸超|疯狂\_手机网易网[ http://m.163.com/dy/article_cambrian/KI2BSOSU0556BKW5.html](http://m.163.com/dy/article_cambrian/KI2BSOSU0556BKW5.html)
-
-\[61] 90 后程序英雄季逸超-CSDN 博客[ https://blog.csdn.net/junecauzhang/article/details/7889256](https://blog.csdn.net/junecauzhang/article/details/7889256)
-
-\[62] 3 位连续创业者打造 Manus，应用潮里有更多“underdog”的机会\_腾讯新闻[ http://news.qq.com/rain/a/20250308A08ABQ00](http://news.qq.com/rain/a/20250308A08ABQ00)
-
-\[63] 季逸超 Peak:AI 竞泳十年|Z Circle|奥运会|伏明霞|奥运冠军|约翰·卡马克|马克·扎克伯格\_网易订阅[ https://www.163.com/dy/article/IPQ85GIG0511B6FU.html](https://www.163.com/dy/article/IPQ85GIG0511B6FU.html)
-
-\[64] 观·人物丨一场来自中国的“代码起义”，谁在定义 AI 搭档?\_四川观察[ http://m.toutiao.com/group/7478722834055889449/?upstream_biz=doubao](http://m.toutiao.com/group/7478722834055889449/?upstream_biz=doubao)
-
-\[65] Manus 杀疯了!这个非主流 90 后的突围路，揭示了 AI 时代的成长法则\_外滩教育[ http://m.toutiao.com/group/7592812703157076522/?upstream_biz=doubao](http://m.toutiao.com/group/7592812703157076522/?upstream_biz=doubao)
-
-\[66] 张小珺 Jùn|商业访谈录 | 小宇宙 - 听播客，上小宇宙[ https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962?utm_source=rss](https://www.xiaoyuzhoufm.com/podcast/626b46ea9cbbf0451cf5a962?utm_source=rss)
-
-\[67] 播客更新|与戴雨森和季逸超聊 一幅 Sora 的信息拼图和中国大模型淘汰赛\_腾讯新闻[ http://news.qq.com/rain/a/20240311A024IP00](http://news.qq.com/rain/a/20240311A024IP00)
-
-\[68] 播客推荐 | Manus 季逸超 12 月访谈(下)\_孔某人的低维认知[ http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao](http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao)
-
-\[69] 我 认为 25 年 最 有 价值 的 一篇 中文 AI 访谈 Manus 出售 前 最后 一 次 公开 访谈 说了 什么 我 反复 看 了 3 遍 ， 总结 了 我 认为 最 有 价值 的 点 # AI # 人工 智能 # Manus # Deep seek # chat gpt[ https://www.iesdouyin.com/share/video/7592277863082024870/?region=\&mid=7592277796819356443\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-\&share_version=280700\&ts=1767945658\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7592277863082024870/?region=&mid=7592277796819356443&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-&share_version=280700&ts=1767945658&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[70] 128. Manus 决定出售前最后的访谈:啊，这奇幻的 2025 年漂流啊… - 张小珺 Jùn|商业访谈录 | 小宇宙 - 听播客，上小宇宙[ https://www.xiaoyuzhoufm.com/episode/695331cb2db086f897b50ea9](https://www.xiaoyuzhoufm.com/episode/695331cb2db086f897b50ea9)
-
-\[71] Manus 被收购前最后一次访谈:季逸超还不知道 Meta 即将来敲门[ https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html](https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html)
-
-\[72] 73. AGI 范式大转移:和广密预言草莓、OpenAI o1 和 self-play RL|全球大模型季报 4 - 张小珺 Jùn|商业访谈录 | 小宇宙 - 听播客，上小宇宙[ https://www.xiaoyuzhoufm.com/episode/66d866f0f39a2201c069dccb](https://www.xiaoyuzhoufm.com/episode/66d866f0f39a2201c069dccb)
-
-\[73] 来自豆包张小珺 ×Manus(季逸超)访谈核心速览(500 字内)访谈录制于 2025 年 12 月 1 日( Meta 收购前)，是 M...[ https://xueqiu.com/3783292942/368778062](https://xueqiu.com/3783292942/368778062)
-
-\[74] Meta 几十亿 美金 收购 Manus ， 看 首席 科学家 季逸超 3 . 5 小时 播客 都 说 了 什么 ， 我 总结 了 八 个 主题 ， 原 播客 非常 值得 一看 # Meta # Manus # 肖弘 # 季逸超 # Agent[ https://www.iesdouyin.com/share/video/7591370069294507954/?region=\&mid=7591369996664703763\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=Gx6dp7c33CJ1rml5mCUnsFt9NKTTaHWWDPgKBClwUtI-\&share_version=280700\&ts=1767945658\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7591370069294507954/?region=&mid=7591369996664703763&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=Gx6dp7c33CJ1rml5mCUnsFt9NKTTaHWWDPgKBClwUtI-&share_version=280700&ts=1767945658&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[75] Manus 季逸超访谈解读(4)不要构建对等的 Multi-Agent\_孔某人的低维认知[ http://m.toutiao.com/group/7592688829362864680/?upstream_biz=doubao](http://m.toutiao.com/group/7592688829362864680/?upstream_biz=doubao)
-
-\[76] Manus 上岸了，但 Agent 还没有赢\_中国企业家杂志[ http://m.toutiao.com/group/7589981563408957978/?upstream_biz=doubao](http://m.toutiao.com/group/7589981563408957978/?upstream_biz=doubao)
-
-\[77] 对话“Manus”两位创始人:2025，AI Agent 即将引爆|AI|创业|张涛|AI|创业\_手机新浪网[ https://finance.sina.cn/2025-03-10/detail-inepeiih0596196.d.html?vt=4\&cid=79649\&node_id=79649](https://finance.sina.cn/2025-03-10/detail-inepeiih0596196.d.html?vt=4&cid=79649&node_id=79649)
-
-\[78] Manus 季逸超访谈解读(1)Benchmark 是所有 AI 公司的唯一护城河\_孔某人的低维认知[ http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao](http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao)
-
-\[79] 【长期主义】第 329 期智能说:腾讯科技独家对话 Manus 肖弘，混沌学园对话 Manus 两位创始人，AI Agent 即将引爆\_创业\_能力\_技术[ https://m.sohu.com/a/871251605_121124376/](https://m.sohu.com/a/871251605_121124376/)
-
-\[80] Manus 季逸超访谈解读(4)不要构建对等的 Multi-Agent\_孔某人的低维认知[ http://m.toutiao.com/group/7592688829362864680/?upstream_biz=doubao](http://m.toutiao.com/group/7592688829362864680/?upstream_biz=doubao)
-
-\[81] Manus 被收购前最后一次访谈:季逸超还不知道 Meta 即将来敲门|manus|meta|创业者|季逸超|疯狂\_手机网易网[ http://m.163.com/jiu/article_cambrian/KI2BSOSU0556BKW5.html](http://m.163.com/jiu/article_cambrian/KI2BSOSU0556BKW5.html)
-
-\[82] 播客推荐 | Manus 季逸超 12 月访谈(下)\_孔某人的低维认知[ http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao](http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao)
-
-\[83] 【长期主义】第 329 期智能说:腾讯科技独家对话 Manus 肖弘，混沌学园对话 Manus 两位创始人，AI Agent 即将引爆\_创业\_能力\_技术[ https://m.sohu.com/a/871251605_121124376/](https://m.sohu.com/a/871251605_121124376/)
-
-\[84] 资金流向更多[ https://stock.weibo.cn/page/detail?symbol=sz002353\&market=cn\&channel=wbcard](https://stock.weibo.cn/page/detail?symbol=sz002353&market=cn&channel=wbcard)
-
-\[85] Manus 上岸了，但 Agent 还没有赢\_中国企业家杂志[ http://m.toutiao.com/group/7589981563408957978/?upstream_biz=doubao](http://m.toutiao.com/group/7589981563408957978/?upstream_biz=doubao)
-
-\[86] Manus 季逸超访谈:阿里千问非常扎实 \$阿里巴巴(BABA)\$刚刚看完 Manus 首席科学家季逸超长达三个小时的访谈，很有意思。(视频在 B 站 有)相比 C...[ https://xueqiu.com/4111913912/368423284](https://xueqiu.com/4111913912/368423284)
-
-\[87] 我 认为 25 年 最 有 价值 的 一篇 中文 AI 访谈 Manus 出售 前 最后 一 次 公开 访谈 说了 什么 我 反复 看 了 3 遍 ， 总结 了 我 认为 最 有 价值 的 点 # AI # 人工 智能 # Manus # Deep seek # chat gpt[ https://www.iesdouyin.com/share/video/7592277863082024870/?region=\&mid=7592277796819356443\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-\&share_version=280700\&ts=1767945665\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7592277863082024870/?region=&mid=7592277796819356443&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-&share_version=280700&ts=1767945665&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[88] Meta 几十亿 美金 收购 Manus ， 看 首席 科学家 季逸超 3 . 5 小时 播客 都 说 了 什么 ， 我 总结 了 八 个 主题 ， 原 播客 非常 值得 一看 # Meta # Manus # 肖弘 # 季逸超 # Agent[ https://www.iesdouyin.com/share/video/7591370069294507954/?region=\&mid=7591369996664703763\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=Gx6dp7c33CJ1rml5mCUnsFt9NKTTaHWWDPgKBClwUtI-\&share_version=280700\&ts=1767945665\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7591370069294507954/?region=&mid=7591369996664703763&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=Gx6dp7c33CJ1rml5mCUnsFt9NKTTaHWWDPgKBClwUtI-&share_version=280700&ts=1767945665&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[89] Manus 季逸超访谈解读(3)Manus 的数据飞轮\_孔某人的低维认知[ http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao](http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao)
-
-\[90] Manus 杀疯了!这个非主流 90 后的突围路，揭示了 AI 时代的成长法则\_外滩教育[ http://m.toutiao.com/group/7592812703157076522/?upstream_biz=doubao](http://m.toutiao.com/group/7592812703157076522/?upstream_biz=doubao)
-
-\[91] Manus 含金量 超高 的 访谈 # 人工 智能 # Manus # 科技[ https://www.iesdouyin.com/share/video/7591345572239794843/?region=\&mid=7591345441896155956\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=1nMOaFLbdbex2Tb_wRrlzFU6p7TWukcdmFtTqZsNVZA-\&share_version=280700\&ts=1767945665\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7591345572239794843/?region=&mid=7591345441896155956&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=1nMOaFLbdbex2Tb_wRrlzFU6p7TWukcdmFtTqZsNVZA-&share_version=280700&ts=1767945665&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[92] Manus 季逸超访谈解读(1)Benchmark 是所有 AI 公司的唯一护城河\_孔某人的低维认知[ http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao](http://m.toutiao.com/group/7591408149740012038/?upstream_biz=doubao)
-
-\[93] 播客推荐 | Manus 季逸超 12 月访谈(下)\_孔某人的低维认知[ http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao](http://m.toutiao.com/group/7590091350519988782/?upstream_biz=doubao)
-
-\[94] 我 认为 25 年 最 有 价值 的 一篇 中文 AI 访谈 Manus 出售 前 最后 一 次 公开 访谈 说了 什么 我 反复 看 了 3 遍 ， 总结 了 我 认为 最 有 价值 的 点 # AI # 人工 智能 # Manus # Deep seek # chat gpt[ https://www.iesdouyin.com/share/video/7592277863082024870/?region=\&mid=7592277796819356443\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-\&share_version=280700\&ts=1767945672\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7592277863082024870/?region=&mid=7592277796819356443&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=jSpFWWqq7nSXFJ3FPyU3Eghs3pxBu4oZA0rCUZoVOyw-&share_version=280700&ts=1767945672&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[95] Manus 季逸超访谈解读(3)Manus 的数据飞轮\_孔某人的低维认知[ http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao](http://m.toutiao.com/group/7592317769761260067/?upstream_biz=doubao)
-
-\[96] 张小珺 对话 季 艺超 ： 只因 肖弘 “ 正常 ” ， 我 才 选择 加入 Manus # 张小珺 商业 访谈录 # 季逸超 # Manus # 肖弘 # Meta 收购 Manus[ https://www.iesdouyin.com/share/video/7593038036498268901/?region=\&mid=7593037934350125824\&u_code=0\&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ\&with_sec_did=1\&video_share_track_ver=\&titleType=title\&share_sign=0wLvUFYnUqlpI3dFTiPrAA4H781p4leMWkjw_BC4RW0-\&share_version=280700\&ts=1767945672\&from_aid=1128\&from_ssr=1\&share_track_info=%7B%22link_description_type%22%3A%22%22%7D](https://www.iesdouyin.com/share/video/7593038036498268901/?region=&mid=7593037934350125824&u_code=0&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=0wLvUFYnUqlpI3dFTiPrAA4H781p4leMWkjw_BC4RW0-&share_version=280700&ts=1767945672&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D)
-
-\[97] 新浪财经客户端[ https://stock.weibo.cn/page/detail?symbol=sz300753\&market=cn\&from=module](https://stock.weibo.cn/page/detail?symbol=sz300753&market=cn&from=module)
-
-\[98] AI 时代，到底什么是稀缺的?|调用|翻译|参考系\_网易订阅[ https://www.163.com/dy/article/KIGT8PU905566SDR.html](https://www.163.com/dy/article/KIGT8PU905566SDR.html)
-
-\[99] Manus 被收购前最后一次访谈:季逸超还不知道 Meta 即将来敲门[ https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html](https://c.m.163.com/news/a/KI2BSOSU0556BKW5.html)
-
-\[100] Manus 季逸超访谈解读(4)不要构建对等的 Multi-Agent\_孔某人的低维认知[ http://m.toutiao.com/group/7592688829362864680/?upstream_biz=doubao](http://m.toutiao.com/group/7592688829362864680/?upstream_biz=doubao)
-
-\[101] Manus 上岸了，但 Agent 还没有赢\_中国企业家杂志[ http://m.toutiao.com/group/7589981563408957978/?upstream_biz=doubao](http://m.toutiao.com/group/7589981563408957978/?upstream_biz=doubao)
-
-\[102] Manus 杀疯了!这个非主流 90 后的突围路，揭示了 AI 时代的成长法则\_外滩教育[ http://m.toutiao.com/group/7592812703157076522/?upstream_biz=doubao](http://m.toutiao.com/group/7592812703157076522/?upstream_biz=doubao)
-
-\[103] Manus 季逸超访谈解读(2)Proactive Agent 不应占用用户时间\_孔某人的低维认知[ http://m.toutiao.com/group/7591946717029728774/?upstream_biz=doubao](http://m.toutiao.com/group/7591946717029728774/?upstream_biz=doubao)
-
-\[104] Manus 最新对话全文:尝试 Agent 支付，公司 RRR 近 1 亿美元\_极客公园[ http://m.toutiao.com/group/7541273859254698539/?upstream_biz=doubao](http://m.toutiao.com/group/7541273859254698539/?upstream_biz=doubao)
-
-\[105] Manus“删博、裁员、跑路新加坡”后，创始人首次复盘经验教训\_虎嗅 APP[ http://m.toutiao.com/group/7528834430148805174/?upstream_biz=doubao](http://m.toutiao.com/group/7528834430148805174/?upstream_biz=doubao)
-
-> （注：文档部分内容可能由 AI 生成）
+> 注：本文档部分内容可能由 AI 辅助生成，核心观点均来自原始访谈内容。
