@@ -1,66 +1,114 @@
-var t;
+var counter;
+
 !(function () {
-	var n,
-		e = [],
-		o = !1;
-	function c() {
-		(o = !0),
-			document.removeEventListener("DOMContentLoaded", c),
-			e.forEach((t) => t.call(document)),
-			(e = []);
+	var onReady;
+	var queue = [];
+	var ready = false;
+
+	function flush() {
+		ready = true;
+		document.removeEventListener("DOMContentLoaded", flush);
+		queue.forEach(function (fn) {
+			fn.call(document);
+		});
+		queue = [];
 	}
-	n = function (t) {
-		o ||
-		"interactive" === document.readyState ||
-		"complete" === document.readyState
-			? t.call(document)
-			: (e.push(t), document.addEventListener("DOMContentLoaded", c));
+
+	onReady = function (fn) {
+		if (ready || document.readyState === "interactive" || document.readyState === "complete") {
+			fn.call(document);
+			return;
+		}
+		queue.push(fn);
+		document.addEventListener("DOMContentLoaded", flush);
 	};
-	({
-		fetch: async function (e) {
-			const o = `${
-				document.currentScript.src.includes("cn.vercount.one")
-					? "https://cn.vercount.one"
-					: "https://vercount.one"
-			}/log?jsonpCallback=VisitorCountCallback`;
-			try {
-				const t = await fetch(o, {
-						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
-						},
-						body: JSON.stringify({
-							url: window.location.href,
-						}),
-					}),
-					c = await t.json();
-				n(() => e(c));
-			} catch (n) {
-				console.error("Error fetching visitor count:", n), t.hideAll();
+
+	function fetchVisitorCount() {
+		var isCnDomain = window.location.hostname.endsWith(".cn");
+		var apiBase = isCnDomain ? "https://cn.vercount.one" : "https://vercount.one";
+		var callbackName = "VisitorCountCallback_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
+		var script = document.createElement("script");
+		var timeoutId = null;
+
+		return new Promise(function (resolve, reject) {
+			function cleanup() {
+				if (timeoutId) clearTimeout(timeoutId);
+				delete window[callbackName];
+				if (script.parentNode) script.parentNode.removeChild(script);
 			}
+
+			window[callbackName] = function (payload) {
+				cleanup();
+				resolve(payload || {});
+			};
+
+			script.onerror = function () {
+				cleanup();
+				reject(new Error("Failed to load visitor counter script"));
+			};
+
+			timeoutId = setTimeout(function () {
+				cleanup();
+				reject(new Error("Visitor counter request timed out"));
+			}, 8000);
+
+			script.src =
+				apiBase +
+				"/log?url=" +
+				encodeURIComponent(window.location.href) +
+				"&jsonpCallback=" +
+				encodeURIComponent(callbackName);
+			document.head.appendChild(script);
+		});
+	}
+
+	function toSafeNumber(input) {
+		var value = Number(input);
+		return Number.isFinite(value) ? value : 0;
+	}
+
+	counter = {
+		counterIds: ["site_pv", "site_uv"],
+		offsetMap: {
+			site_pv: 3500,
+			site_uv: 1024,
 		},
-	}).fetch(
-		(t = {
-			counterIds: ["site_pv", "site_uv"],
-			updateText: function (t) {
-				this.counterIds.forEach((n, index) => {
-					const e = document.getElementById("busuanzi_value_" + n);
-					const number = index === 0 ? t[n] + 3500 : t[n] + 1024;
-					e && (e.textContent = number || "0");
-				});
-			},
-			hideAll: function () {
-				this.counterIds.forEach((t) => {
-					const n = document.getElementById("busuanzi_container_" + t);
-					n && (n.style.display = "none");
-				});
-			},
-			showAll: function () {
-				this.counterIds.forEach((t) => {
-					const n = document.getElementById("busuanzi_container_" + t);
-					n && (n.style.display = "inline");
-				});
-			},
-		}).updateText.bind(t)
-	);
+		updateText: function (payload) {
+			this.counterIds.forEach(
+				function (id) {
+					var valueNode = document.getElementById("busuanzi_value_" + id);
+					if (!valueNode) return;
+					var base = toSafeNumber(payload[id]);
+					var number = base + toSafeNumber(this.offsetMap[id]);
+					valueNode.textContent = String(number);
+				}.bind(this)
+			);
+		},
+		setFallback: function (fallbackText) {
+			this.counterIds.forEach(function (id) {
+				var valueNode = document.getElementById("busuanzi_value_" + id);
+				if (valueNode) valueNode.textContent = fallbackText;
+			});
+		},
+	};
+
+	if (["localhost", "127.0.0.1", "::1"].includes(window.location.hostname)) {
+		onReady(function () {
+			counter.setFallback("0");
+		});
+		return;
+	}
+
+	fetchVisitorCount()
+		.then(function (payload) {
+			onReady(function () {
+				counter.updateText(payload);
+			});
+		})
+		.catch(function (error) {
+			onReady(function () {
+				counter.setFallback("0");
+			});
+			console.warn("Visitor count unavailable:", error);
+		});
 })();

@@ -177,10 +177,13 @@ footer:
     # <span>rebuild in 2023 with using the  <a href="https://hexo.io/index.html">Hexo</a> and<a href="https://github.com/ikeq/hexo-theme-inside">inside</a></span>
     <div>Rebuild in 2023  &nbsp;&nbsp;|&nbsp;&nbsp;  Start in 2021</div>
     <div>
-    <span>
-    Total View <span id="busuanzi_value_site_pv">Loading</span>,&nbsp;
-    Site Visitors <span id="busuanzi_value_site_uv">Loading</span>
+    <span id="busuanzi_container_site_pv">
+    Total View <span id="busuanzi_value_site_pv">0</span>
+    </span>,&nbsp;
+    <span id="busuanzi_container_site_uv">
+    Site Visitors <span id="busuanzi_value_site_uv">0</span>
     </span>
+    </div>
 
 # ---------------------------------------------------------------
 # Content
@@ -432,7 +435,6 @@ plugins:
   #     wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
   #     wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容
   - palette:
-      col: 5
       theme:
         [
           "#673ab7",
@@ -460,9 +462,7 @@ plugins:
   # Or a path relative to `hexo.base_dir`
   # template: snippets/snippet-1.html
 
-  - position: sidebar
-    template: |
-      <script defer>var t;!(function(){var n,e=[],o=!1;function c(){(o=!0),document.removeEventListener("DOMContentLoaded",c),e.forEach((t)=>t.call(document)),(e=[])}n=function(t){o||"interactive"===document.readyState||"complete"===document.readyState?t.call(document):(e.push(t),document.addEventListener("DOMContentLoaded",c))};({fetch:async function(e){const o=`${document.currentScript.src.includes("cn.vercount.one")?"https://cn.vercount.one":"https://vercount.one"}/log?jsonpCallback=VisitorCountCallback`;try{const t=await fetch(o,{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({url:window.location.href,}),}),c=await t.json();n(()=>e(c))}catch(n){console.error("Error fetching visitor count:",n),t.hideAll()}},}).fetch((t={counterIds:["site_pv","site_uv"],updateText:function(t){this.counterIds.forEach((n,index)=>{const e=document.getElementById("busuanzi_value_"+n);const number=index===0?t[n]+3500:t[n]+1024;e&&(e.textContent=number||"0")})},hideAll:function(){this.counterIds.forEach((t)=>{const n=document.getElementById("busuanzi_container_"+t);n&&(n.style.display="none")})},showAll:function(){this.counterIds.forEach((t)=>{const n=document.getElementById("busuanzi_container_"+t);n&&(n.style.display="inline")})},}).updateText.bind(t))})();</script>
+  - js/busuanzi.js
 
   # jQery
   - //cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js
