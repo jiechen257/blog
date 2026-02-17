@@ -122,15 +122,15 @@ profile:
 
 # Sidebar navigation links
 menu:
-  📝 Tech: /tech
-  🔖 Life: /life
+  📝 技术: /tech
+  🔖 杂文: /life
 
   # ⌨️ LeetCode: /leetcode
-  ⏳ List: /list
+  ⏳ 清单: /list
   # 🔗 Now: /now
-  🐈 About: /about
+  🐈  关于我: /about
   # 🔗 Links: /links
-  🔍 Search: /search
+  🔍 搜索: /search
 
 # Social media URL
 sns:
@@ -433,18 +433,19 @@ plugins:
   #     wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容
   - palette:
       col: 5
-      theme: [
-        '#673ab7',
-        '#3f51b5',
-        '#2196f3',
-        '#009688',
-        '#4caf50',
-        '#ff9800',
-        '#ff5722',
-        '#795548',
-        '#607D8B',
-        '#2a2b33'
-      ]
+      theme:
+        [
+          "#673ab7",
+          "#3f51b5",
+          "#2196f3",
+          "#009688",
+          "#4caf50",
+          "#ff9800",
+          "#ff5722",
+          "#795548",
+          "#607D8B",
+          "#2a2b33",
+        ]
 
   # Global Inject script/style
   # By default script will be injected into <body>, and style will be injected into <head>
