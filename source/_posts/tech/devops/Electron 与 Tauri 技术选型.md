@@ -1,8 +1,7 @@
-
 ---
 title: Electron 与 Tauri 技术选型
-tags: Electron, Tauri
-categories: devops
+tags: [engineering, tooling]
+categories: [tech, front-end]
 abbrlink: 2025102001
 date: 2025-10-20 10:13:54
 ---

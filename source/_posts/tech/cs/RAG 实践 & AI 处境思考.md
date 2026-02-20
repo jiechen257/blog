@@ -1,7 +1,7 @@
 ---
 title: RAG 实践 & AI 当下发展
-tags: AI
-categories: cs-basics
+categories: [tech, ai]
+tags: [computer-science, ai]
 abbrlink: 20241126
 date: 2024-11-26 22:02:58
 ---

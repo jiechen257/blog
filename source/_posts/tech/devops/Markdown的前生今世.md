@@ -1,7 +1,7 @@
 ---
 title: Markdown的前生今世
-categories: new-power
-tags: markdown
+categories: [tech, engineering]
+tags: [engineering, tooling]
 abbrlink: 32679
 date: 2023-12-17 21:47:50
 ---

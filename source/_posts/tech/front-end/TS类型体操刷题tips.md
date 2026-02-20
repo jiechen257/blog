@@ -1,7 +1,7 @@
 ---
 title: TS类型体操刷题tips
-tags: TypeScript
-categories: front-end
+categories: [tech, front-end]
+tags: [front-end, engineering]
 abbrlink: 65455
 date: 2022-08-27 14:14:33
 ---

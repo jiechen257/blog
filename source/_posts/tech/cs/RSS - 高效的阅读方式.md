@@ -1,7 +1,7 @@
 ---
 title: RSS - 高效率的阅读方式
-categories: new-power
-tags: rss
+categories: [tech, computer-science]
+tags: [computer-science, productivity]
 abbrlink: 37499
 date: 2023-11-30 00:00:00
 ---

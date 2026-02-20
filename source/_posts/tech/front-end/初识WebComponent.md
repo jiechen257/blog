@@ -1,7 +1,7 @@
 ---
 title: 初识WebComponent
-categories: front-end
-tags: WebComponent
+categories: [tech, front-end]
+tags: [front-end, engineering]
 abbrlink: 43136
 date: 2023-02-16 21:47:50
 ---

@@ -1,7 +1,7 @@
 ---
 title: vue转react快速上手
-tags: react
-categories: front-end
+categories: [tech, front-end]
+tags: [front-end, framework]
 abbrlink: 7380
 date: 2022-04-25 21:52:01
 ---

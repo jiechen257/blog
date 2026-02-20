@@ -1,5 +1,7 @@
 ---
 title: Claude Code 背后的设计思考
+categories: [tech, ai]
+tags: [engineering, ai]
 abbrlink: 2025080411
 date: 2025-08-04
 ---

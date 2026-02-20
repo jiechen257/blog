@@ -1,6 +1,7 @@
 ---
 title: web前端加密是否有意义
-categories: tips
+categories: [tech, front-end]
+tags: [front-end, security]
 abbrlink: 43174
 date: 2022-11-07 22:04:58
 ---

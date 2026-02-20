@@ -1,7 +1,7 @@
 ---
 title: 新兴的Astro
-tags: astro
-categories: front-end
+categories: [tech, front-end]
+tags: [front-end, framework]
 abbrlink: 33106
 date: 2023-04-23 21:47:50
 ---

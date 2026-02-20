@@ -1,7 +1,7 @@
 ---
 title: Redis 快速上手
-categories: back-end
-tags: redis
+categories: [tech, engineering]
+tags: [engineering, backend]
 abbrlink: 43269
 date: 2021-11-03 00:00:00
 ---

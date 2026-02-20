@@ -1,6 +1,7 @@
 ---
 title: 互联网已死，Agent 永生
-categories: ai
+categories: [tech, ai]
+tags: [computer-science, ai]
 abbrlink: 20260211
 date: 2026-02-11 00:00:00
 reprinted: true

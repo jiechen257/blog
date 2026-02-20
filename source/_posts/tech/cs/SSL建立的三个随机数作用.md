@@ -1,7 +1,7 @@
 ---
 title: SSL建立的三个随机数作用
-tags: ssl
-categories: cs-basics
+categories: [tech, computer-science]
+tags: [computer-science, security]
 abbrlink: 25789
 date: 2022-05-27 22:01:01
 ---

@@ -1,7 +1,7 @@
 ---
 title: Local-First 应用程序
-categories: front-end
-tags: ["local-first"]
+categories: [tech, front-end]
+tags: [front-end, architecture]
 abbrlink: 20270708
 date: 2024-07-08
 ---

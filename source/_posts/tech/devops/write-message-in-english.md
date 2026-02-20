@@ -1,7 +1,7 @@
 ---
 title: How to write commit messages in English
-tags: Git
-categories: env
+categories: [tech, engineering]
+tags: [engineering, workflow]
 abbrlink: 20240605
 date: 2024-06-05
 modify: 2024-06-05

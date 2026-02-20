@@ -1,7 +1,7 @@
 ---
 title: ClashX的增强模式
-tags: clash
-categories: config
+categories: [tech, engineering]
+tags: [engineering, network]
 abbrlink: 17799
 date: 2023-08-19 21:47:50
 ---

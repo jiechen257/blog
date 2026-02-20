@@ -123,8 +123,8 @@ profile:
 # Sidebar navigation links
 menu:
   📝 编程: /tech
-  🔖 杂文: /life
   📄 摘录: /extract
+  🔖 杂文: /life
   # ⌨️ LeetCode: /leetcode
   ⏳ 清单: /list
   # 🔗 Now: /now
@@ -464,6 +464,7 @@ plugins:
   # template: snippets/snippet-1.html
 
   - js/busuanzi.js
+  - js/toc-auto-open.js
 
   # jQery
   - //cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js

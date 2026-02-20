@@ -1,7 +1,7 @@
 ---
 title: 关于js中一些看上去简单又不会写的题
-tags: JavaScript
-categories: front-end
+categories: [tech, front-end]
+tags: [front-end, engineering]
 abbrlink: 30326
 date: 2022-05-13 22:08:08
 ---

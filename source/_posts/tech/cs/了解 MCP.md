@@ -1,9 +1,9 @@
 ---
 title: 了解 MCP
+categories: [tech, ai]
+tags: [computer-science, network]
 abbrlink: 2025032705
 date: 2025-03-27
-categories: AI
-tags: mcp
 ---
 ## **什么是MCP**
 

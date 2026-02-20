@@ -1,7 +1,7 @@
 ---
 title: http协议的发展历程
-tags: http
-categories: cs-basics
+categories: [tech, computer-science]
+tags: [computer-science, network]
 abbrlink: 55922
 date: 2022-05-26 22:02:58
 ---

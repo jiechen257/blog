@@ -1,7 +1,7 @@
 ---
 title: 关于 NPM 包的安全性实践
-categories: front-end
-tags: npm
+categories: [tech, front-end]
+tags: [front-end, security]
 abbrlink: 2025101001
 date: 2025-10-10 21:47:50
 reprinted: true

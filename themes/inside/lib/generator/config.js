@@ -1,4 +1,4 @@
-const { pick, md5, parseBackground, flattenObject } = require('../utils');
+const { pick, parseBackground, flattenObject } = require('../utils');
 
 module.exports = function (locals) {
   const js = this.extend.helper.get('js').bind(this);
@@ -82,7 +82,7 @@ module.exports = function (locals) {
   if (theme.pwa.workbox)
     data += `\n;navigator.serviceWorker && location.protocol === 'https:' && window.addEventListener('load', function() { navigator.serviceWorker.register('${theme.pwa.workbox.name}') })`
 
-  const path = `config.${md5(data)}.js`;
+  const path = 'config.js';
   this.extend.injector.register('head_begin', js(path));
 
   return [{

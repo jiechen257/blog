@@ -1,7 +1,7 @@
 ---
 title: 为何不推荐 Sass 作为 css 预处理
-categories: front-end
-tags: sass
+categories: [tech, front-end]
+tags: [front-end, engineering]
 abbrlink: 50630
 date: 2023-07-04 20:47:50
 ---

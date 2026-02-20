@@ -1,7 +1,7 @@
 ---
 title: 为Vue组件添加非响应式数据
-tags: vue
-categories: front-end
+categories: [tech, front-end]
+tags: [front-end, engineering]
 abbrlink: 45352
 date: 2022-04-27 21:47:50
 ---

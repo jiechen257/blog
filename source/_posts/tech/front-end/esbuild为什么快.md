@@ -1,7 +1,7 @@
 ---
 title: esbuild 为什么快
-tags: esbuild
-categories: front-end
+categories: [tech, front-end]
+tags: [front-end, tooling]
 abbrlink: 33235
 date: 2022-11-18 20:47:50
 ---

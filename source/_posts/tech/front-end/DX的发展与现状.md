@@ -1,7 +1,7 @@
 ---
 title: DX 的发展与现状
-categories: front-end
-tags: ["DX", "local-first"]
+categories: [tech, front-end]
+tags: [front-end, tooling]
 abbrlink: 20270724
 date: 2024-07-24
 thumbnail: https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/202407242014806.png

@@ -1,7 +1,7 @@
 ---
 title: windows 系统的包管理器
-categories: new-power
-tags: 包管理器
+categories: [tech, engineering]
+tags: [engineering, tooling]
 abbrlink: 47785
 date: 2023-01-17 00:00:00
 ---

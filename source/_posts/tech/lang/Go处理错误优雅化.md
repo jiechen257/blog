@@ -1,6 +1,7 @@
 ---
 title: Go处理错误优雅化
-categories: golang
+categories: [tech, engineering]
+tags: [programming-language, programming]
 tag: error
 abbrlink: 38096
 date: 2023-11-05 00:00:00

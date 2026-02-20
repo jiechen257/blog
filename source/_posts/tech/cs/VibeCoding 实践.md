@@ -1,6 +1,7 @@
 ---
 title: VibeCoding 思想与实践
-categories: cs-basics
+categories: [tech, ai]
+tags: [computer-science, ai]
 abbrlink: 20260128
 date: 2026-01-28 00:00:00
 ---

@@ -1,7 +1,7 @@
 ---
 title: Manus 季逸超访谈深度调研报告：AI 时代的产品哲学与创业思考
-tags: business
-categories: tech
+categories: [tech, ai]
+tags: [business, ai]
 abbrlink: 20260103
 date: 2026-1-3 14:14:29
 ---
