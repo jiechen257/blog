@@ -1,8 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const gravatar = require('hexo/lib/plugins/helper/gravatar');
-const { date } = require('hexo/lib/plugins/helper/date');
-const urlFor = require('hexo/lib/plugins/helper/url_for');
 const utils = require('./utils');
 const pkg = require('../package.json');
 const configSchema = require('./configSchema.json');
@@ -11,13 +8,16 @@ const { css } = require(`../source/${manifest.theme}`);
 
 module.exports = function (hexo) {
   const js = hexo.extend.helper.get('js').bind(hexo);
+  const gravatar = hexo.extend.helper.get('gravatar').bind(hexo);
+  const date = hexo.extend.helper.get('date');
+  const urlFor = hexo.extend.helper.get('url_for').bind(hexo);
   const pluginManifest = loadManifest([path.join(hexo.theme_dir, 'lib/plugins')]);
 
   hexo.on('generateBefore', function () {
     const site = hexo.config;
     const theme = Object.assign(hexo.theme.config || {}, site.theme_config);
     const email = (theme.profile && theme.profile.email) || site.email || '';
-    const feed = site.feed ? urlFor.call(hexo, site.feed.path) : '';
+    const feed = site.feed ? urlFor(site.feed.path) : '';
     const result = utils.parseConfig(configSchema, theme, {
       $email: email,
       $feed: feed,
@@ -82,7 +82,7 @@ module.exports = function (hexo) {
     // theme vars
     hexo.extend.injector.register('head_end', `<style is="theme">${css(utils.flattenObject(result.appearance))}</style>`);
     // theme.js
-    hexo.extend.injector.register('head_end', `<script src="${urlFor.call(hexo, manifest.theme)}"></script>`);
+    hexo.extend.injector.register('head_end', `<script src="${urlFor(manifest.theme)}"></script>`);
 
     // disqus
     if (result.comments && result.comments.disqus) {
@@ -119,7 +119,7 @@ module.exports = function (hexo) {
           // Direct with url
           if (!pluginManifest[item]) {
             const ext = path.extname(item);
-            const src = urlFor.call(hexo, item);
+            const src = urlFor(item);
             if (ext === '.css') {
               item = `<link href="${src}" rel="stylesheet">`;
             } else if (ext === '.js') {

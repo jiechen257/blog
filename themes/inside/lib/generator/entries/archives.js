@@ -1,11 +1,10 @@
-const { date } = require('hexo/lib/plugins/helper/date');
 const { pick, localeId, visible } = require('../../utils');
 const { archive: archiveProps } = require('./properties');
 
 module.exports = function ({ site, theme, locals, helpers }) {
   const posts = locals.posts.filter(visible).map(pick(archiveProps));
   const config = theme.archive;
-  const dateHelper = date.bind({ page: { lang: localeId(site.language, true) }, config })
+  const locale = localeId(site.language, true);
 
   if (!posts.length) return [];
 
@@ -48,8 +47,9 @@ module.exports = function ({ site, theme, locals, helpers }) {
       return {
         year: year,
         months: Object.keys(cfyPosts[year]).sort(desc).map(month => {
+          const monthLabel = posts[0].date.clone().locale(locale).month(parseInt(month) - 1).format('MMM');
           return {
-            month: dateHelper(month, 'MMM'),
+            month: monthLabel,
             entries: cfyPosts[year][month]
           }
         })
