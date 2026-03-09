@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" font-family="'PingFang SC','Microsoft YaHei','Segoe UI',system-ui,sans-serif">
+  <rect width="860" height="480" fill="#FAFBFD" rx="10"/>
+  <text x="430" y="32" text-anchor="middle" fill="#334155" font-size="16" font-weight="700">官方 API 直连 vs 中转服务 对比</text>
+
+  <!-- Column headers -->
+  <rect x="40" y="50" width="210" height="32" rx="5" fill="#EBF2FA" stroke="#B8D0E8" stroke-width="1"/>
+  <text x="145" y="71" text-anchor="middle" fill="#3D6A99" font-size="12" font-weight="700">对比维度</text>
+
+  <rect x="260" y="50" width="270" height="32" rx="5" fill="#E8F5EE" stroke="#A3D4B5" stroke-width="1"/>
+  <text x="395" y="71" text-anchor="middle" fill="#3B7A57" font-size="12" font-weight="700">✅ 官方 API 直连</text>
+
+  <rect x="540" y="50" width="280" height="32" rx="5" fill="#EBF2FA" stroke="#B8D0E8" stroke-width="1"/>
+  <text x="680" y="71" text-anchor="middle" fill="#3D6A99" font-size="12" font-weight="700">🔄 中转服务</text>
+
+  <!-- Row helper: y starts at 90, each row is 42px -->
+  <!-- Row 1: Endpoint -->
+  <rect x="40" y="90" width="210" height="38" rx="0" fill="#FFFFFF" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="55" y="114" fill="#334155" font-size="11" font-weight="600">🌐 Endpoint</text>
+  <rect x="260" y="90" width="270" height="38" rx="0" fill="#F8FCF9" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="275" y="114" fill="#4D8B65" font-size="10">api.openai.com</text>
+  <rect x="540" y="90" width="280" height="38" rx="0" fill="#FAFBFD" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="555" y="114" fill="#5A7D9A" font-size="10">relay.example.com（自定义域名）</text>
+
+  <!-- Row 2: Auth -->
+  <rect x="40" y="128" width="210" height="38" rx="0" fill="#FFFFFF" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="55" y="152" fill="#334155" font-size="11" font-weight="600">🔑 认证方式</text>
+  <rect x="260" y="128" width="270" height="38" rx="0" fill="#F8FCF9" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="275" y="152" fill="#4D8B65" font-size="10">官方 Key（sk-proj-xxx）</text>
+  <rect x="540" y="128" width="280" height="38" rx="0" fill="#FAFBFD" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="555" y="152" fill="#5A7D9A" font-size="10">中转站签发 Key（sk-xxx）</text>
+
+  <!-- Row 3: Latency -->
+  <rect x="40" y="166" width="210" height="38" rx="0" fill="#FFFFFF" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="55" y="190" fill="#334155" font-size="11" font-weight="600">⚡ 网络延迟</text>
+  <rect x="260" y="166" width="270" height="38" rx="0" fill="#F8FCF9" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="275" y="190" fill="#4D8B65" font-size="10">客户端 → 官方（1 跳）</text>
+  <rect x="540" y="166" width="280" height="38" rx="0" fill="#FAFBFD" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="555" y="190" fill="#A07842" font-size="10">客户端 → 中转 → 官方（+50~300ms）</text>
+
+  <!-- Row 4: Rate Limit -->
+  <rect x="40" y="204" width="210" height="38" rx="0" fill="#FFFFFF" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="55" y="228" fill="#334155" font-size="11" font-weight="600">🚦 速率限制</text>
+  <rect x="260" y="204" width="270" height="38" rx="0" fill="#F8FCF9" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="275" y="228" fill="#4D8B65" font-size="10">专属配额（RPM / TPM）</text>
+  <rect x="540" y="204" width="280" height="38" rx="0" fill="#FAFBFD" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="555" y="228" fill="#A07842" font-size="10">共享上游配额，可能更低</text>
+
+  <!-- Row 5: Streaming -->
+  <rect x="40" y="242" width="210" height="38" rx="0" fill="#FFFFFF" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="55" y="266" fill="#334155" font-size="11" font-weight="600">📡 流式响应</text>
+  <rect x="260" y="242" width="270" height="38" rx="0" fill="#F8FCF9" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="275" y="266" fill="#4D8B65" font-size="10">原生 SSE，稳定可靠</text>
+  <rect x="540" y="242" width="280" height="38" rx="0" fill="#FAFBFD" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="555" y="266" fill="#A07842" font-size="10">需中转站正确透传 SSE</text>
+
+  <!-- Row 6: Privacy -->
+  <rect x="40" y="280" width="210" height="38" rx="0" fill="#FFFFFF" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="55" y="304" fill="#334155" font-size="11" font-weight="600">🔒 数据隐私</text>
+  <rect x="260" y="280" width="270" height="38" rx="0" fill="#F8FCF9" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="275" y="304" fill="#4D8B65" font-size="10">数据仅发送至官方服务器</text>
+  <rect x="540" y="280" width="280" height="38" rx="0" fill="#FAFBFD" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="555" y="304" fill="#B8705A" font-size="10">⚠ 数据经中转站，存在中间人风险</text>
+
+  <!-- Row 7: Price -->
+  <rect x="40" y="318" width="210" height="38" rx="0" fill="#FFFFFF" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="55" y="342" fill="#334155" font-size="11" font-weight="600">💰 价格</text>
+  <rect x="260" y="318" width="270" height="38" rx="0" fill="#F8FCF9" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="275" y="342" fill="#A07842" font-size="10">官方定价（美元），无折扣</text>
+  <rect x="540" y="318" width="280" height="38" rx="0" fill="#FAFBFD" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="555" y="342" fill="#4D8B65" font-size="10">✅ 通常打折（0.3x ~ 0.9x 倍率）</text>
+
+  <!-- Row 8: Payment -->
+  <rect x="40" y="356" width="210" height="38" rx="0" fill="#FFFFFF" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="55" y="380" fill="#334155" font-size="11" font-weight="600">💳 支付方式</text>
+  <rect x="260" y="356" width="270" height="38" rx="0" fill="#F8FCF9" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="275" y="380" fill="#A07842" font-size="10">国际信用卡（Visa / Mastercard）</text>
+  <rect x="540" y="356" width="280" height="38" rx="0" fill="#FAFBFD" stroke="#E8EDF2" stroke-width="0.8"/>
+  <text x="555" y="380" fill="#4D8B65" font-size="10">✅ 微信 / 支付宝 / 人民币</text>
+
+  <!-- Summary -->
+  <rect x="40" y="415" width="780" height="45" rx="6" fill="#F3F6FA" stroke="#D4DFE9" stroke-width="1"/>
+  <text x="145" y="443" text-anchor="middle" fill="#5A7D9A" font-size="11" font-weight="600">总结</text>
+  <text x="395" y="443" text-anchor="middle" fill="#4D8B65" font-size="10">安全性 ✅  ·  稳定性 ✅  ·  合规性 ✅  ·  价格 ✖</text>
+  <text x="680" y="443" text-anchor="middle" fill="#5A7D9A" font-size="10">便利性 ✅  ·  低价格 ✅  ·  安全性 ⚠  ·  合规 ⚠</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" font-family="'PingFang SC','Microsoft YaHei','Segoe UI',system-ui,sans-serif">
+  <rect width="860" height="470" fill="#FAFBFD" rx="10"/>
+  <text x="430" y="32" text-anchor="middle" fill="#334155" font-size="16" font-weight="700">中转服务安全威胁模型</text>
+
+  <!-- High Risk Section -->
+  <rect x="40" y="50" width="780" height="128" rx="8" fill="#FFFFFF" stroke="#D4A0A0" stroke-width="1.2"/>
+  <rect x="40" y="50" width="780" height="28" rx="8" fill="#F8EDED"/>
+  <rect x="40" y="68" width="780" height="10" fill="#F8EDED"/>
+  <text x="430" y="70" text-anchor="middle" fill="#9B5A5A" font-size="12" font-weight="700">高风险威胁</text>
+
+  <!-- Threat 1 -->
+  <rect x="60" y="90" width="370" height="72" rx="6" fill="#FDF8F8" stroke="#D4C0C0" stroke-width="0.8"/>
+  <text x="80" y="112" fill="#7A4A4A" font-size="12" font-weight="600">请求内容被中间人窃取 / 记录</text>
+  <text x="80" y="130" fill="#8B7A7A" font-size="10">所有 prompt 和响应对中转站运营者完全可见</text>
+  <text x="80" y="148" fill="#A09090" font-size="10">影响：代码泄露、商业机密泄露、数据库 schema 外泄</text>
+
+  <!-- Threat 2 -->
+  <rect x="450" y="90" width="350" height="72" rx="6" fill="#FDF8F8" stroke="#D4C0C0" stroke-width="0.8"/>
+  <text x="470" y="112" fill="#7A4A4A" font-size="12" font-weight="600">API Key 被中转站滥用</text>
+  <text x="470" y="130" fill="#8B7A7A" font-size="10">中转站持有上游 Key，存在被恶意使用风险</text>
+  <text x="470" y="148" fill="#A09090" font-size="10">影响：账户欠费、额度耗尽、未授权调用</text>
+
+  <!-- Medium Risk Section -->
+  <rect x="40" y="195" width="780" height="128" rx="8" fill="#FFFFFF" stroke="#D4C5A0" stroke-width="1.2"/>
+  <rect x="40" y="195" width="780" height="28" rx="8" fill="#FDF8EE"/>
+  <rect x="40" y="213" width="780" height="10" fill="#FDF8EE"/>
+  <text x="430" y="215" text-anchor="middle" fill="#8B7530" font-size="12" font-weight="700">中风险威胁</text>
+
+  <!-- Threat 3 -->
+  <rect x="60" y="235" width="240" height="72" rx="6" fill="#FDFBF5" stroke="#D4D0C0" stroke-width="0.8"/>
+  <text x="80" y="257" fill="#6B5E30" font-size="11" font-weight="600">Prompt 注入泄露敏感数据</text>
+  <text x="80" y="275" fill="#8B8060" font-size="10">AI 工具自动读取 .env、密钥</text>
+  <text x="80" y="293" fill="#A09880" font-size="10">影响：私钥/密码/Token 泄露</text>
+
+  <!-- Threat 4 -->
+  <rect x="315" y="235" width="240" height="72" rx="6" fill="#FDFBF5" stroke="#D4D0C0" stroke-width="0.8"/>
+  <text x="335" y="257" fill="#6B5E30" font-size="11" font-weight="600">中转站跑路 / 数据丢失</text>
+  <text x="335" y="275" fill="#8B8060" font-size="10">预充值余额无法退回</text>
+  <text x="335" y="293" fill="#A09880" font-size="10">影响：服务中断、资金损失</text>
+
+  <!-- Threat 5 -->
+  <rect x="570" y="235" width="230" height="72" rx="6" fill="#FDFBF5" stroke="#D4D0C0" stroke-width="0.8"/>
+  <text x="590" y="257" fill="#6B5E30" font-size="11" font-weight="600">模型蒸馏 / 未授权训练</text>
+  <text x="590" y="275" fill="#8B8060" font-size="10">用户数据可能被用于训练</text>
+  <text x="590" y="293" fill="#A09880" font-size="10">影响：知识产权风险</text>
+
+  <!-- Mitigation Section -->
+  <rect x="40" y="340" width="780" height="112" rx="8" fill="#FFFFFF" stroke="#A3D4B5" stroke-width="1.2"/>
+  <rect x="40" y="340" width="780" height="28" rx="8" fill="#F0F8F3"/>
+  <rect x="40" y="358" width="780" height="10" fill="#F0F8F3"/>
+  <text x="430" y="360" text-anchor="middle" fill="#3B7A57" font-size="12" font-weight="700">🛡️ 关键防护措施</text>
+
+  <!-- Mitigations -->
+  <rect x="60" y="380" width="135" height="52" rx="5" fill="#F0F8F3" stroke="#A3D4B5" stroke-width="0.8"/>
+  <text x="127" y="401" text-anchor="middle" fill="#3B7A57" font-size="10" font-weight="600">P0 密钥隔离</text>
+  <text x="127" y="420" text-anchor="middle" fill="#5A9A73" font-size="9">环境分离 + 加密存储</text>
+
+  <rect x="210" y="380" width="145" height="52" rx="5" fill="#F0F8F3" stroke="#A3D4B5" stroke-width="0.8"/>
+  <text x="282" y="401" text-anchor="middle" fill="#3B7A57" font-size="10" font-weight="600">P0 敏感文件过滤</text>
+  <text x="282" y="420" text-anchor="middle" fill="#5A9A73" font-size="9">.cursorignore 配置</text>
+
+  <rect x="370" y="380" width="130" height="52" rx="5" fill="#F0F8F3" stroke="#A3D4B5" stroke-width="0.8"/>
+  <text x="435" y="401" text-anchor="middle" fill="#3B7A57" font-size="10" font-weight="600">P0 请求审计</text>
+  <text x="435" y="420" text-anchor="middle" fill="#5A9A73" font-size="9">元数据日志记录</text>
+
+  <rect x="515" y="380" width="130" height="52" rx="5" fill="#EBF2FA" stroke="#B8D0E8" stroke-width="0.8"/>
+  <text x="580" y="401" text-anchor="middle" fill="#3D6A99" font-size="10" font-weight="600">P1 TLS 校验</text>
+  <text x="580" y="420" text-anchor="middle" fill="#7B9EC4" font-size="9">证书锁定验证</text>
+
+  <rect x="660" y="380" width="140" height="52" rx="5" fill="#EBF2FA" stroke="#B8D0E8" stroke-width="0.8"/>
+  <text x="730" y="401" text-anchor="middle" fill="#3D6A99" font-size="10" font-weight="600">P1 预算告警</text>
+  <text x="730" y="420" text-anchor="middle" fill="#7B9EC4" font-size="9">异常消耗监控</text>
+</svg>

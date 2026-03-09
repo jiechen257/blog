@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" font-family="'PingFang SC','Microsoft YaHei','Segoe UI',system-ui,sans-serif">
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#7B9EC4"/>
+    </marker>
+  </defs>
+
+  <rect width="860" height="400" fill="#FAFBFD" rx="10"/>
+  <text x="430" y="32" text-anchor="middle" fill="#334155" font-size="16" font-weight="700">AI API 中转服务产业链全景</text>
+
+  <!-- Phase labels -->
+  <rect x="55" y="48" width="170" height="22" rx="4" fill="#EBF2FA"/>
+  <text x="140" y="63" text-anchor="middle" fill="#5A7D9A" font-size="11" font-weight="600">上游</text>
+  <rect x="290" y="48" width="280" height="22" rx="4" fill="#EBF2FA"/>
+  <text x="430" y="63" text-anchor="middle" fill="#5A7D9A" font-size="11" font-weight="600">中游</text>
+  <rect x="635" y="48" width="170" height="22" rx="4" fill="#EBF2FA"/>
+  <text x="720" y="63" text-anchor="middle" fill="#5A7D9A" font-size="11" font-weight="600">下游</text>
+
+  <!-- Card Vendors -->
+  <rect x="55" y="80" width="170" height="130" rx="8" fill="#FFFFFF" stroke="#B8D0E8" stroke-width="1.2"/>
+  <text x="140" y="105" text-anchor="middle" fill="#3D6A99" font-size="14" font-weight="700">💳 卡商 / 号商</text>
+  <line x1="75" y1="115" x2="205" y2="115" stroke="#D4DFE9" stroke-width="1"/>
+  <text x="140" y="136" text-anchor="middle" fill="#5A7D9A" font-size="11">虚拟信用卡（U 卡）</text>
+  <text x="140" y="155" text-anchor="middle" fill="#5A7D9A" font-size="11">批量注册 API 账号</text>
+  <text x="140" y="174" text-anchor="middle" fill="#5A7D9A" font-size="11">手续费 + 注册费</text>
+  <rect x="88" y="185" width="104" height="16" rx="3" fill="#FDF2E9"/>
+  <text x="140" y="197" text-anchor="middle" fill="#A07842" font-size="9">⚠ 账号被封 / 卡冻结</text>
+
+  <!-- Arrow → -->
+  <line x1="225" y1="145" x2="282" y2="145" stroke="#7B9EC4" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- Account Pool -->
+  <rect x="290" y="80" width="130" height="130" rx="8" fill="#FFFFFF" stroke="#B8D0E8" stroke-width="1.2"/>
+  <text x="355" y="105" text-anchor="middle" fill="#3D6A99" font-size="14" font-weight="700">🏊 号池</text>
+  <line x1="305" y1="115" x2="405" y2="115" stroke="#D4DFE9" stroke-width="1"/>
+  <text x="355" y="136" text-anchor="middle" fill="#5A7D9A" font-size="11">大号池 / 小号池</text>
+  <text x="355" y="155" text-anchor="middle" fill="#5A7D9A" font-size="11">退款套利获额度</text>
+  <text x="355" y="174" text-anchor="middle" fill="#5A7D9A" font-size="11">低价批发 Token</text>
+  <rect x="303" y="185" width="104" height="16" rx="3" fill="#FDF2E9"/>
+  <text x="355" y="197" text-anchor="middle" fill="#A07842" font-size="9">⚠ 退款政策收紧</text>
+
+  <!-- Arrow → -->
+  <line x1="420" y1="145" x2="432" y2="145" stroke="#7B9EC4" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- Relay Station -->
+  <rect x="440" y="80" width="185" height="130" rx="8" fill="#FFFFFF" stroke="#B8D0E8" stroke-width="1.2"/>
+  <text x="532" y="105" text-anchor="middle" fill="#3D6A99" font-size="14" font-weight="700">🔄 中转站</text>
+  <line x1="455" y1="115" x2="610" y2="115" stroke="#D4DFE9" stroke-width="1"/>
+  <text x="532" y="136" text-anchor="middle" fill="#5A7D9A" font-size="11">API 代理网关</text>
+  <text x="532" y="155" text-anchor="middle" fill="#5A7D9A" font-size="11">计费 + 路由 + 负载均衡</text>
+  <text x="532" y="174" text-anchor="middle" fill="#5A7D9A" font-size="11">赚取中间差价</text>
+  <rect x="475" y="185" width="115" height="16" rx="3" fill="#FDF2E9"/>
+  <text x="532" y="197" text-anchor="middle" fill="#A07842" font-size="9">⚠ 上游断供 / 合规</text>
+
+  <!-- Arrow → -->
+  <line x1="625" y1="145" x2="627" y2="145" stroke="#7B9EC4" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- End Users -->
+  <rect x="635" y="80" width="170" height="130" rx="8" fill="#FFFFFF" stroke="#B8D0E8" stroke-width="1.2"/>
+  <text x="720" y="105" text-anchor="middle" fill="#3D6A99" font-size="14" font-weight="700">👨‍💻 终端用户</text>
+  <line x1="655" y1="115" x2="785" y2="115" stroke="#D4DFE9" stroke-width="1"/>
+  <text x="720" y="136" text-anchor="middle" fill="#5A7D9A" font-size="11">独立开发者</text>
+  <text x="720" y="155" text-anchor="middle" fill="#5A7D9A" font-size="11">企业研发团队</text>
+  <text x="720" y="174" text-anchor="middle" fill="#5A7D9A" font-size="11">AI 应用创业者</text>
+  <rect x="668" y="185" width="104" height="16" rx="3" fill="#FDF2E9"/>
+  <text x="720" y="197" text-anchor="middle" fill="#A07842" font-size="9">⚠ 数据泄露 / 跑路</text>
+
+  <!-- Profit Section -->
+  <rect x="55" y="235" width="750" height="148" rx="8" fill="#F3F6FA" stroke="#D4DFE9" stroke-width="1"/>
+  <text x="430" y="260" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">盈利逻辑与资金流向</text>
+
+  <!-- Profit boxes -->
+  <rect x="80" y="275" width="145" height="40" rx="5" fill="#FFFFFF" stroke="#B8D0E8" stroke-width="1"/>
+  <text x="152" y="292" text-anchor="middle" fill="#3D6A99" font-size="10" font-weight="600">卡商 / 号商</text>
+  <text x="152" y="307" text-anchor="middle" fill="#7B9EC4" font-size="9">U卡手续费 + 账号费</text>
+
+  <line x1="225" y1="295" x2="268" y2="295" stroke="#7B9EC4" stroke-width="1.2" stroke-dasharray="4" marker-end="url(#arr2)"/>
+
+  <rect x="275" y="275" width="145" height="40" rx="5" fill="#FFFFFF" stroke="#B8D0E8" stroke-width="1"/>
+  <text x="347" y="292" text-anchor="middle" fill="#3D6A99" font-size="10" font-weight="600">号池</text>
+  <text x="347" y="307" text-anchor="middle" fill="#7B9EC4" font-size="9">退款套利 → 低价额度</text>
+
+  <line x1="420" y1="295" x2="463" y2="295" stroke="#7B9EC4" stroke-width="1.2" stroke-dasharray="4" marker-end="url(#arr2)"/>
+
+  <rect x="470" y="275" width="160" height="40" rx="5" fill="#FFFFFF" stroke="#B8D0E8" stroke-width="1"/>
+  <text x="550" y="292" text-anchor="middle" fill="#3D6A99" font-size="10" font-weight="600">中转站</text>
+  <text x="550" y="307" text-anchor="middle" fill="#7B9EC4" font-size="9">压价上游 + 溢价下游</text>
+
+  <line x1="630" y1="295" x2="653" y2="295" stroke="#7B9EC4" stroke-width="1.2" stroke-dasharray="4" marker-end="url(#arr2)"/>
+
+  <rect x="660" y="275" width="120" height="40" rx="5" fill="#FFFFFF" stroke="#B8D0E8" stroke-width="1"/>
+  <text x="720" y="292" text-anchor="middle" fill="#3D6A99" font-size="10" font-weight="600">终端用户</text>
+  <text x="720" y="307" text-anchor="middle" fill="#7B9EC4" font-size="9">人民币充值消费</text>
+
+  <!-- Summary line -->
+  <text x="430" y="360" text-anchor="middle" fill="#5A7D9A" font-size="10">资金流向：用户 → 中转站 → 号池 → 卡商/号商 → 官方平台</text>
+</svg>
