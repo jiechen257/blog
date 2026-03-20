@@ -1,6 +1,7 @@
 ---
 title: AI API 中转服务深度解析：架构、风险与工程实践
 date: 2026-03-06
+abbrlink: 2026030601
 tags:
   - AI
   - API
