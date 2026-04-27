@@ -119,10 +119,6 @@ date: 2026-03-20 00:00:00
 
   - [packy-code](https://www.packyapi.com/register?aff=0EjI)（按量付费、支持开票-低消 500）
 
-![packy code](images/image.png)
-
-![sss ai](images/image-1.png)
-
 - sss-ai 使用举例
 
   - 如图，通过 shell 脚本，将 token 写入环境变量，可实现一键安装
