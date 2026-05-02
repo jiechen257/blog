@@ -2,7 +2,7 @@
 title: OpenAI 翁家翌访谈调研报告
 categories: [tech, ai]
 tags: [business, ai]
-abbrlink: 20260103
+abbrlink: 2026021301
 date: 2026-2-13 14:14:29
 ---
 
