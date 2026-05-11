@@ -1,5 +1,5 @@
 ---
-title: Harness Engineering：把 Coding Agent 变成可控开发系统
+title: Harness Engineering：驾驭 Coding Agent 的工程实践
 copyright: false
 categories:
   - tech
@@ -13,34 +13,41 @@ abbrlink: 55459
 date: 2026-05-07 00:00:00
 ---
 
-> Harness Engineering 是 AI 编程从“会话技巧”进入“开发系统设计”之后出现的工程实践
-> 
-> 目标直接：让 Coding Agent 在项目规则、质量门禁和反馈回路中持续产出可验收的软件变更
+2025 年下半年开始，Coding Agent 的能力边界快速扩张
+- Claude Code、Codex、Cursor、Windsurf 等工具让长时运行、多文件修改、子代理派发和 MCP 调用成为常见能力。
+- 社区的讨论随之出现一种层级错位：有人在讨论 Agent 内部怎么构成，有人在讨论开发流程怎么设计，有人在比较哪个第三方套件更强——三组人各有道理，但很难对齐。
 
-- 开发流程本身是工程对象
-  - 人类负责定义目标、边界、规则、验证和决策点
-  - Agent 负责在这些约束中探索、规划、实现、检查和修复
-- 工具、插件、skills、workflow、agent teams 都是实现材料
-  - 真正要设计的是一套能稳定运转的开发控制系统
+2026 年初，OpenAI 在一篇关于 Codex 的文章里首次使用 `Harness Engineering` 这个组合词，把 `harness` 从 Agent 构件的语境推进到使用者侧的工程实践。随后几周内，Anthropic 发表了长时运行 Agent 的 harness 设计指南，LangChain 做了 Agent Harness 的构件解剖；Linux\.DO 上一个持续数月的长帖则把这些概念带进了真实项目的实操验证。
 
-## 1. 概念边界：两种 Harness 指向两层问题
+这篇文章综合了上述材料和社区实践，围绕五个问题展开：Harness Engineering 是什么，它怎样运行，它解决什么问题，怎样优化它的成本，以及如何落地。
 
-`harness` 在 AI Coding 语境里同时被 Agent 开发者、插件开发者、Skills 作者和 Coding Agent 用户使用，因此被拉大到接近“模型之外的一切”
+## 概念与边界
 
-概念变大之后，讨论容易出现三种层级错位：
+`harness` 这个词被用得很泛，接近"模型之外的一切"。拆开看，它指向两层不同的问题。
 
-1. 有人在讨论 Agent 怎么构成
-2. 有人在讨论开发流程怎么设计
-3. 有人在讨论哪个套件更好用
+LangChain 给出的公式最简洁：
 
-把边界划清，核心差异很明确
+> Agent = Model + Harness
+
+模型提供语言与推理，harness 提供状态、工具、执行路径、沙箱、上下文管理和反馈机制。
+
+LangChain 的文章把这些构件分为六类：文件系统、bash 执行、沙箱与验证工具、记忆与搜索、上下文腐败对抗、长程自主执行所需的规划和自验证循环<sup id="fnref-1"><a href="#fn-1">[1]</a></sup>。
+
+OpenAI 的文章把这个词推到使用者侧之后，`Harness Engineering` 成了一个独立的工程范式，关注 Coding Agent 怎样被组织进一个可以稳定产出可验收变更的开发流程。
+
+| 维度 | Agent Harnesses | Harness Engineering |
+| --- | --- | --- |
+| 关注对象 | Agent 的构件 | 使用 Agent 的工程系统 |
+| 核心问题 | 它由什么组成 | 它如何被驾驭成开发流程 |
+| 典型材料 | system prompts、tools、MCP、memory、sandbox、subagents | `AGENTS.md`、spec、runbook、tracker、门禁、审查 |
+| 成熟标志 | Agent 具备工具和约束 | 开发过程具备控制面、验证闭环和验收标准 |
 
 <figure style="margin: 24px 0; width: 100%;">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 720" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" style="display: block; width: 100%; max-width: 100%; height: auto;" role="img" aria-labelledby="harness-layers-title harness-layers-desc">
-  <title id="harness-layers-title">Harness Engineering 分层模型</title>
-  <desc id="harness-layers-desc">展示 Agent Harnesses 的构件层、Harness Engineering 的工程控制层，以及从工具层到交付层的成熟度推进。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 720" role="img" aria-labelledby="harness-engineering-control-system-harness-layers-diagram-title harness-engineering-control-system-harness-layers-diagram-desc" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" style="display: block; width: 100%; max-width: 100%; height: auto;">
+  <title id="harness-engineering-control-system-harness-layers-diagram-title">Harness Engineering 分层模型</title>
+  <desc id="harness-engineering-control-system-harness-layers-diagram-desc">展示 Agent Harnesses 的构件层、Harness Engineering 的工程控制层，以及从工具层到交付层的成熟度推进。</desc>
   <defs>
-    <marker id="harness-layers-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+    <marker id="harness-engineering-control-system-harness-layers-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
       <polygon points="0 0, 7 3.5, 0 7" fill="#5a5a5a"/>
     </marker>
   </defs>
@@ -59,10 +66,10 @@ date: 2026-05-07 00:00:00
     .chip { fill: #f8f6f3; stroke: #d9d3ca; stroke-width: 1; }
     .label { font-size: 13px; fill: #5a5a5a; }
     .node-title { font-size: 16px; font-weight: 700; fill: #1a1a1a; }
-    .node-sub { font-size: 12px; fill: #4f4f4f; }
+    .node-sub { font-size: 12px; fill: #5a5a5a; }
     .small { font-size: 11px; fill: #5a5a5a; }
-    .edge { fill: none; stroke: #5a5a5a; stroke-width: 2; marker-end: url(#harness-layers-arrow); }
-    .soft-edge { fill: none; stroke: #8f8a82; stroke-width: 1.6; stroke-dasharray: 6 6; marker-end: url(#harness-layers-arrow); }
+    .edge { fill: none; stroke: #5a5a5a; stroke-width: 2; marker-end: url(#harness-engineering-control-system-harness-layers-arrow); }
+    .soft-edge { fill: none; stroke: #8f8a82; stroke-width: 1.6; stroke-dasharray: 6 6; marker-end: url(#harness-engineering-control-system-harness-layers-arrow); }
   </style>
   <rect width="1120" height="720" fill="#f8f6f3"/>
   <rect x="28" y="24" width="1064" height="672" rx="20" fill="#fffdf8" stroke="#d9d3ca" stroke-width="1.4"/>
@@ -101,8 +108,8 @@ date: 2026-05-07 00:00:00
   <rect x="612" y="312" width="412" height="44" rx="12" class="chip"/>
   <text x="818" y="340" class="label" text-anchor="middle">给开发过程边界、状态、验证、审查和纠偏</text>
   <path d="M 540 260 H 580" class="edge"/>
-  <rect x="520" y="238" width="80" height="24" rx="10" fill="#fffdf8" stroke="#d9d3ca"/>
-  <text x="560" y="255" class="small" text-anchor="middle">组合进入</text>
+  <rect x="520" y="268" width="80" height="22" rx="10" fill="#fffdf8" stroke="#d9d3ca"/>
+  <text x="560" y="283" class="small" text-anchor="middle">组合进入</text>
   <rect x="60" y="430" width="1000" height="206" rx="18" class="section"/>
   <text x="92" y="470" class="node-title">成熟度推进</text>
   <text x="92" y="494" class="node-sub">从工具补丁到项目级交付系统，逐层补齐当前最大痛点。</text>
@@ -132,456 +139,347 @@ date: 2026-05-07 00:00:00
 <figcaption>Harness Engineering 分层模型</figcaption>
 </figure>
 
-> 这张图把两个层级放在一起看：Agent Harnesses 是构件层，Harness Engineering 是工程控制层
-> 
-> 构件层决定 Agent 有什么能力，控制层决定这些能力如何进入可验收的开发流程
+开发者与模型交互的粒度至少经历了三次跳跃：
 
-| 维度 | Agent Harnesses | Harness Engineering |
-| --- | --- | --- |
-| 主要关注对象 | harness 本身 | engineering 实践 |
-| 核心问题 | Agent 怎样被构成 | Coding Agent 怎样被驾驭为开发流程 |
-| 典型构件 | system prompts、tools、MCP、skills、hooks、subagents、memory、context compaction、sandbox、approval、model routing | AGENTS.md、项目文档、spec / plan、runbook、任务编排、质量门禁、测试验证、代码审查、上下文治理、技术债治理 |
-| 层级 | Agent 内部与外部扩展 | 项目级开发系统 |
-| 成熟标志 | Agent 具备工具、状态和约束 | 开发过程具备控制面、执行面、集成面、反馈回路和验收标准 |
+| 阶段 | 交互尺度 | 主要失败来源 | 核心工程动作 |
+| --- | --- | --- | --- |
+| Prompt Engineering | 单次交互 | prompt 模糊、上下文缺失 | 改提示词 |
+| Context Engineering | 会话级 | 上下文污染、记忆断裂 | 管理文件选择与压缩 |
+| Harness Engineering | 项目级 | 控制面失真、任务漂移、验证不足 | 设计规则、门禁、反馈回路 |
 
-Agent Harnesses 关注 Agent 的构件
+这个边界直接影响诊断方向：Agent 产出不稳定时，先判断缺的是构件能力还是流程设计——缺构件补 MCP、skill、hook；缺流程补任务边界、质量门禁、runbook 和控制面纪律。
 
-一个常见抽象是：
+很多"为什么套件功能很多、结果仍然不稳"的困惑，根源在于把两类问题混在一起。
 
-> Agent = Model + Harness
+## 运行结构
 
-- Agent 由模型和 harness 共同构成
-  - 模型之外的提示词、状态、工具、执行逻辑、反馈回路和约束系统都属于 harness
-  - 原始模型具备语言和推理能力
-  - harness 给它状态、工具、权限、执行路径、上下文管理和反馈机制
-  - 这些构件让模型成为可以做事的 Agent
+把开发流程当作工程对象之后，核心结构是三层工作面：
 
-Agent Harnesses 可以拆成三层：
-
-1. **内置 harness**
-   - 构成 Agent 的基础能力
-   - 典型能力包括系统提示词处理、工具调用、MCP 接入、容错、上下文压缩、记忆、沙箱、审批和子代理调度
-2. **嵌入式外部 harness**
-   - 以插件、Skills 集或规则包形式增强 Coding Agent
-   - 典型项目包括 Superpowers、everything-claude-code、oh-my-opencode、oh-my-claudecode、oh-my-codex、BMAD、gstack
-3. **包裹式外部 harness**
-   - 把 Coding Agent 包在更大的协作系统内，或与 Coding Agent 互嵌
-   - 典型形态包括 Trellis、Routa 这类 workspace-first 多 Agent 协调系统
-
-Harness Engineering 关注这些构件如何进入真实开发流程：
-
-- 系统上下文如何写
-- 文档如何组织
-- 任务如何切分
-- 进度如何跟踪
-- 上下文如何换手
-- 验证如何自动化
-- 质量如何验收
-- 技术债如何回收
-
-> 判断一个系统是否进入 Harness Engineering 范围，看它是否形成闭环
-
-- 单个 skill 是工具
-- 多个 skill 串成流程是 workflow
-- workflow 引入状态记录、失败分支、验证门禁、人工决策点和持续清理机制之后，才成为 harness 的一部分
-
-这个区分直接影响选型
-
-- 缺工具能力
-  - 补 MCP、skill、hook 或子代理
-- 缺工程稳定性
-  - 补任务边界、质量门禁、runbook、控制面和验收标准
-- 把两类问题分开
-  - 能减少很多“为什么套件功能很多，结果仍然不稳”的困惑
-
-## 2. 工程重心演进：从 prompt 到 context，再到 project loop
-
-> AI 编程的工作重心经历了三次上移
-
-| 阶段 | 交互尺度 | 人类主要职责 | AI 主要职责 | 关键产物 | 主要风险 |
-| --- | --- | --- | --- | --- | --- |
-| 提示词工程 | 单次交互 | 写清 prompt | 响应局部请求 | prompt、片段代码、局部解释 | 输出不稳定、上下文不足 |
-| 上下文工程 | 会话级别 | 组织上下文 | 执行一段任务 | 会话上下文、文件选择、短计划 | 上下文污染、记忆断裂 |
-| Harness 工程 | 项目级别 | 定规则、设门禁、控反馈 | 自主推进开发 | AGENTS.md、spec、plan、runbook、tracker、review、test gates | 控制面失真、任务粒度漂移、验证不足、token 投入产出比低 |
-
-1. 第一阶段更接近 IDE 插件时代
-   - AI 像高级代码补全和开发助手，主要处理代码行、函数和局部问题
-   - 开发者对输出质量的主要影响来自 prompt 和局部上下文
-
-2. 第二阶段开始出现项目级上下文理解
-   - Cursor 等工具让 AI 可以读多个文件、回答项目问题、做小范围多文件改动
-   - 这个阶段的关键能力是“让模型看到正确的东西”
-   - 上下文选择、文件摘要、会话压缩、相关代码定位会明显影响输出质量
-
-3. 第三阶段出现在 Coding Agent 能够长时间运行、多文件修改、调用工具、派发子任务之后
-   - Claude Code、Windsurf、Cursor、TRAE、Codex、OpenCode、Gemini CLI 等工具逐步把 Agent 能力带到开发流程里
-   - Agent 可以连续工作 5 分钟、30 分钟、几小时，甚至跨会话推进任务
-
-交互频率降低之后，问题随之变化
-开发者不再只关心“怎么让 AI 写出一段代码”，还要关心：
-
-- 它是否理解项目规则
-- 它是否在正确分支和目录里修改
-- 它是否知道任务边界
-- 它是否运行真实验证
-- 它是否把自报成功和实际完成混在一起
-- 它是否把过期上下文当成当前事实
-- 它是否在长任务里不断放大早期错误
-
-Harness Engineering 就是在这个压力下出现的
-
-- 模型能力越强
-  - 单次错误的影响范围越大
-- Agent 执行越久
-  - 早期偏差累积越严重
-- 自动化程度越高
-  - 质量门禁越需要提前定义
-
-Harness Engineering 的工程对象是项目级开发闭环，涵盖这些工程动作：
-
-- 多 Agent 协作
-- 质量门控
-- 架构评审
-- 上下文腐败治理
-- 控制面与集成面分离
-- 系统提示词持续优化
-- 项目文档维护
-- 技术债治理
-
-## 3. 控制系统：控制面、执行面、集成面和反馈回路
-
-> 一套可运行的 Harness Engineering 系统，核心是形成“事实读取 → 任务选择 → 执行 → 验证 → 修复 → 合入 → 状态更新”的闭环
-> 
-> 角色名和 workflow 复杂度，只在服务这个闭环时有价值
-
-最有解释力的结构是三层工作面：
-
-- **控制面**：维护 orchestration、tracker、prompts、交接文档、任务状态、阻塞项、解锁条件和编排真相
-- **执行面**：每个任务从集成面当前 HEAD 新建 worktree / branch，执行代码修改、测试和验证
-- **集成面**：所有任务完成后的本地合并目标，承载最新可验证代码事实
+- **控制面**：orchestration、tracker、prompts、交接文档、任务依赖与阻塞状态。
+- **执行面**：每个任务从集成面切出的 worktree/branch，承载本次修改与定向验证。
+- **集成面**：本地真实代码状态，所有任务完成后的合并目标。
 
 <figure style="margin: 24px 0; width: 100%;">
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1120 620" preserveAspectRatio="xMidYMid meet" style="display: block; width: 100%; max-width: 100%; height: auto;" role="img" aria-labelledby="control-loop-title control-loop-desc">
-  <title id="control-loop-title">Harness Engineering 控制回路</title>
-  <desc id="control-loop-desc">控制面、执行面、集成面和验证反馈构成 Coding Agent 开发闭环。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 620" role="img" aria-labelledby="harness-engineering-control-system-control-loop-diagram-title harness-engineering-control-system-control-loop-diagram-desc" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" style="display: block; width: 100%; max-width: 100%; height: auto;">
+  <title id="harness-engineering-control-system-control-loop-diagram-title">Harness Engineering 控制回路</title>
+  <desc id="harness-engineering-control-system-control-loop-diagram-desc">控制面、执行面、集成面和验证反馈构成 Coding Agent 开发闭环。</desc>
   <defs>
-    <marker id="control-loop-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    <marker id="harness-engineering-control-system-control-loop-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#5a5a5a"/>
     </marker>
-    <style>
-      .bg { fill: #f8fafc; }
-      .lane { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; }
-      .card { fill: #fefefe; stroke: #334155; stroke-width: 1.4; rx: 12; }
-      .control { fill: #e0f2fe; }
-      .execution { fill: #fef3c7; }
-      .integration { fill: #dcfce7; }
-      .verify { fill: #fce7f3; }
-      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
-      .lane-title { font: 700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #334155; }
-      .text { font: 500 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
-      .small { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
-      .line { fill: none; stroke: #2563eb; stroke-width: 2.4; marker-end: url(#control-loop-arrow); }
-      .muted-line { fill: none; stroke: #64748b; stroke-width: 1.8; stroke-dasharray: 6 6; marker-end: url(#control-loop-arrow); }
-    </style>
   </defs>
-  <rect class="bg" x="0" y="0" width="1120" height="620"/>
-  <text class="title" x="48" y="56">Harness Engineering 控制回路</text>
-  <text class="small" x="48" y="86">控制面定义事实和规则，执行面完成切片，集成面承载可验证代码，验证反馈回到控制面。</text>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .title { font-size: 28px; font-weight: 700; fill: #1a1a1a; }
+    .subtitle { font-size: 14px; fill: #6a6a6a; }
+    .lane { fill: #ffffff; stroke: #d9d3ca; stroke-width: 1.4; }
+    .lane-title { font-size: 17px; font-weight: 700; fill: #1a1a1a; }
+    .node-title { font-size: 16px; font-weight: 700; fill: #1a1a1a; }
+    .label { font-size: 13px; fill: #5a5a5a; }
+    .small { font-size: 11px; fill: #5a5a5a; }
+    .node-blue { fill: #dbeafe; stroke: #355c8a; stroke-width: 1.5; }
+    .node-amber { fill: #fef3c7; stroke: #8f7350; stroke-width: 1.5; }
+    .node-green { fill: #dcfce7; stroke: #3d7a4d; stroke-width: 1.5; }
+    .node-pink { fill: #fce7f3; stroke: #8a4768; stroke-width: 1.5; }
+    .edge { fill: none; stroke: #5a5a5a; stroke-width: 2; marker-end: url(#harness-engineering-control-system-control-loop-arrow); }
+    .soft-edge { fill: none; stroke: #8f8a82; stroke-width: 1.6; stroke-dasharray: 6 6; marker-end: url(#harness-engineering-control-system-control-loop-arrow); }
+  </style>
+  <rect width="1120" height="620" fill="#f8f6f3"/>
+  <rect x="28" y="24" width="1064" height="572" rx="20" fill="#fffdf8" stroke="#d9d3ca" stroke-width="1.4"/>
+  <text x="60" y="68" class="title">Harness Engineering 控制回路</text>
+  <text x="60" y="92" class="subtitle">控制面定义事实和规则，执行面完成切片，集成面承载可验证代码，验证反馈回到控制面。</text>
   <rect class="lane" x="48" y="120" width="1024" height="110" rx="16"/>
   <rect class="lane" x="48" y="260" width="1024" height="110" rx="16"/>
   <rect class="lane" x="48" y="400" width="1024" height="110" rx="16"/>
   <text class="lane-title" x="72" y="154">控制面</text>
   <text class="lane-title" x="72" y="294">执行面</text>
   <text class="lane-title" x="72" y="434">集成与验证</text>
-  <rect class="card control" x="190" y="142" width="180" height="64" rx="12"/>
-  <text class="text" x="216" y="169">读取真相</text>
-  <text class="small" x="216" y="192">orchestration / tracker</text>
-  <rect class="card control" x="430" y="142" width="180" height="64" rx="12"/>
-  <text class="text" x="456" y="169">选择任务切片</text>
-  <text class="small" x="456" y="192">unlocked / blocked</text>
-  <rect class="card execution" x="310" y="282" width="180" height="64" rx="12"/>
-  <text class="text" x="336" y="309">派发实现</text>
-  <text class="small" x="336" y="332">worktree / subagent</text>
-  <rect class="card execution" x="560" y="282" width="180" height="64" rx="12"/>
-  <text class="text" x="586" y="309">修复问题</text>
-  <text class="small" x="586" y="332">失败分支回流</text>
-  <rect class="card integration" x="250" y="422" width="180" height="64" rx="12"/>
-  <text class="text" x="276" y="449">合入集成面</text>
-  <text class="small" x="276" y="472">latest code truth</text>
-  <rect class="card verify" x="510" y="422" width="180" height="64" rx="12"/>
-  <text class="text" x="536" y="449">验证与审查</text>
-  <text class="small" x="536" y="472">test / build / review</text>
-  <rect class="card control" x="760" y="142" width="180" height="64" rx="12"/>
-  <text class="text" x="786" y="169">更新控制面</text>
-  <text class="small" x="786" y="192">handoff / next task</text>
-  <path class="line" d="M370 174 H430"/>
-  <path class="line" d="M520 206 V244 H405 V282"/>
-  <path class="line" d="M400 346 V386 H342 V422"/>
-  <path class="line" d="M430 454 H510"/>
-  <path class="line" d="M690 454 H760 V346 H732"/>
-  <path class="muted-line" d="M650 282 V234 H850 V206"/>
-  <path class="line" d="M690 422 H850 V206"/>
-  <path class="line" d="M850 142 V106 H280 V142"/>
-  <text class="small" x="792" y="258">通过验证：吸收事实</text>
-  <text class="small" x="735" y="356">验证失败：返回修复</text>
-  <text class="small" x="500" y="544">完成标准来自真实命令输出、diff、审查结果和人工决策点。</text>
+  <rect class="node-blue" x="190" y="142" width="180" height="64" rx="12"/>
+  <text class="node-title" x="216" y="169">读取真相</text>
+  <text class="label" x="216" y="189">orchestration / tracker</text>
+  <rect class="node-blue" x="430" y="142" width="180" height="64" rx="12"/>
+  <text class="node-title" x="456" y="169">选择任务切片</text>
+  <text class="label" x="456" y="189">unlocked / blocked</text>
+  <rect class="node-blue" x="760" y="142" width="180" height="64" rx="12"/>
+  <text class="node-title" x="786" y="169">更新控制面</text>
+  <text class="label" x="786" y="189">handoff / next task</text>
+  <rect class="node-amber" x="310" y="282" width="180" height="64" rx="12"/>
+  <text class="node-title" x="336" y="309">派发实现</text>
+  <text class="label" x="336" y="329">worktree / subagent</text>
+  <rect class="node-amber" x="560" y="282" width="180" height="64" rx="12"/>
+  <text class="node-title" x="586" y="309">修复问题</text>
+  <text class="label" x="586" y="329">失败分支回流</text>
+  <rect class="node-green" x="250" y="422" width="180" height="64" rx="12"/>
+  <text class="node-title" x="276" y="449">合入集成面</text>
+  <text class="label" x="276" y="469">latest code truth</text>
+  <rect class="node-pink" x="510" y="422" width="180" height="64" rx="12"/>
+  <text class="node-title" x="536" y="449">验证与审查</text>
+  <text class="label" x="536" y="469">test / build / review</text>
+  <path class="edge" d="M370 174 H430"/>
+  <path class="edge" d="M520 206 V244 H405 V282"/>
+  <path class="edge" d="M400 346 V386 H342 V422"/>
+  <path class="edge" d="M430 454 H510"/>
+  <path class="edge" d="M690 454 H760 V346 H732"/>
+  <path class="soft-edge" d="M650 282 V234 H850 V206"/>
+  <path class="edge" d="M690 422 H850 V206"/>
+  <path class="edge" d="M850 142 V106 H280 V142"/>
+  <text class="small" x="755" y="252">通过验证：吸收事实</text>
+  <text class="small" x="700" y="374">验证失败：返回修复</text>
+  <text class="label" x="500" y="560" text-anchor="middle">完成标准来自真实命令输出、diff、审查结果和人工决策点。</text>
 </svg>
 <figcaption>Harness Engineering 控制回路</figcaption>
 </figure>
 
-> 这套结构把“控制信息”和“代码事实”分开
+分离的核心目的是把"应当如何推进"和"代码实际是什么"拆开。
 
-- 控制面记录应该如何推进
-- 集成面记录代码实际状态
-- 执行面承载本次准备改变的切片
-- Agent 可以读控制面选择下一步
-- Agent 必须回到集成面确认真实代码状态
+Agent 可以读控制面决定下一步做什么，但判断完成必须回到集成面看真实 diff、真实测试输出、真实构建结果——社区把这条纪律称为 Truth-first。
 
-一次完整循环通常包含这些动作：
+它反制的是一类具体失败：Agent 把 tracker 标记当成完成状态继续推进，旧 diff 被带入后续切片，错误在几轮交接后才暴露。
 
-1. 读取控制面事实
-2. 对照集成面状态
-3. 选择已解锁任务
-4. 派发探索和边界确认
-5. 切出执行面
-6. 派发实现
-7. 运行 focused tests / lint / typecheck / build
-8. 审查 diff 和越界风险
-9. 合入集成面或返回修复
-10. 更新 tracker 和编排状态
-11. 重新计算下一批可执行任务
+### 引导与检测
 
-这套流程里有几个容易被忽略的事实
+三层工作面定义了结构骨架，填充它的机制是引导和检测。Böckeler 在 Martin Fowler 站上用控制论框架对 harness 做了正交分解<sup id="fnref-2"><a href="#fn-2">[2]</a></sup>。
 
-> **长期运行能力本身只能证明系统可以持续执行**
+**第一个维度是方向:**
+- `guides / 引导`在 Agent 行动前指明正确方向：`AGENTS.md`、architecture.md、skill 指令、LSP 集成、runbook。
+- `sensors / 反馈`在 Agent 行动后检测和修正偏差：测试、lint、typecheck、code review、构建结果。
 
-公开实践里，一个 8 合 1 的大型重构计划可以让 OMO 持续运行数小时甚至接近 24 小时，但长期运行会放大任务切分过碎、上下文腐败、子代理累计限制、DAG 死结、测试数据缺失等问题
+**第二个维度是执行方式:**
+- `computational / 计算型`是确定性的 CPU 执行，成本低、结果可靠：lint、typecheck、ArchUnit、覆盖率检查。
+- `inferential / 推理型`是 LLM/GPU 执行，成本高、非确定性，但能处理语义判断：`AGENTS.md` 指令、code review skill、AI judge。
 
-> **控制面成本会吞噬产出**
+|  | 引导（行动前） | 反馈（行动后检测） |
+| --- | --- | --- |
+| **计算型** | LSP、bootstrap 脚本、OpenRewrite | lint、typecheck、ArchUnit、覆盖率 |
+| **推理型** | `AGENTS.md`、architecture skill、API 文档 | code review skill、AI judge、日志异常检测 |
 
-一次 24 小时左右的记录里，集成面涉及 38 个文件、约 670 行改动；控制面涉及 17 个文件、约 4933 行改动
-设计、协调和进度记录远大于实际代码产出
-控制面当然必要，但过程文件过厚时，开发系统会变成“记录很多，产出很少”
+引导和反馈相互配合：
+- 只有反馈的系统让 Agent "反复犯同样的错误"——测试告诉它错了，但它不知道正确方向。
+- 只有引导的系统"编码了规则却永远不知道规则是否生效"——`AGENTS.md` 写得再好，没有测试就无法闭环。
+- harness 的设计工作就是沿着四个象限逐一补齐，并通过**转向循环**（steering loop）持续迭代。
 
-> **任务切片粒度直接决定 token 投入产出比**
+### 文档作为模型间的 API
 
-一次 32 小时左右的自动运行记录显示，48 个文件产生约 3333 行改动，token 消耗超过 10 亿级别
-追查后发现，交接提示词里混入了“最小可执行单元”倾向，导致每个 worktree 只做 1–3 个文件、几行到几十行改动
+多模型协作时，不同模型的上下文容量、推理强度和响应形态各不相同。直接互读原始执行日志会造成上下文膨胀和判断污染。
 
-针对这三个问题的修正集中在五件事：
+解决方式是把文档当作模型间的 API：
 
-1. **统一术语**
-   - 编排文档里的最小条目称为任务
-   - 基于任务拆出的实际工作称为切片
-   - 减少 lane、batch、slice 等自造词混杂
-2. **控制面瘦身**
-   - 清理过程噪音
-   - 只保留任务依赖、完成状态、阻塞项和当前事实
-3. **Truth-first**
-   - 判断真实代码状态时以集成面为准
-   - 控制面承担记录和决策，不承担代码事实
-4. **贪婪切片**
-   - 同模块、同类型工作尽量合并推进
-   - 一个任务原则上在少数几次切片内完成
-   - 避免 token 被细碎门禁消耗
-5. **验证纪律**
-   - 每个切片都需要 focused tests、模块级验证、构建或 fence 验证
-   - 完成判断以真实命令输出为准
-
-调整后，9 小时左右完成 65 个文件、约 1539 行总改动，估算 token 约 2.2 亿，时间效率和 token 产出效率明显改善
-结论是：任务粒度需要根据模型能力和 harness 成本动态设定，门禁越重，切片越需要足够大
-
-> **跨模型协作需要把文档当作 API**
-
-- 高阶模型适合高层方向判断、架构偏差识别和实验策略
-- Claude Code / Codex 适合跨文件代码执行
-- Gemini 类模型适合长对话压缩和大纲提炼
-- Amp 这类工具适合依赖分析和架构图生成
-- Cursor 适合单文件精修和人工介入
-
-跨模型协作的关键是结构化文档传递
-杂乱执行记录直接进入决策模型会污染判断
-文档在这里承担 API 作用：
-
-| 文档 | 生产者 | 消费者 | 作用 |
+| 文档类型 | 生产者 | 消费者 | 接口职责 |
 | --- | --- | --- | --- |
-| 历史大纲摘要 | 压缩模型或整理 Agent | 高阶决策模型 | 去噪、保留关键状态、节省上下文 |
-| AGENTS.md | 人类或高阶模型 | 执行 Agent | 固化项目规则和领域知识 |
-| 版本开发报告 | 执行 Agent | 人类和其他模型 | 固化本轮迭代踩坑、设计变化和未完成项 |
-| 可视化图表 / 数据 | 脚本或诊断工具 | 决策模型 | 把复杂系统状态降维为可判断对象 |
+| 历史大纲摘要 | 压缩模型 / 整理 Agent | 高阶决策模型 | 去噪、保留状态 |
+| `AGENTS.md` | 人类 / 高阶模型 | 执行 Agent | 固化规则与边界 |
+| 版本开发报告 | 执行 Agent | 人类 + 其他模型 | 固化踩坑和未完成项 |
+| 进度文件 | 每轮 Agent | 下一轮 Agent | 跨上下文窗口的连续记忆 |
 
-文档同时承担人类备忘录和 Agent 工程接口，负责传递状态、规则和判断依据
+Anthropic 的指南把这个模式具象化：`claude-progress.txt` 跨会话维护，配合 `feature_list.json` 和 git log 构成启动信息。
 
-> 文档越像 API，越需要稳定字段、稳定术语和可验证事实
+每轮 Agent 的固定启动序列：`pwd` → 读进度文件 → 读功能清单 → `git log --oneline -20` → 运行 `init.sh` → 跑冒烟测试确认基线 → 开始工作。
 
-## 4. 实践方法：从轻量纪律扩展到完整 harness
+LangChain 把 `AGENTS.md` 定义为一种**持续学习**机制——短期记忆固化为长期记忆的通道。
 
-> 个人或小团队可以从一套轻量 harness 开始
-> 
-> 最小系统不需要重型多 Agent 平台，只需要可执行规则、真实验证和清晰交接
+这是 harness 与传统 README 的实质分歧：harness 文档面向机器消费，字段稳定度和术语一致性比文笔重要。
 
-1. **写项目级规则**
-   - AGENTS.md 或同类文件应该包含项目边界、目录语义、禁止事项、危险操作确认规则、默认验证命令、提交规范和完成标准
-   - 它承担地图功能，让 Agent 快速知道“这里怎样工作”
+`tracker.md` 里一个字段从 `blocked` 改成 `waiting` 可能让下游 Agent 判断逻辑失效——这是 API 层面的破坏性变更。
 
-2. **准备控制面目录**
-   - 只保存会反复影响执行的信息：架构图、关键设计、spec、plan、runbook、tracker、交接模板、历史决策和已知坑
-   - 过程噪音定期清理，控制面只保留当前事实、阻塞项和可执行判断
+### 人类作为隐式 harness
 
-3. **为任务类型定义默认流程**
-   - bug 修复需要复现、根因、修复、回归
-   - 新功能需要需求边界、设计、实现、测试
-   - 重构需要行为保持、验证覆盖和分阶段合并
-   - 文档任务需要来源链路和过期信息清理
-   - 不同任务共用一套最小门禁，不同风险等级叠加不同验证
+Böckeler 指出：**人类本身就是一种隐式 harness**。人类开发者自带被吸收的编码规范、对复杂度的审美厌恶（"一个 300 行的函数看着就不对"）、社会问责（名字挂在 commit 上）、组织记忆，以及对"承重约定"与"习惯约定"的直觉区分。
 
-4. **准备真实验收材料**
-   - AI 自生成测试可以补充边界
-   - 关键回归集需要来自真实业务、历史 bug、线上数据或人工定义的验收用例
-   - 长任务尤其需要里程碑检查点
-   - 无人值守时间越长，早期误差越需要通过中间门禁截断
+Agent 缺少全部这些能力。harness 外显化了其中一部分。
 
-5. **调整任务切片粒度**
-   - 模型能力强、门禁成本高时，切片应该更贪婪
-   - 同模块、同类型、同验证路径的工作适合合并推进
-   - 切片过碎会让 planning、review、handoff 和验证反复吞掉 token
-   - 切片过大会让跑偏成本上升
-   - 每个切片要足够小到能验证，也要足够大到值得跑完整门禁
+## 解决什么问题
 
-一套最小目录可以这样落地：
+Anthropic 的长时运行指南列出了几种具名的失败模式：
+- **one-shotting**：试图一次性完成所有工作，跑到一半上下文耗尽
+- **premature victory declaration**：Agent 看到部分进展就宣布完成
+- **dirty handoffs**：切片结束时留下未文档化的 bug 和半成品状态
+
+这些失败模式都源自 harness 缺失。Anthropic 直接说明，即便是 Opus 4.5 在 Claude Agent SDK 的循环中跨多个上下文窗口运行，缺少 harness 模式的约束就"无法构建出生产级的 Web 应用"<sup id="fnref-3"><a href="#fn-3">[3]</a></sup>。
+
+### 验证质量的天花板
+
+Agent 自生成测试只覆盖模型自身理解到的路径，遗漏真实业务和历史 bug 走过的路径。局部实现里问题不大，重构场景里是系统性漏洞——重构要保持的恰恰是 Agent 没有理解到的行为。
+
+Anthropic 的观察：Agent 会写单元测试、用 `curl` 打 dev server 端点，但仍然"无法识别端到端功能不工作"。引入浏览器自动化（Puppeteer MCP）做端到端验证后，"Agent 能够识别和修复仅从代码看不出来的 bug"。
+
+Böckeler 的框架把这个问题定位到更大的缺口：**行为验证（functional correctness）是当前最难解决的维度**。代码风格有 lint，架构约束有 ArchUnit，可维护性有覆盖率——但"功能是否正确"主要依赖 AI 自生成测试和人工验收。
+
+一种有前景但适用范围有限的模式是 **approved fixtures**——人类审批预期输出后将其固化为回归锚点。
+
+门禁的测试集需要人工参与
+- 关键路径的回归集必须来自既有系统、线上样本或人工定义的验收用例
+- AI 自生成测试补边界，人工定义测试守核心行为。
+
+## 成本与调优
+
+长时运行 Agent 的典型故障是"跑得动但很贵"。Linux\.DO 社区的 OMO 实践数据可以作为机制信号：
+
+- 某次约 24 小时的运行里，集成面输出约 38 个文件、670 行代码改动；同期控制面产出 17 个文件、约 4933 行记录。控制面产出在行数上是集成面的七倍多<sup id="fnref-4"><a href="#fn-4">[4]</a></sup>。
+- 一次 32 小时长跑里，48 个文件产生约 3333 行代码，token 消耗超过 10 亿。追溯发现交接提示词里混入了"最小可执行单元"倾向，每个 worktree 只改 1–3 个文件、几行到几十行 diff。
+- 统一术语、瘦身控制面、调整切片策略之后，9 小时完成 65 个文件、约 1539 行改动，token 约 2.2 亿。时间效率和 token 产出比都改善了一个量级。
+
+### 贪婪切片
+
+这组数据指向一个反直觉的结论：**任务粒度越细，单位产出的固定成本越高**。每个切片都要跑 planning、边界确认、handoff、实现、focused test、审查、merge、tracker 更新——这是一组几乎不随切片大小变化的固定开销。
+
+直觉上"小批次、快反馈"在人类协作中成立，因为人类 review 成本近似线性于 diff 大小。Agent 的 review 成本是亚线性的——读 200 行和读 20 行在 token 消耗上量级接近。
+
+最优切片粒度因此从"尽量小"变成"小到能通过验证，同时大到值得跑完整门禁"。社区把这个策略称为**贪婪切片**。
+
+### Context rot 对策
+
+与控制面熵增并行的另一个机制是 **context rot**——LangChain 的术语，指随着上下文窗口填满，模型的推理能力退化。三种对策：
+
+- **compaction**：上下文临近容量时智能摘要和卸载
+- **tool call offloading**：大块工具输出只保留首尾，全文写入文件系统按需读取
+- **progressive disclosure**：用 skills 机制按需展开能力，启动时不加载全部工具定义<sup id="fnref-5"><a href="#fn-5">[5]</a></sup>
+
+共同思路是把上下文当作稀缺资源管理。
+
+### Harnessability
+
+Böckeler 提出的 **harnessability** 概念：代码库被 harness 的难度差异很大。提升有效性的结构性属性：
+
+- 强类型语言——类型检查本身就是内置 sensor
+- 清晰的模块边界——支持架构约束规则
+- 抽象框架如 Spring——隐式提高首次正确率
+
+她把这些称为"环境可供性"（ambient affordances），结构性属性让环境本身对 Agent 可读、可导航、可操作。
+
+遗留系统面临一个悖论：最需要 harness 的地方，恰恰是 harness 最难建的地方。
+
+## 落地路径
+
+<figure style="margin: 24px 0; width: 100%;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 860" role="img" aria-labelledby="harness-engineering-control-system-harness-adoption-flow-diagram-title harness-engineering-control-system-harness-adoption-flow-diagram-desc" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" style="display: block; width: 100%; max-width: 100%; height: auto;">
+  <title id="harness-engineering-control-system-harness-adoption-flow-diagram-title">Harness Engineering 采用决策流程</title>
+  <desc id="harness-engineering-control-system-harness-adoption-flow-diagram-desc">从痛点识别、基础条件判断、控制层选择，到执行闭环和度量反馈的流程图。</desc>
+  <defs>
+    <marker id="harness-engineering-control-system-harness-adoption-flow-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 7 3.5, 0 7" fill="#5a5a5a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .title { font-size: 28px; font-weight: 700; fill: #1a1a1a; }
+    .subtitle { font-size: 14px; fill: #6a6a6a; }
+    .region-title { font-size: 16px; font-weight: 700; fill: #1a1a1a; }
+    .node-title { font-size: 15px; font-weight: 700; fill: #1a1a1a; }
+    .node-sub { font-size: 12px; fill: #5a5a5a; }
+    .label { font-size: 13px; fill: #5a5a5a; }
+    .small { font-size: 11px; fill: #5a5a5a; }
+    .chip { fill: #f8f6f3; stroke: #d9d3ca; stroke-width: 1; }
+    .chip-text { font-size: 11px; fill: #5a5a5a; }
+    .edge { fill: none; stroke: #5a5a5a; stroke-width: 2; marker-end: url(#harness-engineering-control-system-harness-adoption-flow-arrow); }
+    .soft-edge { fill: none; stroke: #8f8a82; stroke-width: 1.6; stroke-dasharray: 6 6; marker-end: url(#harness-engineering-control-system-harness-adoption-flow-arrow); }
+    .start { fill: #dbeafe; stroke: #355c8a; stroke-width: 1.8; }
+    .process { fill: #dcfce7; stroke: #3d7a4d; stroke-width: 1.8; }
+    .decision { fill: #fef3c7; stroke: #8f7350; stroke-width: 1.8; }
+    .output { fill: #e8e0f0; stroke: #6b5b8a; stroke-width: 1.8; }
+    .repair { fill: #fce7f3; stroke: #8a4768; stroke-width: 1.8; }
+    .rail { fill: #fffdf8; stroke: #d9d3ca; stroke-width: 1.4; }
+    .frame { fill: #fffdf8; stroke: #d9d3ca; stroke-width: 1.4; }
+  </style>
+  <rect width="1040" height="860" fill="#f8f6f3"/>
+  <rect x="24" y="24" width="992" height="812" rx="20" class="frame"/>
+  <text x="64" y="70" class="title">Harness Engineering 采用决策流程</text>
+  <text x="64" y="96" class="subtitle">先确认基础条件，再选择最小控制层，最后用真实验证和反馈数据修正流程。</text>
+  <rect x="64" y="124" width="912" height="58" rx="14" class="rail"/>
+  <text x="86" y="154" class="region-title">阅读顺序</text>
+  <text x="190" y="154" class="label">痛点识别</text>
+  <text x="300" y="154" class="label">基础条件</text>
+  <text x="410" y="154" class="label">控制层选择</text>
+  <text x="550" y="154" class="label">执行闭环</text>
+  <text x="665" y="154" class="label">度量反馈</text>
+  <text x="775" y="154" class="label">流程瘦身</text>
+  <rect x="390" y="220" width="260" height="72" rx="24" class="start"/>
+  <text x="520" y="251" text-anchor="middle" class="node-title">识别当前最大痛点</text>
+  <text x="520" y="274" text-anchor="middle" class="node-sub">上下文、质量、长任务、token 成本</text>
+  <path d="M 520 292 V 342" class="edge"/>
+  <path d="M 520 342 L 660 420 L 520 498 L 380 420 Z" class="decision"/>
+  <text x="520" y="414" text-anchor="middle" class="node-title">基础条件清楚？</text>
+  <text x="520" y="436" text-anchor="middle" class="node-sub">需求、runbook</text>
+  <text x="520" y="454" text-anchor="middle" class="node-sub">测试数据、完成标准</text>
+  <path d="M 380 420 H 160 V 548" class="edge"/>
+  <rect x="196" y="402" width="46" height="22" rx="7" class="chip"/>
+  <text x="219" y="417" text-anchor="middle" class="chip-text">不清楚</text>
+  <rect x="80" y="548" width="260" height="90" rx="14" class="repair"/>
+  <text x="210" y="584" text-anchor="middle" class="node-title">先补基础材料</text>
+  <text x="210" y="607" text-anchor="middle" class="node-sub">收敛需求，补 runbook</text>
+  <text x="210" y="627" text-anchor="middle" class="node-sub">准备真实验收用例</text>
+  <path d="M 520 498 V 548" class="edge"/>
+  <rect x="536" y="510" width="34" height="22" rx="7" class="chip"/>
+  <text x="553" y="525" text-anchor="middle" class="chip-text">清楚</text>
+  <rect x="390" y="548" width="260" height="90" rx="14" class="process"/>
+  <text x="520" y="583" text-anchor="middle" class="node-title">选择最小控制层</text>
+  <text x="520" y="606" text-anchor="middle" class="node-sub">工具层、流程层、状态层、控制层</text>
+  <text x="520" y="626" text-anchor="middle" class="node-sub">从当前痛点补一层</text>
+  <path d="M 650 593 H 740" class="edge"/>
+  <rect x="740" y="548" width="220" height="90" rx="14" class="output"/>
+  <text x="850" y="583" text-anchor="middle" class="node-title">进入执行闭环</text>
+  <text x="850" y="606" text-anchor="middle" class="node-sub">读事实，改代码，跑验证</text>
+  <text x="850" y="626" text-anchor="middle" class="node-sub">修复失败，合入，更新状态</text>
+  <path d="M 850 638 V 704 H 520 V 674" class="soft-edge"/>
+  <rect x="724" y="688" width="92" height="22" rx="7" class="chip"/>
+  <text x="770" y="703" text-anchor="middle" class="chip-text">反馈修正</text>
+  <rect x="390" y="674" width="260" height="90" rx="14" class="process"/>
+  <text x="520" y="709" text-anchor="middle" class="node-title">度量是否改善</text>
+  <text x="520" y="732" text-anchor="middle" class="node-sub">交付速度、验证通过率、返工率</text>
+  <text x="520" y="752" text-anchor="middle" class="node-sub">token 投入产出比</text>
+  <path d="M 390 719 H 210 V 638" class="soft-edge"/>
+  <rect x="250" y="702" width="94" height="22" rx="7" class="chip"/>
+  <text x="297" y="717" text-anchor="middle" class="chip-text">证据不足</text>
+  <rect x="696" y="220" width="264" height="194" rx="16" class="rail"/>
+  <text x="724" y="254" class="region-title">执行时守住三条线</text>
+  <text x="724" y="292" class="label">1. Truth-first：代码事实以集成面为准</text>
+  <text x="724" y="326" class="label">2. 控制面瘦身：只保留当前事实</text>
+  <text x="724" y="360" class="label">3. 贪婪切片：同模块同验证路径合并</text>
+  <path d="M 650 256 H 696" class="edge"/>
+</svg>
+<figcaption>Harness Engineering 采用决策流程</figcaption>
+</figure>
+
+采用 harness engineering 的判断简化为三步：先看基础条件是否就绪（需求、runbook、测试数据、完成标准），再选择最小控制层补当前最大痛点，最后用真实交付数据修正系统。
+
+个人或小团队起步不需要重型多 Agent 平台。一个可行的最小目录：
 
 ```text
-AGENTS.md
-docs/architecture.md
-docs/runbooks/dev-test.md
-docs/plans/current.md
-docs/tracker.md
-docs/handoff-template.md
+AGENTS.md                   # 项目规则、禁止事项、默认验证命令、完成标准
+docs/architecture.md        # 模块边界、数据流、外部依赖、高风险区域
+docs/runbooks/dev-test.md   # 安装、启动、测试、联调、日志收集
+docs/plans/current.md       # 当前任务目标、非目标、方案、验收标准
+docs/tracker.md             # 任务状态、依赖、阻塞、完成证据
 ```
 
-每次执行结束只要求五项完成证明：改了什么、为什么这样改、跑了什么验证、还有什么风险、下一步是否需要人类决策
+每轮执行结束只要求一份最小完成证明：改了什么、为什么这样改、跑了什么验证、还剩什么风险、下一步是否需要人类决策。
 
-对于微服务或复杂系统，最关键的基础设施是联调 runbook
-AI 需要能够按照 runbook 编译、配置、运行、测试
-架构差异会改变 runbook 内容，但 Harness Engineering 的基本问题通用：
+外部套件的选型应当倒着来——先定位自身痛点，再判断套件补的是哪一层：
 
-- 如何让 Agent 找到服务边界
-- 如何让 Agent 知道依赖启动顺序
-- 如何让 Agent 运行真实集成验证
-- 如何让 Agent 在失败时收集日志、定位边界、回到修复循环
-- 如何在关键设计、危险操作和验收处插入人类决策点
-
-> workflow 和 harness 的关系可以用门禁来判断
-
-数据库设计、后端逻辑、前端页面、模块集成既可以顺序推进，也可以并行推进部分任务
-关键不在顺序，在于门禁：
-
-1. B 到 C 之间需要后端接口或契约检查
-2. C 到 D 之间需要 E2E 或页面流程检查
-3. D 之后需要 CodeReview 和集成验证
-4. 失败后需要自动修复分支或人工决策点
-
-带有门禁、状态、失败分支和反馈回路的 workflow 构成 harness 的一部分；步骤列表是流程模板
-
-外部套件可以按重量、粒度、可控性和适配性来选：
-
-| 套件 / 方法 | 阶段性判断 | 适合方向 |
+| 痛点 | 对应的能力层 | 可参考的套件方向 |
 | --- | --- | --- |
-| Superpowers | 相对轻量，TDD 流程偏重，brainstorming 有价值；粒度细，跑偏容易纠正 | 局部实现、需求澄清、细粒度质量门禁 |
-| OMO | 编排重，Sisyphus 擅长长任务；长任务成本和跑偏成本也高 | 目标明确、计划充分、可长时间运行的大块工作 |
-| GSD | 偏重 workflow，命令好记，社区反馈积极 | 想要强流程但降低命令复杂度的场景 |
-| Trellis | 轻量、易自定义，强调代码规范积累 | 需要把团队规则沉淀进轻量控制系统的场景 |
-| CodeStable | 理念偏简洁，可能缓解 OMO 过重的问题 | 需要更低控制面成本的场景 |
-| gstack / BMAD | 工作闭环更宽，部分项目超出纯代码构建 | 产品交付、团队角色和更大范围协作 |
+| 需求澄清不足 | 流程层前段 | Superpowers 的 brainstorming 和 TDD |
+| 长任务无人值守 | 状态层 + 控制层 | OMO 的 orchestration |
+| 命令多、难记 | 流程层 | GSD 的命令收敛 |
+| 需要沉淀团队规则 | 静态设施 | Trellis 的规范积累 |
+| 控制面成本过高 | 控制层 | CodeStable 的极简理念 |
+| 跨产品、角色协作 | 交付层 | BMAD、gstack 的产品闭环 |
 
-用这张表的方法是先定位自身痛点，再选套件：
+### 什么时候应当按兵不动
 
-- 痛点在需求澄清，强化 brainstorming
-- 痛点在长任务无人值守，强化编排和交接
-- 痛点在质量不可控，强化测试集、review、runbook 和验收门禁
-- 痛点在 token 浪费，降低控制面噪音并调大切片粒度
+三种情况下应先补基础：
 
-Harness Engineering 可以按成熟度分层推进：
+- 需求本身仍然混乱，验收标准没定
+- 关键路径没有可用的回归测试或真实数据
+- 项目规则已经过期，`AGENTS.md` 和代码事实不一致
 
-1. **工具层**
-   - 零散 prompt、单个 skill、单个 MCP、局部脚本
-2. **流程层**
-   - brainstorm → spec → plan → implement → verify 这类可重复 workflow
-3. **状态层**
-   - tracker、orchestration、handoff、blocked / unlocked、worktree discipline
-4. **控制层**
-   - 控制面、执行面、集成面分离
-   - 自动验证、审查、失败分支和合并纪律形成闭环
-5. **交付层**
-   - 把 bug 修复、功能开发、重构、技术债治理、文档维护和回归测试都纳入统一开发系统
+在这种状态下加 workflow 会放大噪音，加 agent teams 会放大分歧，加自动化会放大错误传播。更稳的顺序是先把需求、runbook、测试数据和完成标准补齐。
 
-多数个人实践不需要一步到第五层
-有效路径是从当前最大痛点补一层：
+衡量 harness 是否有效只需两个指标：返工率和验证通过率。两个指标持平或倒退，任何套件、角色、编排都只是控制面的装饰。
 
-- 上下文混乱，补文档索引和交接模板
-- 质量不稳，补门禁和测试集
-- 长任务跑偏，补里程碑和控制面
-- 效率低，补切片粒度和噪音治理
+### 注释
 
-## 5. 采用边界、判断清单与引用材料
-
-Harness Engineering 适合三类场景：
-
-- 多文件变更频繁
-- 质量门禁明确
-- 任务需要跨会话推进
-
-它对这些任务尤其有价值：
-
-- 大型重构
-- 长期 feature
-- 复杂 bug 排查
-- 多 Agent 协作
-
-三类场景里需要保持克制：
-
-- 需求仍然混乱
-- 验证材料不足
-- 项目规则本身过期
-
-此时增加 workflow 会放大噪音
-增加 agent teams 会放大分歧
-增加自动化会放大错误传播
-
-> 更稳的做法是先把需求、runbook、测试数据和完成标准补齐
-
-几个需要持续注意的边界：
-
-- 视觉设计、用户体验和复杂产品判断难以量化，仍需要人工评审
-- AI 自生成测试容易只覆盖自己理解到的路径，真实回归集需要人类提供
-- 长任务必须插入里程碑检查点，无人值守时间越长，早期误差放大越严重
-- 重型 harness 的控制面成本不可忽视，门禁越多，切片越需要足够大
-- 外部套件迭代快，最佳实践需要持续校正
-
-一套有效的 Harness Engineering 实践需要同时回答这些问题：
-
-- 项目里哪些信息必须长期稳定？
-- Agent 做事前需要读什么？
-- Agent 能在哪些目录和分支写文件？
-- 什么任务可以并行，什么任务必须串行？
-- 哪些命令构成完成证明？
-- 哪些失败交给 Agent 自动修，哪些失败交给人类决策？
-- 如何在长期运行后清理上下文和控制面噪音？
-- 如何把 bug 修复、功能开发、重构、文档维护和技术债治理纳入同一套系统？
-
-> 有效的判断顺序是：先定义自己的项目缺什么，再选择外部 harness 如何补位
-> 
-> 外部套件是标准件和参考实现，工程师要设计的是适合自己项目、模型、预算、风险和工作习惯的控制系统
-
-### 引用材料
-
-- Linux.DO 原始长期讨论：[想开一个 harness engineering 实践的长期帖子，大家一起分享实践经验](https://linux.do/t/topic/1791588)
-- 阶段性总结：[概念边界与方法论](https://linux.do/t/topic/1791588/150?u=jiechen257)
-- 长任务实践：[近乎 24 小时 OMO 自动运行实践](https://linux.do/t/topic/1791588/59)
-- 控制面优化：[控制面瘦身与任务切分粒度修正](https://linux.do/t/topic/1791588/101)
-- 大跨度重构复盘：[大型重构实践后的问题归因](https://linux.do/t/topic/1791588/123)
-- 方法论反思：[Trellis 和 CodeStable 引起的反思](https://linux.do/t/topic/1791588/157)
-- OpenAI：[Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/zh-Hans-CN/index/harness-engineering/)
-- Anthropic：[Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
-- LangChain：[The Anatomy of an Agent Harness](https://www.langchain.com/blog/the-anatomy-of-an-agent-harness)
-- Martin Fowler：[Harness engineering for coding agent users](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html)
+1. <span id="fn-1"></span>LangChain 在 Terminal Bench 2.0 上的发现佐证了这一点：同一个 Opus 4.6 模型在不同 harness 中得分差异巨大。LangChain 的 coding agent 仅通过改进 harness（不换模型）就从排行榜第 30 名升至前 5 名。harness 的设计质量对产出的影响不亚于模型本身。 <a href="#fnref-1">↩</a>
+2. <span id="fn-2"></span>这个框架的理论根基是控制论。Böckeler 引用了 Ashby 的必要多样性定律（Law of Requisite Variety）：调节器需要拥有至少与被调节系统一样多的多样性。Coding Agent 几乎可以生成任何代码——约束拓扑结构（技术栈、模块边界、命名规范）是一种品种削减动作，让 harness 的覆盖变得可行。 <a href="#fnref-2">↩</a>
+3. <span id="fn-3"></span>Anthropic 为此设计了一套双 Agent 架构：Initializer Agent 在首次会话中建立项目脚手架、生成结构化功能清单（JSON 格式，因为模型"更不容易不恰当地修改 JSON 文件"），Coding Agent 在后续每次会话中读取已有状态、增量完成单个功能、测试并留下干净状态。两个 Agent 共享同一个 system prompt 和工具集——区别只是 user prompt 不同。 <a href="#fnref-3">↩</a>
+4. <span id="fn-4"></span>这里的比例来自具体项目和套件，在多轮复盘里一致出现。 <a href="#fnref-4">↩</a>
+5. <span id="fn-5"></span>其中 compaction 已被 Claude Agent SDK 内置，但 Anthropic 指出 compaction "并不总是能把足够清晰的指令传递给下一个 Agent"，因此仍需要外部持久化机制（进度文件、git log、结构化功能清单）作为补充。 <a href="#fnref-5">↩</a>
