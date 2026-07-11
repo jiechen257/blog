@@ -1,0 +1,145 @@
+/* Inside theme refinement layer — preserves the original layout and visual identity. */
+:root {
+  color-scheme: light dark;
+  --reading-leading: 1.85;
+  --focus-ring: #2563eb;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  letter-spacing: 0.01em;
+}
+
+.skip-link {
+  position: fixed;
+  inset: 0 auto auto 1rem;
+  z-index: 10000;
+  padding: 0.75rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: var(--inside-card-background, #fff);
+  color: var(--inside-foreground-color, #222);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+  transform: translateY(-120%);
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:where(a, button, input, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+:where(article, main) {
+  line-height: var(--reading-leading);
+}
+
+:where(article, main) :is(h2, h3, h4) {
+  scroll-margin-top: 5rem;
+  text-wrap: balance;
+}
+
+:where(article, main) p {
+  text-wrap: pretty;
+}
+
+img {
+  height: auto;
+}
+
+:where(article, main) img {
+  border-radius: 0.35rem;
+}
+
+pre,
+figure.highlight {
+  position: relative;
+  max-width: 100%;
+  overflow: auto;
+  overscroll-behavior-inline: contain;
+  tab-size: 2;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid currentColor;
+  border-radius: 0.35rem;
+  background: var(--inside-card-background, #fff);
+  color: inherit;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+pre:hover .copy-code-button,
+figure.highlight:hover .copy-code-button,
+.copy-code-button:focus-visible,
+.copy-code-button[data-state="copied"] {
+  opacity: 0.92;
+}
+
+@media (hover: none) {
+  .copy-code-button {
+    opacity: 0.86;
+  }
+}
+
+@media (max-width: 675px) {
+  :where(button, [role="button"], nav a) {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  :where(article, main) {
+    line-height: 1.78;
+  }
+
+  :where(article, main) :is(h1, h2, h3) {
+    overflow-wrap: anywhere;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  .skip-link,
+  .copy-code-button {
+    display: none !important;
+  }
+}

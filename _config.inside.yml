@@ -22,20 +22,20 @@ appearance:
   # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
 
   # Maximum width of content
-  # content_width: 640
+  content_width: 720
 
   # Fonts
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
-    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+    url:
 
     # Base font which applied to body
-    base: "'Josefin Sans', 'PingFang SC'"
+    base: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
     # Sidebar author font, fallback to `base`
-    logo: "https://cdn.jsdelivr.net/gh/jiechen257/personal-gallery@main/img/202312211541815.jpeg"
+    logo: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
     # Sidebar menu font, fallback to `base`
-    menu: "Baloo Bhaijaan"
+    menu: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
     # Font for:
     # - percentage on the fab button
     # - month text on archives page
@@ -44,11 +44,11 @@ appearance:
     # - toc index
     # - category pill
     # fallback to `base`
-    label: Montserrat
+    label: "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     # Headline(h1, h2, h3, h4, h5, h6) font, fallback to `base`
-    heading:
+    heading: "ui-serif, 'Songti SC', STSong, Georgia, serif"
     # Code and code block
-    code: Inconsolata, monospace
+    code: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
     # Base font for printing which applied to body
     print:
 
@@ -364,9 +364,9 @@ favicon: /image/favicon.ico
 # SEO
 seo:
   # Render structured-data in <head>, default to `false`
-  # structured_data: true
+  structured_data: true
   # Server-side rendering (SSR), default to `false`
-  # ssr: true
+  ssr: true
 
 # PWA
 pwa:
@@ -423,9 +423,6 @@ pwa:
 # Plugins
 plugins:
   # Built-in plugins
-  - cipher:
-      placeholder: 您好, 这里需要密码
-      excerpt: Content encrypted
   # - encrypt: # hexo-blog-encrypt
   #     abstract: 有东西被加密了, 请输入密码查看.
   #     message: 您好, 这里需要密码.
@@ -455,6 +452,8 @@ plugins:
   # - xxx.css
   # - xxx.jss
   - css/timeline.css
+  - css/ux-refinements.css
+  - css/reprinted-badges.css
 
   # Dynamic inject html snippet
   # - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
@@ -465,13 +464,5 @@ plugins:
 
   - js/busuanzi.js
   - js/toc-auto-open.js
-
-  # jQery
-  - //cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js
-
-  # 代码复制
-  - position: [post, page]
-    template: |
-      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
-      <script type="text/javascript" src="//vkceyugu.cdn.bspapp.com/VKCEYUGU-5a7313a3-81df-49ad-941e-33cab30695e9/2cc5a7b6-2f2f-49aa-9f0e-92e17c117f2f.js"></script>
-      <link href="//vkceyugu.cdn.bspapp.com/VKCEYUGU-5a7313a3-81df-49ad-941e-33cab30695e9/f637376e-b7a4-4b96-9f5f-fe7873b2f8d2.css" rel="stylesheet">
+  - js/code-copy.js
+  - js/reprinted-badges.js

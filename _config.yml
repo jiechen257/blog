@@ -13,12 +13,12 @@ timezone: "Asia/Shanghai"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://becase.top
+url: https://blog.becase.top
 permalink: :layout/:abbrlink
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false
+  trailing_html: false
 
 # Directory
 source_dir: source
@@ -93,6 +93,7 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
+  - image/**/*.md
 ignore:
 
 # Extensions
@@ -100,19 +101,17 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: inside
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+sitemap:
+  path: sitemap.xml
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 # deploy:
 #   type: git
 #   repo: https://github.com/jiechen257/blog.git
 #   branch: deploy-page
-
-encrypt: # hexo-blog-encrypt
-  abstract: 有东西被加密了, 请输入密码查看.
-  message: 有东西被加密了, 请输入密码查看.
-  tags:
-    - { name: diary, password: jiechen }
-    - { name: encrypt, password: tequila }
-  # - {name: tagName, password: 密码B}
-  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
-  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容

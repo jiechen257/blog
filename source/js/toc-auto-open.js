@@ -1,56 +1,36 @@
 (function () {
-  var DESKTOP_QUERY = '(min-width: 992px)';
-  var lastOpenedPath = '';
+  'use strict';
 
-  function isDesktop() {
-    return window.matchMedia && window.matchMedia(DESKTOP_QUERY).matches;
+  var openedPath = '';
+
+  function shouldOpen() {
+    return window.matchMedia('(min-width: 992px)').matches && /^\/post\//.test(location.pathname);
   }
 
-  function isPostLikePath() {
-    return /^\/post\//.test(location.pathname);
-  }
+  function openWhenReady() {
+    if (!shouldOpen() || openedPath === location.pathname) return;
+    var app = document.body;
 
-  function tryOpenToc() {
-    if (!isDesktop() || !isPostLikePath()) return;
-    if (lastOpenedPath === location.pathname) return;
-
-    var tocButton = document.querySelector('.iκ-toc');
-    if (!tocButton) return;
-
-    lastOpenedPath = location.pathname;
-    tocButton.click();
-  }
-
-  function scheduleTryOpen() {
-    setTimeout(tryOpenToc, 80);
-    setTimeout(tryOpenToc, 240);
-    setTimeout(tryOpenToc, 480);
-  }
-
-  function onRouteChange() {
-    if (lastOpenedPath !== location.pathname) {
-      scheduleTryOpen();
+    function open() {
+      var button = document.querySelector('.iκ-toc');
+      if (!button) return false;
+      openedPath = location.pathname;
+      button.click();
+      return true;
     }
+
+    if (open()) return;
+    var observer = new MutationObserver(function () {
+      if (open()) observer.disconnect();
+    });
+    observer.observe(app, { childList: true, subtree: true });
+    window.setTimeout(function () { observer.disconnect(); }, 2500);
   }
 
-  var rawPushState = history.pushState;
-  var rawReplaceState = history.replaceState;
-
-  history.pushState = function () {
-    rawPushState.apply(this, arguments);
-    onRouteChange();
-  };
-
-  history.replaceState = function () {
-    rawReplaceState.apply(this, arguments);
-    onRouteChange();
-  };
-
-  window.addEventListener('popstate', onRouteChange, { passive: true });
-  window.addEventListener('hashchange', onRouteChange, { passive: true });
-  window.addEventListener('load', scheduleTryOpen, { passive: true });
-
-  document.addEventListener('click', function () {
-    onRouteChange();
-  }, { passive: true });
+  window.addEventListener('inside:navigation', openWhenReady, { passive: true });
+  window.addEventListener('popstate', openWhenReady, { passive: true });
+  window.addEventListener('resize', openWhenReady, { passive: true });
+  document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', openWhenReady, { once: true })
+    : openWhenReady();
 })();
