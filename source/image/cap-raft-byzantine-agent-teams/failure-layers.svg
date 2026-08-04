@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 700" width="1120" height="700" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">多 Agent 协作的三层失效模型</title>
+  <desc id="diagram-desc">从通信、状态到信任三个层次，说明 CAP、Raft 与拜占庭容错分别处理什么问题。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#69645d"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .title { font-size: 28px; font-weight: 700; fill: #1f1d1a; }
+    .subtitle { font-size: 14px; fill: #6f6961; }
+    .lane { fill: #ffffff; stroke: #ddd7ce; stroke-width: 1.4; }
+    .lane-number { font-size: 13px; font-weight: 700; fill: #6f6961; letter-spacing: 1px; }
+    .lane-title { font-size: 19px; font-weight: 700; fill: #1f1d1a; }
+    .node-title { font-size: 16px; font-weight: 700; fill: #1f1d1a; }
+    .body { font-size: 13px; fill: #59544e; }
+    .small { font-size: 12px; fill: #6f6961; }
+    .question { fill: #f8f6f2; stroke: #cfc8be; stroke-width: 1.3; }
+    .cap { fill: #fef3c7; stroke: #9a7843; stroke-width: 1.5; }
+    .raft { fill: #dbeafe; stroke: #416b9b; stroke-width: 1.5; }
+    .bft { fill: #fce7f3; stroke: #98607d; stroke-width: 1.5; }
+    .edge { fill: none; stroke: #69645d; stroke-width: 1.8; marker-end: url(#arrow); }
+    .guide { fill: none; stroke: #b4ada4; stroke-width: 1.5; stroke-dasharray: 5 6; marker-end: url(#arrow); }
+  </style>
+
+  <rect width="1120" height="700" fill="#f8f6f3"/>
+  <rect x="28" y="24" width="1064" height="652" rx="20" fill="#fffdf8" stroke="#d9d3ca" stroke-width="1.4"/>
+  <text x="60" y="70" class="title">多 Agent 协作的三层失效模型</text>
+  <text x="60" y="96" class="subtitle">先判断问题发生在哪一层，再选择机制；三层可以同时存在，后两层不会被前一层的方案自动解决。</text>
+
+  <rect x="60" y="128" width="1000" height="142" rx="16" class="lane"/>
+  <text x="86" y="158" class="lane-number">01 · 通信层</text>
+  <text x="86" y="188" class="lane-title">成员联系不上</text>
+  <text x="86" y="212" class="body">消息延迟、丢失或网络分区</text>
+  <text x="86" y="235" class="small">例：Agent A 已检查完成，C 却收不到结果</text>
+
+  <rect x="420" y="158" width="244" height="82" rx="13" class="question"/>
+  <text x="542" y="188" class="node-title" text-anchor="middle">分区期间如何取舍？</text>
+  <text x="542" y="216" class="body" text-anchor="middle">暂停关键动作 / 允许继续工作</text>
+  <path d="M 380 199 H 420" class="edge"/>
+
+  <rect x="744" y="158" width="254" height="82" rx="13" class="cap"/>
+  <text x="871" y="188" class="node-title" text-anchor="middle">CAP</text>
+  <text x="871" y="216" class="body" text-anchor="middle">一致性与可用性的业务取舍</text>
+  <path d="M 664 199 H 744" class="edge"/>
+
+  <rect x="60" y="292" width="1000" height="142" rx="16" class="lane"/>
+  <text x="86" y="322" class="lane-number">02 · 状态层</text>
+  <text x="86" y="352" class="lane-title">成员看到不同版本</text>
+  <text x="86" y="376" class="body">并发修改产生多个候选历史</text>
+  <text x="86" y="399" class="small">例：A 检查 v2，B 测试的却是 v1</text>
+
+  <rect x="420" y="322" width="244" height="82" rx="13" class="question"/>
+  <text x="542" y="352" class="node-title" text-anchor="middle">哪份状态正式生效？</text>
+  <text x="542" y="380" class="body" text-anchor="middle">协调者 / 日志 / 多数派门槛</text>
+  <path d="M 380 363 H 420" class="edge"/>
+
+  <rect x="744" y="322" width="254" height="82" rx="13" class="raft"/>
+  <text x="871" y="352" class="node-title" text-anchor="middle">Raft / 共识</text>
+  <text x="871" y="380" class="body" text-anchor="middle">形成唯一、连续的权威历史</text>
+  <path d="M 664 363 H 744" class="edge"/>
+
+  <rect x="60" y="456" width="1000" height="142" rx="16" class="lane"/>
+  <text x="86" y="486" class="lane-number">03 · 信任层</text>
+  <text x="86" y="516" class="lane-title">成员给出任意错误</text>
+  <text x="86" y="540" class="body">伪造、隐瞒或向不同对象发送矛盾信息</text>
+  <text x="86" y="563" class="small">例：B 没有运行测试，却声称全部通过</text>
+
+  <rect x="420" y="486" width="244" height="82" rx="13" class="question"/>
+  <text x="542" y="516" class="node-title" text-anchor="middle">结论为什么可信？</text>
+  <text x="542" y="544" class="body" text-anchor="middle">身份 / 原始证据 / 独立验证</text>
+  <path d="M 380 527 H 420" class="edge"/>
+
+  <rect x="744" y="486" width="254" height="82" rx="13" class="bft"/>
+  <text x="871" y="516" class="node-title" text-anchor="middle">拜占庭容错</text>
+  <text x="871" y="544" class="body" text-anchor="middle">在不完全信任下维持可信决定</text>
+  <path d="M 664 527 H 744" class="edge"/>
+
+  <path d="M 1020 240 V 310" class="guide"/>
+  <path d="M 1020 404 V 474" class="guide"/>
+  <text x="560" y="638" class="body" text-anchor="middle">定位顺序：消息能否到达 → 状态能否统一 → 证据能否相信</text>
+</svg>
