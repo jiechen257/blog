@@ -565,12 +565,16 @@ function jsParser() {
   let babel, terser;
   try {
     terser = require('terser');
-    babel = require('babel-core');
-    require('babel-preset-env');
+    babel = require('@babel/core');
+    require('@babel/preset-env');
   } catch (e) { return i => i || '' }
 
-  const esSafe = code => babel.transform(code, { presets: [['env', { 'modules': false }]] });
-  const minify = terser.minify;
+  const esSafe = code => babel.transformSync(code, {
+    babelrc: false,
+    configFile: false,
+    presets: [['@babel/preset-env', { modules: false }]],
+  });
+  const minify = terser.minify_sync;
 
   return function (code) {
     if (!code || typeof code !== 'string') return '';

@@ -1,7 +1,7 @@
 'use strict';
 
 const cheerio = require('cheerio');
-const urlFor = require('hexo/lib/plugins/helper/url_for');
+const { url_for: urlFor } = require('hexo-util');
 
 describe('structured_data', function () {
   const Hexo = require('hexo');

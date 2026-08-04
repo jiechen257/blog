@@ -8,6 +8,6 @@ describe('gist', function () {
   it('create additional tag', function () {
     const $ = cheerio.load(gist(['foo']));
 
-    expect($('script').attr('src')).toBe('//gist.github.com/foo.js');
+    expect($('script').attr('src')).toBe('https://gist.github.com/foo.js');
   });
 });

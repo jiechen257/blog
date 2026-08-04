@@ -5,6 +5,10 @@
   "scripts": {
     "test": "jasmine --config=test/jasmine.json"
   },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "packageManager": "npm@11.11.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ikeq/hexo-theme-inside.git"
@@ -24,16 +28,17 @@
   },
   "homepage": "https://github.com/ikeq/hexo-theme-inside#readme",
   "dependencies": {
-    "html-to-text": "8.2.0",
-    "markdown-it": "13.0.0",
-    "markdown-it-container": "3.0.0"
+    "html-to-text": "10.0.0",
+    "markdown-it": "15.0.0",
+    "markdown-it-container": "4.0.0"
   },
   "devDependencies": {
-    "babel-core": "6.26.3",
-    "babel-preset-env": "1.7.0",
-    "cheerio": "1.0.0-rc.10",
-    "hexo": "^6.3.0",
-    "jasmine": "4.1.0",
-    "terser": "4.8.0"
+    "@babel/core": "7.29.7",
+    "@babel/preset-env": "7.29.7",
+    "cheerio": "1.2.0",
+    "hexo": "8.1.2",
+    "hexo-util": "4.0.0",
+    "jasmine": "6.3.0",
+    "terser": "5.49.0"
   }
 }

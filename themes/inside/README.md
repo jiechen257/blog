@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/npm/v/hexo-theme-inside.svg?label=NPM&color=limegreen&style=flat-square" alt="Theme inside on npm" />
   </a>
   <img src="https://img.shields.io/badge/Hexo-5.2%2B-blue?style=flat-square">
-  <img src="https://img.shields.io/badge/Node.js-12%2B-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/Node.js-20.19%2B-blue?style=flat-square">
 </p>
 
 <p align="center">
