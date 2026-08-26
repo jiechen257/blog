@@ -30,11 +30,11 @@ if (existsSync(join(output, 'undefined'))) failures.push('Invalid /undefined/ ro
 const postDirectories = existsSync(join(output, 'post'))
   ? readdirSync(join(output, 'post'), { withFileTypes: true }).filter((entry) => entry.isDirectory())
   : [];
-if (postDirectories.length !== 98) failures.push('Expected 98 published post routes, found ' + postDirectories.length);
+if (postDirectories.length !== 99) failures.push('Expected 99 published post routes, found ' + postDirectories.length);
 
 if (failures.length) {
   console.error(failures.join('\n'));
   process.exit(1);
 }
 
-console.log('Verified SSR, SEO files, 98 post routes, zoom support, and optimized assets.');
+console.log('Verified SSR, SEO files, 99 post routes, zoom support, and optimized assets.');
