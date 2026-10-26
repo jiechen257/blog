@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/ikeq/hexo-theme-inside#readme",
   "dependencies": {
-    "html-to-text": "10.0.0",
-    "markdown-it": "15.0.0",
+    "html-to-text": "10.0.1",
+    "markdown-it": "15.0.3",
     "markdown-it-container": "4.0.0"
   },
   "devDependencies": {

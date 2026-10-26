@@ -28,7 +28,7 @@
     "hexo-server": "3.0.0",
     "hexo-theme-inside": "2.7.2",
     "hexo-util": "4.0.0",
-    "markdown-it": "14.3.0",
+    "markdown-it": "14.3.3",
     "markdown-it-container": "4.0.0"
   },
   "engines": {
